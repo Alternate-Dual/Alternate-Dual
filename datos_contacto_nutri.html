@@ -11,19 +11,95 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Work+Sans&display=swap" rel="stylesheet">
 
     <title>Datos de contacto Nutricionista</title>
+<style>
+    body{
+        font-size:large;
+        font-family: 'Nunito', sans-serif;
+        margin:0;
+        text-align: center;
+        margin-top: 10%;
+        
+        background-color: #eceff1;
 
+    }
+
+   
+
+    h1,h2,h3,h4{
+        font-family: 'Work Sans', sans-serif;
+
+    }
+
+    h1{
+        margin-bottom: 4%;
+    }
+
+
+
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    form label{
+        margin-top: 2%;
+        margin-bottom: 1%;
+    }
+
+    form input{
+        width: 20%;
+        height: 2rem;
+        min-height:8%;
+        font-size:large;
+        font-family: 'Nunito', sans-serif;
+        margin-top: 1%;
+    }
+    
+
+    /* Boton */
+    button {
+        font-size:large;
+        font-family: 'Nunito', sans-serif;
+        background-color: #7ed957;
+        border: none;
+        color: white;
+        padding: 10px;
+        min-width: 15%;
+        text-align: center;
+        border-radius: 12px;
+        margin-top: 4%;
+        margin-bottom: 2%;
+    }
+
+    button:hover {
+        color: #7ed957;
+        border-radius: 12px;
+        background-color: white;
+        border: 1px solid #7ed957;
+        cursor: pointer;
+    }
+
+
+
+</style>
+
+</head>
 </head>
 <body>
 
     <h1>Datos de contacto</h1>
 
-    <label for="nombre">Teléfono</label><br>
-    <input type="tel" id="tel" name="tel"><br>
+    <form action="">
 
-    <label for="nombre">Correo electrónico</label><br>
-    <input type="email" id="email" name="email"><br>
+        <label for="nombre">Teléfono</label>
+        <input type="text" id="tel" name="tel" placeholder="+34...">
 
-    <input type="submit" value="Confirmar">
-    
+        <label for="nombre">Correo electrónico</label>
+        <input type="text" id="email" name="email" placeholder="ejemplo@gmail.com">
+
+        <button type="submit">confirmar</button>
+    </form>
 </body>
 </html>

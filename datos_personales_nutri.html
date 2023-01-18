@@ -11,28 +11,104 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Work+Sans&display=swap" rel="stylesheet">
 
     <title>Datos personales Nutricionista</title>
+
+    <style>
+        body{
+            font-size:large;
+            font-family: 'Nunito', sans-serif;
+            margin:0;
+            text-align: center;
+            margin-top: 10%;
+            
+            background-color: #eceff1;
+    
+        }
+    
+       
+    
+        h1,h2,h3,h4{
+            font-family: 'Work Sans', sans-serif;
+    
+        }
+    
+        h1{
+            margin-bottom: 4%;
+        }
+    
+    
+    
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        form label{
+            margin-top: 2%;
+            margin-bottom: 1%;
+            
+        }
+    
+        form input{
+            display: block;
+            width: 20%;
+            height: 2rem;
+            min-height:8%;
+            font-size:large;
+            font-family: 'Nunito', sans-serif;
+            margin-top: 1%;
+        }
+        
+    
+        /* Boton */
+        button {
+            font-size:large;
+            font-family: 'Nunito', sans-serif;
+            background-color: #7ed957;
+            border: none;
+            color: white;
+            padding: 10px;
+            min-width: 15%;
+            text-align: center;
+            border-radius: 12px;
+            margin-top: 4%;
+            margin-bottom: 2%;
+        }
+    
+        button:hover {
+            color: #7ed957;
+            border-radius: 12px;
+            background-color: white;
+            border: 1px solid #7ed957;
+            cursor: pointer;
+        }
+    
+    
+    
+    </style>
 </head>
 <body>
 
     <h1>Datos personales</h1>
 
     <form>
-        <label for="nombre">Nombre y apellidos</label><br>
-        <input type="text" id="nombre" name="nombre"><br>
+        <label for="nombre">Nombre y apellidos</label>
+        <input type="text" id="nombre" name="nombre">
 
-        <label for="fecha">Fecha de nacimiento</label><br>
-        <input type="date" id="start" name="trip-start" min="1950-01-01" ><br>
+        <label for="fecha">Fecha de nacimiento</label>
+        <input type="date" id="start" name="trip-start" min="1950-01-01" >
 
-        <label for="dni">DNI</label><br>
-        <input type="text" id="dni" name="dni"><br>
+        <label for="dni">DNI</label>
+        <input type="text" id="dni" name="dni">
 
-        <label for="sexo">Sexo</label><br>
+        <label for="sexo">Sexo</label>
         <input type="radio" id="mujer" name="sexo" value="mujer">
-        <label for="mujer">Mujer</label><br>
+        <label for="mujer">Mujer</label>
         <input type="radio" id="hombre" name="sexo" value="hombre">
-        <label for="hombre">Hombre</label><br>
+        <label for="hombre">Hombre</label>
 
-        <input type="submit" value="Confirmar">
+        <button type="submit">Confirmar</button>
 
 
 
