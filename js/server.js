@@ -29,6 +29,11 @@ app.get("/datoscontacto", function(request, response){ //Renderizado de páginas
     response.render('datos_contacto_nutri', { tel: 'Hey', email: 'Hello there!'});
 })
 
+app.get("/indexnutricionista", function(request, response){ //Renderizado de páginas mustache (uno por plantilla), "127.0.0.1:3000/datoscontacto"
+    response.render('index_nutricionista');
+})
+
+
 app.get("/echo/:a", function(request, response){ //Desbuggear plantillas (Ver si nos coge los parametros o no)
     console.log(request)
     response.send(request.params.a)
