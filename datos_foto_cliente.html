@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Work+Sans&display=swap" rel="stylesheet">
 
+    <script src="https://use.fontawesome.com/3a2eaf6206.js"></script>
     <title>Datos, foto cliente</title>
 
     
@@ -90,7 +91,29 @@
             border-radius:50%;
         }
     
-    
+    /*-----div de la imagen-----*/
+    div{
+        text-align:center;
+        padding: 4%;
+        margin-top: 3%;
+        margin-right: 50%;
+        margin-left: 50%;
+        border-radius: 50%; 
+        height: 6rem;
+        width: 6rem;
+        border:thin solid black;
+       
+       
+        
+      }
+
+      input{
+        display: none;
+      }
+      label{
+        cursor:pointer;
+      }
+      /*-------------------------*/
     
     </style>
 </head>
@@ -100,15 +123,20 @@
 
     <form action="">
 
-    <!--Foto-->
-    <img type="image" src="img/4.png">
-    <!--Foto-->
-
-    <input type="file" id="profile_pic" name="profile_pic" accept=".jpg, .jpeg, .png" />
+        <div id="imagen">
+        <label for="inputTag">
+          Seleccione imagen <br/>
+          <i class="fa fa-2x fa-camera"></i>
+          <input id="inputTag" type="file"/>
+          <br/>
+          <span id="imageName"></span>
+        </label>
+      </div>
 
     <button type="submit">Siguiente</button>
 
 </form>
+
 
     <a href="#">Omitir</a>
     
