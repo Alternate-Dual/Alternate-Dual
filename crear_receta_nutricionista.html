@@ -5,15 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-     <!--fuentes google-->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Work+Sans&display=swap" rel="stylesheet">
- 
+    <script src="https://use.fontawesome.com/3a2eaf6206.js"></script>
 
     <title>Crear receta nutricionista</title>
 
     <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Nunito&family=Work+Sans&display=swap');
 
         body{
             font-size:large;
@@ -64,16 +62,15 @@
         }
 
         .contener{
-            background-color: aqua;
+            background-color: white;
             margin-left: 25%;
             margin-right: 25%;
+            padding: 1%;
             
         }
 
         .contener >div{
-            background-color: red;
-            text-align: center;
-            padding: 20px;
+            background-color: white;
             
         }
 
@@ -81,11 +78,12 @@
             margin: auto;
             background-color: white;
             border-collapse: collapse !important;
-            width: 80%;
+            width: 50%;
             border: none;
             padding-left: 90%;
             padding-right: 90%;
             text-align: center;
+            
         }
 
         table td {
@@ -93,6 +91,42 @@
             max-width: 5%;
             
         }
+
+        .valor{
+            max-width: 5%;
+        }
+
+        #list{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+
+        /*-----div de la imagen-----*/
+        .imagen{
+
+            text-align:center;
+            padding: 4%;
+            margin-top: 3%;
+            margin-right: 50%;
+            margin-left: 50%;
+            border-radius: 50%; 
+            height: 6rem;
+            width: 6rem;
+            border:thin solid black;
+            
+        }
+
+        #inputTag{
+            display: none;
+            cursor: pointer;
+        }
+        #lableImg{
+            cursor:pointer;
+        }
+      /*-------------------------*/
 
     </style>
 </head>
@@ -106,35 +140,45 @@
 
             <div class="foto">
                 <img src="img/3.png" alt="">
+                <div id="imagen">
+                    <label id="labelImg" for="inputTag">
+                      Seleccione imagen <br/>
+                      <i class="fa fa-2x fa-camera"></i>
+                      <input id="inputTag" type="file"/>
+                      <br/>
+                      <span id="imageName"></span>
+                    </label>
+                  </div>
             </div>
 
             <div class="formu">
                 <form action="">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" name="nombre">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre"><br>
 
-                    <label for="nombre">Tiempo en ejecución</label>
-                    <input type="number" id="num" name="num">
+                    <label for="nombre">Tiempo en ejecución:</label>
+                    <input type="number" id="num" name="num"><br>
 
                     <label for="complej">Complejidad de realización</label>
                     <select id="dificul">
                         <option value="Fácil">Fácil</option>
                         <option value="Intermedio">Intermedio</option>
-                        <option value="Complejo">Complejo</option>
+                        <option value="Complejo">Complejo</option><br>
                     </select>
 
-                <p class="tipo">Tipo de comida</p> 
-                    <input type="radio" id="desay" name="desay" value="desay">
-                    <label for="desay"> Desayuno</label>
-                    <input type="radio" id="mediam" name="mediam" value="mediam">
-                    <label for="mediam"> Media mañana</label>
-                    <input type="radio" id="comid" name="comid" value="comid">
-                    <label for="comid"> Comida</label>
-                    <input type="radio" id="meri" name="meri" value="meri">
-                    <label for="meri"> Merienda</label>
-                    <input type="radio" id="cena" name="cena" value="cena">
-                    <label for="cena"> Cena</label>
-
+                    <h4>Tipo de comida</h4>
+                    
+                    <input class="tipIn" type="radio" id="desay" name="desay" value="desay">
+                    <label class="tipLa" for="desay"> Desayuno</label><br>
+                    <input class="tipIn" type="radio" id="mediam" name="mediam" value="mediam">
+                    <label class="tipLa" for="mediam"> Media mañana</label><br>
+                    <input class="tipIn" type="radio" id="comid" name="comid" value="comid">
+                    <label class="tipLa" class="tip" for="comid"> Comida</label><br>
+                    <input class="tipIn" type="radio" id="meri" name="meri" value="meri">
+                    <label class="tipLa" for="meri"> Merienda</label><br>
+                    <input class="tipIn" type="radio" id="cena" name="cena" value="cena">
+                    <label class="tipLa" for="cena"> Cena</label><br>
+                   
                 </form>
             </div>
         <!--</div>-->
@@ -144,11 +188,13 @@
             <div class="ingre">
 
                 <h4>Ingredientes</h4>
+                <div id="list">
                 <ul>
-                    <li>ej</li>
+                    <li>ejemplo</li>
                     <li>ej</li>
                     <li>ej</li>
                 </ul>
+                </div>
                 <p>Añadir</p>
 
             </div>
@@ -156,13 +202,15 @@
             <div class="prepa">
 
                 <h4>Preparación</h4>
+                <div id="list">
                 <ol>
                     <li>ej</li>
                     <li>ej</li>
                     <li>ej</li>
                 </ol>
+                </div>
                 <p>Añadir</p>
-
+                
             </div>
         <!--</div>-->
         
@@ -172,35 +220,44 @@
             <h4>Valores nutricionales</h4>
 
             <label for="cal">Calorías</label>
-            <input type="text">
+            <input class="valor" type="number">
 
             <label for="carbo">Carbohidratos</label>
-            <input type="text">
+            <input class="valor" type="number">
 
             <label for="prote">Proteinas</label>
-            <input type="text">
+            <input class="valor" type="number">
 
             <label for="grasa">Grasas</label>
-            <input type="text">
+            <input class="valor" type="number">
         </div>
 
     
     </div> 
     
-    <table border="1px" >
+    <table>
 
         <tr>
             <td >
                 <img src="img/3.png" alt="">
+                <div id="imagen">
+                    <label id="labelImg" for="inputTag">
+                      Seleccione imagen <br/>
+                      <i class="fa fa-2x fa-camera"></i>
+                      <input id="inputTag" type="file"/>
+                      <br/>
+                      <span id="imageName"></span>
+                    </label>
+                  </div>
             </td>
 
             <td >
                 <form action="">
                     <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" name="nombre">
+                    <input type="text" id="nombre" name="nombre"><br>
 
                     <label for="nombre">Tiempo en ejecución</label>
-                    <input type="number" id="num" name="num">
+                    <input type="number" id="num" name="num"><br>
 
                     <label for="complej">Complejidad de realización</label>
                     <select id="dificul">
@@ -212,13 +269,13 @@
                     
                         <p>Tipo de comida</p> 
                             <input type="radio" id="desay" name="desay" value="desay">
-                            <label for="desay"> Desayuno</label>
+                            <label for="desay"> Desayuno</label><br>
                             <input type="radio" id="mediam" name="mediam" value="mediam">
-                            <label for="mediam"> Media mañana</label>
+                            <label for="mediam"> Media mañana</label><br>
                             <input type="radio" id="comid" name="comid" value="comid">
-                            <label for="comid"> Comida</label>
+                            <label for="comid"> Comida</label><br>
                             <input type="radio" id="meri" name="meri" value="meri">
-                            <label for="meri"> Merienda</label>
+                            <label for="meri"> Merienda</label><br>
                             <input type="radio" id="cena" name="cena" value="cena">
                             <label for="cena"> Cena</label>
         
@@ -228,49 +285,54 @@
         </tr>      
 
         <tr>
-
-            <td >
-
-                <h4>Preparación</h4>
-                <ol>
-                    <li>ej</li>
-                    <li>ej</li>
-                    <li>ej</li>
-                </ol>
-
-            </td>
-
             <td >
 
                 <h4>Ingredientes</h4>
+
+                <div id="list">
                 <ul>
                     <li>ej</li>
                     <li>ej</li>
                     <li>ej</li>
                 </ul>
-                <p>Añadir ingrediente</p>
+                </div>
+                <p>Añadir</p>
 
             </td>
+            <td >
+
+                <h4>Preparación</h4>
+                <div id="list">
+                <ol>
+                    <li>ej</li>
+                    <li>ej</li>
+                    <li>ej</li>
+                </ol>
+                </div>
+                <p>Añadir</p>
+            </td>
+
+            
 
         </tr>
 
     
         <tr>
-            <td >
+            <td colspan="3" >
 
                 <h4>Valores nutricionales</h4>
     
                 <label for="cal">Calorías</label>
-                <input type="text">
+                <input class="valor" type="text">
     
                 <label for="carbo">Carbohidratos</label>
-                <input type="text">
+                <input class="valor" type="text">
     
                 <label for="prote">Proteinas</label>
-                <input type="text">
+                <input class="valor" type="text">
     
                 <label for="grasa">Grasas</label>
-                <input type="text">
+                <input class="valor" type="text">
             </td>
         </tr>
 
