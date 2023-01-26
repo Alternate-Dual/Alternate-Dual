@@ -5,16 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--fuentes google-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Work+Sans&display=swap" rel="stylesheet">
-
     <title>Receta cliente</title>
 
     <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Nunito&family=Work+Sans&display=swap');
+
         body{
-            font-size:large;
+            font-size: large;
             font-family: 'Nunito', sans-serif;
             margin:0;
             
@@ -63,7 +61,8 @@
         'receta2 receta2 receta2 receta3 receta3 receta3'
         'receta4 receta4 receta4 receta4 receta4 receta4';
         gap: 20px;
-        padding: 155px;
+        padding-left: 20%;
+        padding-right: 20%;
 
     }
 
@@ -71,8 +70,8 @@
         background-color: white;
         border-radius: 8px;
         text-align: center;
-        padding: 20px 0;
-        font-size: 30px;
+        padding: 3%;
+
     }
 
     .foto1{
@@ -87,7 +86,7 @@
         display: grid;
         grid-template-areas:
         'foto foto nombre nombre';
-
+        gap: 50px;
     }
 
     #horizon li{
@@ -101,6 +100,11 @@
             align-items: center;
     }
     
+    img{
+        height: 70%;
+        width: 66%;
+
+    }
     
     
     
@@ -113,11 +117,11 @@
 
             <div class="foto1">
             <!--imagen-->
-                <img src="img/3.png">
+                <img src="public/img/desayuno.jpg">
             </div>
 
             <div class="foto2">
-                <h3>Tostada con huevo y aguacate</h3>
+                <h3>Fruta</h3>
 
                 <div id="list">
                     <ul id="horizon">
@@ -134,9 +138,9 @@
             <h3>Qué necesitas</h3>
             <div id="list">
             <ul>
-                <li>Tostada pan integral</li>
-                <li>Aguacate</li>
-                <li>Huevo hervido</li>
+                <li>Fruta</li>
+                <li></li>
+                <li></li>
             </ul>
             </div>
         </div>
@@ -146,9 +150,9 @@
             <h3>Cómo prepararlo</h3>
             <div id="list">
             <ol>
-                <li>Tostar pan</li>
-                <li>preparar aguacate</li>
-                <li>untar aguacate</li>
+                <li></li>
+                <li></li>
+                <li></li>
             </ol>
             </div>
         </div>
