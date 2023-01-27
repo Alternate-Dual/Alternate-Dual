@@ -172,17 +172,24 @@ header{
         color: $gris;
         cursor: pointer;
         z-index: 10001;
-        margin-left: 15vh;
-        display: block;
-        
+        margin-left: 10vh;
     }
+
+    div#menuicon{
+        display: none;
+       
+        @media (max-width:1620px){
+            &{
+                display:block;
+            }    
+        }
+    }
+
 
 }
 
 @media (max-width:1620px){
-    div#menuicon i{
-        display: block;
-    }
+
     header{
         padding: 14px 2%;
         transition: .2s;
@@ -195,7 +202,7 @@ header{
 }
 
 @media (max-width:1620px){
-    div#menuicon i{
+    div#menuicon{
         display: block;
     }
     ul#menu{
@@ -203,7 +210,7 @@ header{
         top: 100%;
         right: -100%;
         width: 270px;
-        height: 15vh;
+        height: 26vh;
         background: $verde_claro;
         display: flex;
         flex-direction: column;
