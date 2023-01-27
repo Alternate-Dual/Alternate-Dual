@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Semanal</title>
+    <style>
+#bodyMenuSemanal {
+    margin: 0%;
+    background-color: #eceff1;
+}
+
+.centrarContenidoPerfil{
+    height: 100px;
+    width: auto;
+    display: flex;
+    align-items: left;
+    margin-left: 8rem;
+    margin-right: 8rem;
+    justify-content: left;
+    background-color: rgba(0, 255, 255, 0);
+}
+
+.centrarContenidoPerfil img {
+    border-radius: 50%; 
+    width: 5rem;
+}
+
+.centrarContenidoPerfil h4 {
+    margin-left: 5px;
+    margin-top: 30px;
+}
+
+.cabeceraSemana{
+    height: 50px;
+    width: auto;
+    justify-content: right;
+    align-items: center;
+    display: flex;
+    margin-left: 8rem;
+    margin-right: 8rem;
+    background-color: rgba(220, 26, 23, 0);
+    color: #0a0a0a;
+}
+
+.semanaSiguiente button {
+    background-color: rgb(5, 107, 61);
+    border: solid 0px;
+    border-radius: 20px;
+    padding: 10px;
+    color: #ffffff;
+    height: 25px;
+    display: flex;
+    margin-left: 22rem;
+    align-items: center;
+    justify-content: right;
+    cursor: pointer;
+    
+}
+
+.menuDia {
+    height: auto;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    border-radius: 15px;
+    width: auto;
+    padding: 10px;
+    margin-left: 8rem;
+    margin-right: 8rem;
+    background-color: #ffffff;
+}
+
+#menuDiah3 {
+    margin-left: 2rem;
+    font-family: 'Work Sans', sans-serif;
+}
+
+#menuDiah5 {
+    margin-left: 2rem;
+    font-family: 'Work Sans', sans-serif;
+    background-color: rgba(0, 255, 255, 0);
+}
+
+#searchMenuDia {
+    width: 100px;
+    border-radius: 20px;
+}
+
+div#caja{
+    display: grid;
+    grid-template-columns: 340px 340px 340px;
+    grid-template-rows: 200px;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    background-color: rgba(0, 255, 255, 0);
+}
+
+div#caja div{
+  background-color:rgba(196, 195, 200, 0.71);
+  padding:20px;
+  border-radius: 20px;
+  align-items: flex-end;
+  justify-content: center;
+  display: flex;
+  height:120px;
+  width:130px;
+}
+
+#checkmark1 {
+    position: absolute;
+        top: 330px;
+        left: 290px;
+        height: 25px;
+        width: 25px;
+        background-color: #eee;
+}
+
+#checkmark2 {
+    position: absolute;
+        top: 330px;
+        left: 630px;
+        height: 25px;
+        width: 25px;
+        background-color: #eee;
+}
+
+#checkmark3 {
+    position: absolute;
+        top: 330px;
+        left: 970px;
+        height: 25px;
+        width: 25px;
+        background-color: #eee;
+}
+
+#checkmark4 {
+    position: absolute;
+        top: 600px;
+        left: 290px;
+        height: 25px;
+        width: 25px;
+        background-color: #eee;
+}
+
+#checkmark5 {
+    position: absolute;
+    top: 600px;
+        left: 630px;
+        height: 25px;
+        width: 25px;
+        background-color: #eee;
+}
+
+#checkmark6 {
+    position: absolute;
+        top: 600px;
+        left: 970px;
+        height: 25px;
+        width: 25px;
+        background-color: #eee;
+}
+
+#checkmark7 {
+    position: absolute;
+        top: 870px;
+        left: 290px;
+        height: 25px;
+        width: 25px;
+        background-color: #eee;
+}
+
+#checkmark8 {
+    position: absolute;
+    top: 870px;
+        left: 630px;
+        height: 25px;
+        width: 25px;
+        background-color: #eee;
+}
+
+#checkmark9 {
+    position: absolute;
+    top: 870px;
+        left: 970px;
+        height: 25px;
+        width: 25px;
+        background-color: #eee;
+}
+
+#infoIcon {
+        margin-right: 8rem;
+    }
+
+
+    </style>
+</head>
+<body id="bodyMenuSemanal">
+    <div class="centrarContenidoPerfil">
+        <img src="public/img/cara.jpg" alt="cara" />
+        <h4>Nombre del cliente</h4>
+    </div>
+
+    <div class="cabeceraSemana">
+        <div class="semanaSiguiente">
+            <h2 onclick=""><button>Crear receta</button></h2>
+        </div>
+    </div>
+    <div class="menuDia">
+        <h3 id="menuDiah3">Desayuno</h3>
+        <div id="caja">
+            <div>
+                <img id="infoIcon" src="public/img/informacion.png" alt="">
+                <input type="checkbox" name="checkmark" id="checkmark1">
+            </div>
+            <div>
+                <img id="infoIcon" src="public/img/informacion.png" alt="">
+                    <input type="checkbox" name="checkmark" id="checkmark2">
+            </div>
+            <div>
+                <img id="infoIcon" src="public/img/informacion.png" alt="">
+                    <input type="checkbox" name="checkmark" id="checkmark3">
+            </div>
+            <span>
+                Sandwich de manzana <br> y granola
+            </span>
+            <span>
+                Sandwich de manzana <br> y granola
+            </span>
+            <span>
+                Sandwich de manzana <br> y granola
+            </span>
+        </div>
+        <div id="caja">    
+            <div>
+                <img id="infoIcon" src="public/img/informacion.png" alt="">
+                <input type="checkbox" name="checkmark" id="checkmark4">
+            </div>
+            <div>
+                <img id="infoIcon" src="public/img/informacion.png" alt="">
+                    <input type="checkbox" name="checkmark" id="checkmark5">
+            </div>
+            <div>
+                <img id="infoIcon" src="public/img/informacion.png" alt="">
+                    <input type="checkbox" name="checkmark" id="checkmark6">
+            </div>
+            <span>
+                Sandwich de manzana <br> y granola
+            </span>
+            <span>
+                Sandwich de manzana <br> y granola
+            </span>
+            <span>
+                Sandwich de manzana <br> y granola
+            </span>
+        </div>  
+        <div id="caja">  
+            <div>
+                <img id="infoIcon" src="public/img/informacion.png" alt="">
+                    <input type="checkbox" name="checkmark" id="checkmark7">
+            </div>
+            <div>
+                <img id="infoIcon" src="public/img/informacion.png" alt="">
+                    <input type="checkbox" name="checkmark" id="checkmark8">
+            </div>
+            <div>
+                <img id="infoIcon" src="public/img/informacion.png" alt="">
+                    <input type="checkbox" name="checkmark" id="checkmark9">
+            </div>
+            <span>
+                Sandwich de manzana <br> y granola
+            </span>
+            <span>
+                Sandwich de manzana <br> y granola
+            </span>
+            <span>
+                Sandwich de manzana <br> y granola
+            </span>
+        </div>
+    </div>
+</body>
+</html>
