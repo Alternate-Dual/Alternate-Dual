@@ -25,14 +25,23 @@ app.use(express.static('public'));
 //const connection = mysql.createConnection(db_opts)
 //connection.connect()
 
-app.get("/datoscontacto", function(request, response){ //Renderizado de páginas mustache (uno por plantilla), "127.0.0.1:3000/datoscontacto"
-    response.render('datos_contacto_nutri', { tel: 'Hey', email: 'Hello there!'});
+app.get("/datoscontacto", function(request, response){ //Renderizado de páginas mustache (uno por plantilla), "127.0.0.1:3000/datoscontacto" 
+    response.render('datos_contacto_nutri', { tel: 'Hey', email: 'Hello there!'}); //Ejemplo
 })
 
-app.get("/indexnutricionista", function(request, response){ //Renderizado de páginas mustache (uno por plantilla), "127.0.0.1:3000/datoscontacto"
-    response.render('index_nutricionista');
+
+app.get("/menunutricionista", function(request, response){ //Renderizado de páginas mustache (uno por plantilla)
+    response.render('menu_nutricionista');
 })
 
+app.get("/menupaciente", function(request, response){ //Renderizado de páginas mustache (uno por plantilla)
+    response.render('menu_paciente');
+})
+
+app.get("/login", function(request, response){ //Renderizado de páginas mustache (uno por plantilla)
+    response.render('login');
+})
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 app.get("/echo/:a", function(request, response){ //Desbuggear plantillas (Ver si nos coge los parametros o no)
     console.log(request)

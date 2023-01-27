@@ -1,70 +1,359 @@
-body{
-    font-size:large;
-    font-family: 'Nunito', sans-serif;
-    margin:0;
-    text-align: center;
-    margin-top: 10%;
-    
-    background-color: #eceff1;
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Work+Sans&display=swap'); //importar fuentes
 
+//colores
+$verde_claro: #7ed957ff;
+$verde_oscuro:#50c31eff;
+$naranja:#ffa24dff;
+$beige:#fff9eaff;
+$gris_claro: rgb(243, 240, 240);
+$gris: #545454;
+$gris_oscuro: #303433;
+$color_fondo_claro: #eceff1;
+//fuentes
+$titulos: 'Work Sans', sans-serif;
+$parrafos: 'Nunito', sans-serif;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
 }
 
-
-
-h1,h2,h3,h4{
-    font-family: 'Work Sans', sans-serif;
-
-}
-
-h1{
-    margin-bottom: 4%;
-}
-
-
-
-form{
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    background: transparent;
+    padding: 28px 12%;
+    transition: all .50s ease;
+
+    a#logo{
+        display: flex;
+        img{
+            width: 50%;
+        }
+    }
+
+    ul#menu{
+        display: flex;
+
+        a{
+            color: $gris;
+            font-family: $titulos;
+            font-size: 1.1rem;
+            font-weight: 500;
+            padding: 5px 0;
+            margin: 0px 30px;
+            transition: all .30s ease;
+        }
+
+        a:hover{
+            color: $verde_oscuro;
+        }
+    }
+
+    div#user{
+        display: flex;
+        align-items: center;
+        margin-left: 15%;
+        position: fixed;
+        right: 15vw;
+
+        div#profile{
+            position: relative;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            cursor: pointer;
+
+            img{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        div#profilemenu{
+            position: absolute;
+            top: 120px;
+            right: -10px;
+            padding: 10px 20px;
+            background: $gris_claro;
+            width: 200px;
+            box-sizing: 0 5px 25px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            transition: 0.5s;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        div#profilemenu.active{
+            top: 80px;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        div#profilemenu::before{
+            content: '';
+            position: absolute;
+            top: -5px;
+            right: 28px;
+            width: 20px;
+            height: 20px;
+            background: $gris_claro;
+            transform: rotate(45deg);
+        }
+
+
+        div#profilemenu h3{
+            width: 100%;
+            text-align: center;
+            font-size: 18px;
+            font-family: $titulos;
+            font-weight: 500;
+            padding: 20px 0;
+            line-height: 1.2em;
+        }
+
+        div#profilemenu h3 span{
+            font-size: 14px;
+            font-weight: 400;
+            font-family: $parrafos;
+        }
+
+        div#profilemenu ul li{
+            list-style: none;
+            padding: 10px 0;
+            border-top: 1px solid $gris;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        div#profilemenu ul li i{
+            max-width: 20px;
+            margin-right: 10px;
+            transition: 0.3s;
+            opacity: 0.5;
+            color: black;
+        }
+
+        div#profilemenu ul li:hover i{
+            opacity: 1;
+        }
+
+        div#profilemenu ul li a{
+            display: inline-block;
+            text-decoration: none;
+            color: black;
+            font-weight: 500;
+            font-family: $parrafos;
+            transition: 0.3s;
+        }
+
+        div#profilemenu ul li:hover a{
+            color: $verde_oscuro;
+        }
+
+    }   
+
+    div#menuicon i{
+        font-size: 35px;
+        color: $gris;
+        cursor: pointer;
+        z-index: 10001;
+        margin-left: 15vh;
+        display: block;
+        
+    }
+
+}
+
+@media (max-width:1620px){
+    div#menuicon i{
+        display: block;
+    }
+    header{
+        padding: 14px 2%;
+        transition: .2s;
+    }
+
+    ul#menu a{
+        padding: 5px 0;
+        margin: 0px 20px;
+    }
+}
+
+@media (max-width:1620px){
+    div#menuicon i{
+        display: block;
+    }
+    ul#menu{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 270px;
+        height: 20vh;
+        background: $verde_claro;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 10px;
+        transition: all .50s ease;
+    }
+    ul#menu li a{
+        display: block;
+        margin: 12px 0;
+        padding: 0px 25px;
+        transition: all .50s ease;
+        color: $gris;
+    }
+    ul#menu li a:hover{
+        color: $gris;
+        transform: translateY(5px);
+    }
+
+    ul#menu.open{
+        right: 2%;
+    }
+}
+
+//Login
+div#login {
+    font-family: 'Work Sans', sans-serif;
+    color: $gris_oscuro;
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+section {
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-form label{
-    margin-top: 2%;
-    margin-bottom: 1%;
+section.side {
+    background: url(../img/bk.png) no-repeat;
+    background-size: 100% 102%;
 }
 
-form input{
-    width: 20%;
-    height: 2rem;
-    min-height:8%;
-    font-size:large;
-    font-family: 'Nunito', sans-serif;
-    margin-top: 1%;
+.side img {
+    width: 40%;
+    max-width: 50%;
 }
 
+.login-container {
+    max-width: 450px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-/* Boton */
-button {
-    font-size:large;
-    font-family: 'Nunito', sans-serif;
-    background-color: #7ed957;
-    border: none;
-    color: white;
-    padding: 10px;
-    min-width: 15%;
+.title {
+    text-transform: uppercase;
+    font-size: 3em;
+    font-weight: bold;
     text-align: center;
-    border-radius: 12px;
-    margin-top: 4%;
-    margin-bottom: 2%;
+    letter-spacing: 1px;
 }
 
-button:hover {
-    color: #7ed957;
-    border-radius: 12px;
-    background-color: white;
-    border: 1px solid #7ed957;
+.separator {
+    width: 150px;
+    height: 4px;
+    background-color: #50c31e;
+    margin: 24px;
+}
+
+.welcome-message {
+    text-align: center;
+    font-size: 1.1em;
+    line-height: 28px;
+    margin-bottom: 30px;
+    color: #696969;
+}
+
+.login-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control {
+    width: 100%;
+    position: relative;
+    margin-bottom: 24px;
+}
+
+input,
+button {
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    font-size: 1.1em;
+}
+
+input {
+    width: 100%;
+    background: #e6e6e6;
+    color: #333;
+    letter-spacing: 0.5px;
+    padding: 14px 64px;
+}
+
+input ~ i {
+    position: absolute;
+    left: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    transition: color   0.4s;
+}
+
+
+button.submit {
+    color: #fff;
+    padding: 14px 64px;
+    margin: 32px auto;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    background: #50c31e;
     cursor: pointer;
+    transition: opacity 0.4s;
 }
 
+button.submit:hover {
+    opacity: 0.9;
+}
 
+.login-container{
+    a{
+        color: $gris;
+    }
+}
+/* ----  Responsiveness   ----  */
+@media (max-width: 780px) {
+
+    div#login {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .side {
+        display: none;
+    }
+}
