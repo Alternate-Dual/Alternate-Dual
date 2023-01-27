@@ -185,14 +185,20 @@ header div#menuicon i {
   color: #545454;
   cursor: pointer;
   z-index: 10001;
-  margin-left: 15vh;
-  display: block;
+  margin-left: 10vh;
+}
+
+header div#menuicon {
+  display: none;
 }
 
 @media (max-width: 1620px) {
-  div#menuicon i {
+  header div#menuicon {
     display: block;
   }
+}
+
+@media (max-width: 1620px) {
   header {
     padding: 14px 2%;
     -webkit-transition: .2s;
@@ -205,7 +211,7 @@ header div#menuicon i {
 }
 
 @media (max-width: 1620px) {
-  div#menuicon i {
+  div#menuicon {
     display: block;
   }
   ul#menu {
@@ -213,7 +219,7 @@ header div#menuicon i {
     top: 100%;
     right: -100%;
     width: 270px;
-    height: 20vh;
+    height: 26vh;
     background: #7ed957ff;
     display: -webkit-box;
     display: -ms-flexbox;
