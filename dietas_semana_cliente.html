@@ -72,12 +72,7 @@
 
     /*-------------semana con divs-------------*/
 
-    .contenedores{
-        display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-    }
+    
     .contBlan{
         background-color: white;
         margin-right: 10%;
@@ -85,12 +80,13 @@
         margin-bottom: 2%;
         width: 70%;
         display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-height: 35rem;
+        
 
     }
-
+  
     
     /*--------------------fin divs-------------*/
 
@@ -313,10 +309,10 @@
         <div class="contBlan">
 
             <h3>Lunes</h3>
-            <div id="diaSem">
+            
 
                 <p>Desayuno</p>
-            </div>
+           
                 <div id="dias">
                     <h4>Nombre</h4>
                     <img src="public/img/favicon-32x32.png" alt="">
@@ -325,10 +321,10 @@
                     </div>
                 </div>
 
-                <div id="diaSem">
+                
 
                     <p>Media Mañana</p>
-                </div>
+               
                     <div id="dias">
                         <h4>Nombre</h4>
                         <img src="public/img/favicon-32x32.png" alt="">
