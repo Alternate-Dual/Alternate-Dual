@@ -80,12 +80,18 @@
         margin-bottom: 2%;
         width: 70%;
         display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+    }
+            #gris{
+        display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   max-height: 35rem;
-        
+            }
 
-    }
+  
   
     
     /*--------------------fin divs-------------*/
@@ -308,11 +314,14 @@
 
         <div class="contBlan">
 
-            <h3>Lunes</h3>
+            <!--<h3>Lunes</h3>-->
             
 
-                <p>Desayuno</p>
-           
+                <div id="tiempo">
+                <h4>Desayuno</h4><h4>Media Mañana</h4>
+            </div>
+
+            <div id="gris">
                 <div id="dias">
                     <h4>Nombre</h4>
                     <img src="public/img/favicon-32x32.png" alt="">
@@ -322,8 +331,6 @@
                 </div>
 
                 
-
-                    <p>Media Mañana</p>
                
                     <div id="dias">
                         <h4>Nombre</h4>
@@ -332,7 +339,7 @@
                             <a href="#"><i class="fa-solid fa-info"></i></a>
                         </div>
                     </div>
-                
+                </div>
         
         </div>
     </div>
