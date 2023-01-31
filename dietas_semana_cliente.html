@@ -62,6 +62,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            width: 50%;
             background-color:#e7ebec;
         }
 
@@ -70,7 +71,73 @@
             height: 2%;
         }
 
-    /*-------------semana con divs-------------*/
+    /*----------semana con grid-------------------------*/
+    
+    .titulo{
+        grid-area: titulo;
+    }
+
+    .diaSem1{
+        grid-area: diaSem1;
+        
+    }
+
+    .diaSem2{
+        grid-area: diaSem2;
+    }
+
+    .diaSem3{
+        grid-area: diaSem3;
+    }
+
+    .diaSem4{
+        grid-area: diaSem4;
+    }
+
+    .dia1{
+        grid-area: dia1;
+    }
+
+    .dia2{
+        grid-area: dia2;
+    }
+
+    .dia3{
+        grid-area: dia3;
+    }
+
+    .dia4 {
+        grid-area: dia4;
+    }
+
+
+    .contBlanco{
+        display: grid;
+        grid-template-columns: 200px 200px 200px 200px;
+        grid-template-areas: 
+        'titulo titulo titulo titulo'
+        'diaSem1 diaSem2 diaSem3 diaSem4'
+        'dia1 dia2 dia3 dia4';
+        gap: 1px;
+        padding-left: 20%;
+        padding-right: 20%;
+        margin-bottom: 2%;
+        max-width: 70%;
+        background-color: white;
+    }
+
+    .contBlanco>div{
+        background-color: white;
+        border-radius: 8px;
+        text-align: center;
+        padding: 3%;
+
+    }
+    
+    /*------------- fin grid---------------------------*/
+
+
+    /*-------------semana con divs en flex-------------*/
 
     
     .contBlan{
@@ -78,24 +145,118 @@
         margin-right: 10%;
         margin-left: 10%;
         margin-bottom: 2%;
-        width: 70%;
-        display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        padding-bottom: 2%;
+        width: 60%;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
-            #gris{
-        display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  max-height: 35rem;
+    #gris{
+        display:inline-flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        overflow-x:scroll;
+        
+        
             }
+
+    #plato{
+        background-color: #e7ebec;
+        padding: 1em;
+        margin: 1em;
+        width: 6em;
+        height: 150px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+ } 
+
+    #tiempo{
+        display:inline-flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 115px;
+        max-width: 95%;
+
+    }
+
+    #tiempo div{
+        /*width: 10em;
+        
+        margin-right: 5%;
+        margin-left: 5%; */
+        background-color: #e7ebec;
+        padding-left: 1em;
+        padding-right: 1em;
+        
+        width: 150px;
+        
+
+    }
 
   
   
     
-    /*--------------------fin divs-------------*/
+    /*--------------------fin flex-------------*/
 
+    /*---------FLEX GENERATOR-------------------*/
+    .flex-container {
+        background-color: white;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 2%;
+    
+
+    }
+
+.flex-item:nth-child(1) {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    margin-right: 10%;
+    }
+
+.flex-item:nth-child(2) {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    margin-right: 10%;
+    }
+
+.flex-item:nth-child(3) {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    margin-right: 10%;
+    }
+
+.flex-item:nth-child(4) {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    }
+
+.flex-item:nth-child(5) {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    }  
 
     </style>
 
@@ -279,16 +440,38 @@
 
     <!--Intento con todo divs-->
 
-    <div class="contenedores">
 
 
-        <div class="contBlan">
+    <!---------------------GRID-------------------------------->
 
-            <h3>Lunes</h3>
-            <div id="diaSem">
+        <div class="contBlanco">
+
+            <div class="titulo">
+                <h3>Lunes</h3>
+            </div>
+
+            <div class="diaSem1">
 
                 <p>Desayuno</p>
             </div>
+
+            <div class="diaSem2">
+
+                <p>Media Mañana</p>
+            </div>
+
+            <div class="diaSem3">
+
+                <p>Comida</p>
+            </div>
+
+            <div class="diaSem4">
+
+                <p>Merienda</p>
+            </div>
+
+
+            <div class="dia1">
                 <div id="dias">
                     <h4>Nombre</h4>
                     <img src="public/img/favicon-32x32.png" alt="">
@@ -296,11 +479,9 @@
                         <a href="#"><i class="fa-solid fa-info"></i></a>
                     </div>
                 </div>
+            </div>    
 
-                <div id="diaSem">
-
-                    <p>Media Mañana</p>
-                </div>
+            <div class="dia2">
                     <div id="dias">
                         <h4>Nombre</h4>
                         <img src="public/img/favicon-32x32.png" alt="">
@@ -308,21 +489,136 @@
                             <a href="#"><i class="fa-solid fa-info"></i></a>
                         </div>
                     </div>
+                </div>            
+                
+                <div class="dia3">
+                    <div id="dias">
+                        <h4>Nombre</h4>
+                        <img src="public/img/favicon-32x32.png" alt="">
+                        <div>
+                            <a href="#"><i class="fa-solid fa-info"></i></a>
+                        </div>
+                    </div>
+                </div>
+                   
+                <div class="dia4">
+                        <div id="dias">
+                            <h4>Nombre</h4>
+                            <img src="public/img/favicon-32x32.png" alt="">
+                            <div>
+                                <a href="#"><i class="fa-solid fa-info"></i></a>
+                            </div>
+                        </div>
+                    </div>   
+    
                 
         
         </div>
 
+        <!-----------------------FLEX------------------------------------------------>
+
         <div class="contBlan">
 
-            <!--<h3>Lunes</h3>-->
-            
-
-                <div id="tiempo">
-                <h4>Desayuno</h4><h4>Media Mañana</h4>
-            </div>
+            <h3>Lunes</h3>
 
             <div id="gris">
-                <div id="dias">
+                <div>
+                    <p>Desayuno</p>
+                    <div id="plato">
+                        <h4>Nombre</h4>
+                        <img src="public/img/favicon-32x32.png" alt="">
+                        <div>
+                            <a href="#"><i class="fa-solid fa-info"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div>
+                    <p>Media Mañana</p>
+                    <div id="plato">
+                        <h4>Nombre</h4>
+                        <img src="public/img/favicon-32x32.png" alt="">
+                        <div>
+                            <a href="#"><i class="fa-solid fa-info"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <p>Comida</p>
+                    <div id="plato">
+                        <h4>Nombre</h4>
+                        <img src="public/img/favicon-32x32.png" alt="">
+                        <div>
+                            <a href="#"><i class="fa-solid fa-info"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <p>Merienda</p>
+                    <div id="plato">
+                        <h4>Nombre</h4>
+                        <img src="public/img/favicon-32x32.png" alt="">
+                        <div>
+                            <a href="#"><i class="fa-solid fa-info"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <p>Cena</p>
+                    <div id="plato">
+                        <h4>Nombre</h4>
+                        <img src="public/img/favicon-32x32.png" alt="">
+                        <div>
+                            <a href="#"><i class="fa-solid fa-info"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div> 
+
+    
+        
+    
+    <!---------------------FLEX GENERATOR-------------------------> 
+
+    <div class="flex-container">
+
+
+            <!--<h3>Lunes</h3>
+            
+
+            <div id="tiempo">
+
+                <div id="time">
+                    <p>Desayuno</p>
+                </div>
+
+                <div id="time">
+                    <p>Media Mañana</p>
+                </div>
+
+                <div id="time">
+                    <p>Comida</p>
+                </div>
+
+                <div id="time">
+                    <p>Merienda</p>
+                </div>
+
+                <div id="time">
+                    <p>Cena</p>
+                </div>
+
+            </div>-->
+
+            <div class="flex-container">
+                <div id="plato">
                     <h4>Nombre</h4>
                     <img src="public/img/favicon-32x32.png" alt="">
                     <div>
@@ -332,17 +628,40 @@
 
                 
                
-                    <div id="dias">
+                    <div id="plato">
                         <h4>Nombre</h4>
                         <img src="public/img/favicon-32x32.png" alt="">
                         <div>
                             <a href="#"><i class="fa-solid fa-info"></i></a>
                         </div>
                     </div>
+                
+
+                <div id="plato">
+                    <h4>Nombre</h4>
+                    <img src="public/img/favicon-32x32.png" alt="">
+                    <div>
+                        <a href="#"><i class="fa-solid fa-info"></i></a>
+                    </div>
                 </div>
-        
+
+                <div id="plato">
+                    <h4>Nombre</h4>
+                    <img src="public/img/favicon-32x32.png" alt="">
+                    <div>
+                        <a href="#"><i class="fa-solid fa-info"></i></a>
+                    </div>
+                </div>
+
+                <div id="plato">
+                    <h4>Nombre</h4>
+                    <img src="public/img/favicon-32x32.png" alt="">
+                    <div>
+                        <a href="#"><i class="fa-solid fa-info"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
 
 
 
