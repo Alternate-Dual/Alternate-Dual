@@ -4,6 +4,15 @@ let bodyParser = require('body-parser');
 const res = require('express/lib/response');
 let app = express();
 
+const mysql = require('mysql')  //Conexion BDD
+const myconn = require('express-myconnection')
+const dbOptions = {
+    host: 'localhost',
+    port: 3306,
+    user: 'root',
+    password: '',
+    database: 'nutrifit'
+}
 
 app.set('views', `${__dirname}/views`);
 app.set('view engine', 'mustache');
@@ -11,27 +20,28 @@ app.engine('mustache', mustacheExpress());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
-//Puerto express
+const routes = require('./routes')
+
+// Middlewares (conector)----------------------
+app.use(myconn(mysql, dbOptions, 'single'))
+
+// Arrancar servidor ---------------------------
 app.listen(3000, function () {
-    console.log("Server started");
+    console.log("Servidor arrancado");
 });
 
-//Prueba API
-
+// Rutas ---------------------------------------
 app.get('/', (req, res)=>{
-    res.send('Welcome to my API')
+    res.send('Bienvenido a mi API')
 })
 
-///////
-
-app.get("/datoscontacto", function(request, response){ //Renderizado de páginas mustache (uno por plantilla), "127.0.0.1:3000/datoscontacto" 
-    response.render('datos_contacto_nutri', { tel: 'Hey', email: 'Hello there!'}); //Ejemplo
-})
+app.use('/menunutricionista', routes)
 
 
-app.get("/menunutricionista", function(request, response){ //Renderizado de páginas mustache (uno por plantilla)
-    response.render('menu_nutricionista');
-})
+app.get("/echo/:a", function(request, response){ //Desbuggear plantillas (Ver si nos coge los parametros o no)
+    console.log(request)
+    response.send(request.params.a)
+});
 
 app.get("/menupaciente", function(request, response){ //Renderizado de páginas mustache (uno por plantilla)
     response.render('menu_paciente');
@@ -41,9 +51,6 @@ app.get("/login", function(request, response){ //Renderizado de páginas mustach
     response.render('login');
 })
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-app.get("/echo/:a", function(request, response){ //Desbuggear plantillas (Ver si nos coge los parametros o no)
-    console.log(request)
-    response.send(request.params.a)
-});
+app.get("/datoscontacto", function(request, response){ //Renderizado de páginas mustache (uno por plantilla), "127.0.0.1:3000/datoscontacto" 
+    response.render('datos_contacto_nutri', { tel: 'Hey', email: 'Hello there!'}); //Ejemplo
+})
