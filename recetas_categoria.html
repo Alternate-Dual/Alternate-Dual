@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú Semanal</title>
+    <title>Receta Categoría</title>
     <style>
 #bodyMenuSemanal {
     margin: 0%;
@@ -88,22 +88,44 @@
 
 div#caja{
     display: grid;
-    grid-template-columns: 340px 340px 340px;
-    grid-template-rows: 200px;
+    grid-template-columns: 300px 300px 300px 150px;
+    grid-template-rows: repeat(1,170px);
+    margin-left: 2rem;
+    background-color: rgba(0, 255, 255, 0);
+}
+
+#imgNombreComidas {
+        align-items: center;
+        justify-content:center;
+        display: flex;
+        margin-left: 0rem;
+        margin-right: 2rem;
+        margin-top: 1rem;
+        border-radius: 10%;
+        height:140px;
+        width:140px;
+}
+
+div#caja{
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 190px;
     margin-left: 2rem;
     margin-bottom: 2rem;
+    justify-content: center;
+    align-items: center;
     background-color: rgba(0, 255, 255, 0);
 }
 
 div#caja div{
   background-color:rgba(196, 195, 200, 0.71);
   padding:20px;
-  border-radius: 20px;
-  align-items: flex-end;
+  border-radius: 10px;
+  align-items: center;
   justify-content: center;
   display: flex;
-  height:120px;
-  width:130px;
+  height:150px;
+  width:250px;
 }
 
 #checkmark {
@@ -113,7 +135,8 @@ div#caja div{
 }
 
 #infoIcon {
-        margin-right: 4rem;
+        margin-right: 0rem;
+        cursor: pointer;
 }
 
 

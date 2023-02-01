@@ -64,7 +64,7 @@
 }
 
 .menuDia {
-    position: fixed;
+    position: static;
     height: auto;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     border-radius: 15px;
@@ -146,6 +146,29 @@ div#caja div{
 }
 #slider {
     cursor: pointer;
+}
+
+
+@media screen and (max-width:800px) {
+
+    
+.menuDia{
+        background-color: white;
+        margin-bottom: 2%;
+        padding: 2%;
+        width: 100%;
+
+    }
+
+.carrousel{
+    display:flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.elemento{
+    flex:1 0 auto;
+}
 }
 
     </style>
