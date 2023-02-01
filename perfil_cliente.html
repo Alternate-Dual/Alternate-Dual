@@ -98,7 +98,7 @@ body {
   </head>
   <body>
     <div class="centrarContenidoPerfil">
-      <img src="img/cara.jpg" alt="cara" />
+      <img src="public/img/cara.jpg" alt="cara" />
       <p>Nombre del cliente</p>
     </div>
 
@@ -111,39 +111,40 @@ body {
 
       <div class="ContenedorPesos">
         Peso actual
-        <p>60 Kg</p>
+        <p id="pesoActual">60Kg</p>
+        <p id="demo"></p>
       </div>
     </div>
     <div class="contenedorActualizarPeso">
-      <button id="boton" value="ACTUALIZAR PESO">ACTUALIZAR PESO</button>
+      <button id="boton" onclick="cambiarPeso()" value="ACTUALIZAR PESO">ACTUALIZAR PESO</button>
     </div>
 
     <!-- Progreso historial -->
     <div>
       <h4>MI PROGRESO</h4>
       <div class="FondoDatosCliente">
-        <div class="datosCliente"><img src="img/grafico.png" alt="grafico"> Historial de peso</div>
+        <div class="datosCliente"><img src="public/img/grafico.png" alt="grafico"> Historial de peso</div>
             <hr />
-        <div class="datosCliente"><img src="img/nutricion.png" alt=""> Historial de comidas</div>
+        <div class="datosCliente"><img src="public/img/nutricion.png" alt=""> Historial de comidas</div>
       </div>
     </div>
     <!-- Datos Cliente -->
     <div>
       <h4>MIS DATOS</h4>
       <div class="FondoDatosCliente">
-        <div class="datosCliente" ><img src="img/imc.png" alt=""> IMC</div>
+        <div class="datosCliente" ><img src="public/img/imc.png" alt=""> IMC</div>
             <hr />
-        <div class="datosCliente" ><img src="img/cuerpo-humano.png" alt=""> % de Grasa corporal</div>
+        <div class="datosCliente" ><img src="public/img/cuerpo-humano.png" alt=""> % de Grasa corporal</div>
             <hr />
-        <div class="datosCliente" ><img src="img/fuerte.png" alt=""> Masa múscular</div>
+        <div class="datosCliente" ><img src="public/img/fuerte.png" alt=""> Masa múscular</div>
             <hr />
-        <div class="datosCliente"><img src="img/limite-de-altura.png" alt=""> Altura</div>
+        <div class="datosCliente"><img src="public/img/limite-de-altura.png" alt=""> Altura</div>
             <hr />
-        <div class="datosCliente" ><img src="img/horario.png" alt=""> Gestión de ahorros</div>
+        <div class="datosCliente" ><img src="public/img/horario.png" alt=""> Gestión de ahorros</div>
             <hr />
-            <div class="datosCliente" ><img src="img/exito.png" alt=""> No tienes ningún reto empezado, elige uno de la lista</div>
+            <div class="datosCliente" ><img src="public/img/exito.png" alt=""> No tienes ningún reto empezado, elige uno de la lista</div>
             <hr />
-        <div class="datosCliente"><img src="img/gluten.png" alt=""> Alérgenos y enfermedades</div>
+        <div class="datosCliente"><img src="public/img/gluten.png" alt=""> Alérgenos y enfermedades</div>
       </div>
     </div>
 
@@ -151,10 +152,22 @@ body {
     <div>
       <h4>MI CUENTA</h4>
       <div class="FondoDatosCliente">
-        <div class="datosCliente"><img src="img/carnet.png" alt=""> Nombre y apellidos</div>
+        <div class="datosCliente"><img src="public/img/carnet.png" alt=""> Nombre y apellidos</div>
         <hr />
-        <div class="datosCliente"><img src="img/campana.png" alt=""> Notificaciones</div>
+        <div class="datosCliente"><img src="public/img/campana.png" alt=""> Notificaciones</div>
       </div>
     </div>
+
+    <script>
+
+function cambiarPeso() {
+  document.getElementById("pesoActual").contentEditable = true;
+  document.getElementById("demo").innerHTML = "Ya puedes editar el peso.";
+}
+
+
+    </script>
+
+
   </body>
 </html>
