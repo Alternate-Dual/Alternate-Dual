@@ -111,32 +111,35 @@ div#caja{
         width:80px;
 }
 
-#infoIcon {
-        margin-top: 0.0rem;
-        margin-top: 100px;
-        cursor: pointer;
+div#caja{
+    display: grid;
+    grid-template-columns: 300px 300px 300px 20px;
+    grid-template-rows: 180px;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    background-color: rgba(0, 255, 255, 0);
 }
-
-#checkmark {
-        display: grid;
-        margin-top: 100px;
-        grid-template-columns: 2em auto;
-        height: 25px;
-        width: 25px;
-        background-color: #eee;
-    }
 
 div#caja div{
   background-color:rgba(196, 195, 200, 0.71);
   padding:20px;
-  border-radius: 10%;
+  border-radius: 10px;
   align-items: center;
   justify-content: center;
   display: flex;
   height:120px;
-  width:130px;
+  width:150px;
 }
 
+#checkmark {
+        height: 25px;
+        width: 25px;
+        background-color: #eee;
+}
+
+#infoIcon {
+        margin-right: 0rem;
+}
 #slider {
     margin-top: 50px;
     cursor: pointer;
@@ -162,7 +165,7 @@ div#caja div{
         <h3 id="menuDiah3">Lunes</h3>
         <h5 id="menuDiah5">Desayuno <input type="search" placeholder="🔍Buscar" name="" id="searchMenuDia"></h5>
         <div id="caja">
-            <div><img id="imgNombreComidas" src="public/img/desayuno1.jpg" alt="">
+            <div id="NombreComidas"><img id="imgNombreComidas" src="public/img/desayuno1.jpg" alt="">
                 <img id="infoIcon" src="public/img/informacion.png" alt="">
                 <input type="checkbox" name="checkmark" id="checkmark">
             </div>
