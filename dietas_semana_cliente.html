@@ -31,21 +31,6 @@
 
     /*-----------------flex------------------*/
 
-    
-    .contBlan{
-        background-color: white;
-        margin-right: 10%;
-        margin-left: 10%;
-        margin-bottom: 2%;
-        padding-bottom: 2%;
-        width: 60%;
-
-        display: inline-flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-    }
     #gris{
         display:inline-flex;
         flex-direction: row;
@@ -59,7 +44,7 @@
     #plato{
         background-color: #e7ebec;
         padding: 1em;
-        margin: 1em;
+        margin: 2em;
         width: 6em;
         height: 150px;
 
@@ -70,30 +55,62 @@
         align-items: center;
  } 
 
-    #tiempo{
-        display:inline-flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-
-        gap: 115px;
-        max-width: 95%;
-
-    }
-
-    #tiempo div{
-        background-color: #e7ebec;
-        padding-left: 1em;
-        padding-right: 1em;
-        width: 150px;  
-
-    }
-    
+  
     /*--------------------fin flex--------------*/
 
+/*----------prueba carrousel----------------------------*/
 
+.contBlan2{
+    background-color: white;
+        margin-right: 10%;
+        margin-left: 10%;
+        margin-bottom: 2%;
+        padding-bottom: 2%;
+        width: 60%;
+        display:inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        
+        
+
+    }
+    .carrousel{
+        display:inline-flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        overflow-x: auto;
+        
+        
+        
+    
+}
+.elemento{
+    flex:1 0 auto;
+    
+}
+
+
+@media screen and (max-width:800px) {
+    .contBlan2{
+            background-color: white;
+            
+            margin-bottom: 2%;
+            padding: 2%;
+            width: 100%;
+
+        }
+
+    .carrousel{
+        display:flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+
+    .elemento{
+        flex:1 0 auto;
+    }
+}
     </style>
 
 </head>
@@ -102,13 +119,13 @@
     <h1>Semana 1</h1>
 
     <!-----------------------Lunes------------------------------------------------>
-
-        <div class="contBlan">
+        
+        <div class="contBlan2">
 
             <h3>Lunes</h3>
-
-            <div id="gris">
-                <div>
+    
+            <div class="carrousel">
+                <div class="elemento">
                     <p>Desayuno</p>
                     <div id="plato">
                         <h4>Nombre</h4>
@@ -119,9 +136,9 @@
                         </div>
                     </div>
                 </div>
-
+    
                 
-                <div>
+                <div class="elemento">
                     <p>Media Mañana</p>
                     <div id="plato">
                         <h4>Nombre</h4>
@@ -132,8 +149,8 @@
                         </div>
                     </div>
                 </div>
-
-                <div>
+    
+                <div class="elemento">
                     <p>Comida</p>
                     <div id="plato">
                         <h4>Nombre</h4>
@@ -144,9 +161,9 @@
                         </div>
                     </div>
                 </div>
-
-
-                <div>
+    
+    
+                <div class="elemento">
                     <p>Merienda</p>
                     <div id="plato">
                         <h4>Nombre</h4>
@@ -157,8 +174,8 @@
                         </div>
                     </div>
                 </div>
-
-                <div>
+    
+                <div class="elemento">
                     <p>Cena</p>
                     <div id="plato">
                         <h4>Nombre</h4>
@@ -169,406 +186,407 @@
                         </div>
                     </div>
                 </div>
-
+    
             </div>
-        </div> 
+        </div>
 
     <!-----------------------Martes----------------------------------->    
-        <div class="contBlan">
+    <div class="contBlan2">
 
-            <h3>Martes</h3>
+        <h3>Martes</h3>
 
-            <div id="gris">
-                <div>
-                    <p>Desayuno</p>
-                    <div id="plato">
-                        <h4>Nombre</h4>
-                        <img src="public/img/favicon-32x32.png" alt="">
-                        <div>
-                            <a href="#"><i class="fa-solid fa-info"></i></a>
-                        </div>
+        <div class="carrousel">
+            <div class="elemento">
+                <p>Desayuno</p>
+                <div id="plato">
+                    <h4>Nombre</h4>
+                    <img src="public/img/favicon-32x32.png" alt="">
+                    <div>
+                        <a href="#"><i class="fa-solid fa-info"></i></a>
                     </div>
                 </div>
-
-                
-                <div>
-                    <p>Media Mañana</p>
-                    <div id="plato">
-                        <h4>Nombre</h4>
-                        <img src="public/img/favicon-32x32.png" alt="">
-                        <div>
-                            <a href="#"><i class="fa-solid fa-info"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <p>Comida</p>
-                    <div id="plato">
-                        <h4>Nombre</h4>
-                        <img src="public/img/favicon-32x32.png" alt="">
-                        <div>
-                            <a href="#"><i class="fa-solid fa-info"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div>
-                    <p>Merienda</p>
-                    <div id="plato">
-                        <h4>Nombre</h4>
-                        <img src="public/img/favicon-32x32.png" alt="">
-                        <div>
-                            <a href="#"><i class="fa-solid fa-info"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <p>Cena</p>
-                    <div id="plato">
-                        <h4>Nombre</h4>
-                        <img src="public/img/favicon-32x32.png" alt="">
-                        <div>
-                            <a href="#"><i class="fa-solid fa-info"></i></a>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-        </div> 
 
+            
+            <div class="elemento">
+                <p>Media Mañana</p>
+                <div id="plato">
+                    <h4>Nombre</h4>
+                    <img src="public/img/favicon-32x32.png" alt="">
+                    <div>
+                        <a href="#"><i class="fa-solid fa-info"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="elemento">
+                <p>Comida</p>
+                <div id="plato">
+                    <h4>Nombre</h4>
+                    <img src="public/img/favicon-32x32.png" alt="">
+                    <div>
+                        <a href="#"><i class="fa-solid fa-info"></i></a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="elemento">
+                <p>Merienda</p>
+                <div id="plato">
+                    <h4>Nombre</h4>
+                    <img src="public/img/favicon-32x32.png" alt="">
+                    <div>
+                        <a href="#"><i class="fa-solid fa-info"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="elemento">
+                <p>Cena</p>
+                <div id="plato">
+                    <h4>Nombre</h4>
+                    <img src="public/img/favicon-32x32.png" alt="">
+                    <div>
+                        <a href="#"><i class="fa-solid fa-info"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
     <!-----------------------------------Miercoles------------------------>    
-        <div class="contBlan">
+    <div class="contBlan2">
 
-            <h3>Miércoles</h3>
+        <h3>Miércoles</h3>
 
-            <div id="gris">
-                <div>
-                    <p>Desayuno</p>
-                    <div id="plato">
-                        <h4>Nombre</h4>
-                        <img src="public/img/favicon-32x32.png" alt="">
-                        <div>
-                            <a href="#"><i class="fa-solid fa-info"></i></a>
-                        </div>
+        <div class="carrousel">
+            <div class="elemento">
+                <p>Desayuno</p>
+                <div id="plato">
+                    <h4>Nombre</h4>
+                    <img src="public/img/favicon-32x32.png" alt="">
+                    <div>
+                        <a href="#"><i class="fa-solid fa-info"></i></a>
                     </div>
                 </div>
-
-                
-                <div>
-                    <p>Media Mañana</p>
-                    <div id="plato">
-                        <h4>Nombre</h4>
-                        <img src="public/img/favicon-32x32.png" alt="">
-                        <div>
-                            <a href="#"><i class="fa-solid fa-info"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <p>Comida</p>
-                    <div id="plato">
-                        <h4>Nombre</h4>
-                        <img src="public/img/favicon-32x32.png" alt="">
-                        <div>
-                            <a href="#"><i class="fa-solid fa-info"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div>
-                    <p>Merienda</p>
-                    <div id="plato">
-                        <h4>Nombre</h4>
-                        <img src="public/img/favicon-32x32.png" alt="">
-                        <div>
-                            <a href="#"><i class="fa-solid fa-info"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <p>Cena</p>
-                    <div id="plato">
-                        <h4>Nombre</h4>
-                        <img src="public/img/favicon-32x32.png" alt="">
-                        <div>
-                            <a href="#"><i class="fa-solid fa-info"></i></a>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-        </div> 
 
+            
+            <div class="elemento">
+                <p>Media Mañana</p>
+                <div id="plato">
+                    <h4>Nombre</h4>
+                    <img src="public/img/favicon-32x32.png" alt="">
+                    <div>
+                        <a href="#"><i class="fa-solid fa-info"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="elemento">
+                <p>Comida</p>
+                <div id="plato">
+                    <h4>Nombre</h4>
+                    <img src="public/img/favicon-32x32.png" alt="">
+                    <div>
+                        <a href="#"><i class="fa-solid fa-info"></i></a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="elemento">
+                <p>Merienda</p>
+                <div id="plato">
+                    <h4>Nombre</h4>
+                    <img src="public/img/favicon-32x32.png" alt="">
+                    <div>
+                        <a href="#"><i class="fa-solid fa-info"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="elemento">
+                <p>Cena</p>
+                <div id="plato">
+                    <h4>Nombre</h4>
+                    <img src="public/img/favicon-32x32.png" alt="">
+                    <div>
+                        <a href="#"><i class="fa-solid fa-info"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
     <!------------------Jueves-------------------------------------------->    
-        <div class="contBlan">
+    <div class="contBlan2">
 
-            <h3>Jueves</h3>
+        <h3>Jueves</h3>
 
-            <div id="gris">
-                <div>
-                    <p>Desayuno</p>
-                    <div id="plato">
-                        <h4>Nombre</h4>
-                        <img src="public/img/favicon-32x32.png" alt="">
-                        <div>
-                            <a href="#"><i class="fa-solid fa-info"></i></a>
-                        </div>
+        <div class="carrousel">
+            <div class="elemento">
+                <p>Desayuno</p>
+                <div id="plato">
+                    <h4>Nombre</h4>
+                    <img src="public/img/favicon-32x32.png" alt="">
+                    <div>
+                        <a href="#"><i class="fa-solid fa-info"></i></a>
                     </div>
                 </div>
-
-                
-                <div>
-                    <p>Media Mañana</p>
-                    <div id="plato">
-                        <h4>Nombre</h4>
-                        <img src="public/img/favicon-32x32.png" alt="">
-                        <div>
-                            <a href="#"><i class="fa-solid fa-info"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <p>Comida</p>
-                    <div id="plato">
-                        <h4>Nombre</h4>
-                        <img src="public/img/favicon-32x32.png" alt="">
-                        <div>
-                            <a href="#"><i class="fa-solid fa-info"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div>
-                    <p>Merienda</p>
-                    <div id="plato">
-                        <h4>Nombre</h4>
-                        <img src="public/img/favicon-32x32.png" alt="">
-                        <div>
-                            <a href="#"><i class="fa-solid fa-info"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <p>Cena</p>
-                    <div id="plato">
-                        <h4>Nombre</h4>
-                        <img src="public/img/favicon-32x32.png" alt="">
-                        <div>
-                            <a href="#"><i class="fa-solid fa-info"></i></a>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-        </div> 
+
+            
+            <div class="elemento">
+                <p>Media Mañana</p>
+                <div id="plato">
+                    <h4>Nombre</h4>
+                    <img src="public/img/favicon-32x32.png" alt="">
+                    <div>
+                        <a href="#"><i class="fa-solid fa-info"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="elemento">
+                <p>Comida</p>
+                <div id="plato">
+                    <h4>Nombre</h4>
+                    <img src="public/img/favicon-32x32.png" alt="">
+                    <div>
+                        <a href="#"><i class="fa-solid fa-info"></i></a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="elemento">
+                <p>Merienda</p>
+                <div id="plato">
+                    <h4>Nombre</h4>
+                    <img src="public/img/favicon-32x32.png" alt="">
+                    <div>
+                        <a href="#"><i class="fa-solid fa-info"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="elemento">
+                <p>Cena</p>
+                <div id="plato">
+                    <h4>Nombre</h4>
+                    <img src="public/img/favicon-32x32.png" alt="">
+                    <div>
+                        <a href="#"><i class="fa-solid fa-info"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
     <!--------------------Viernes----------------------------------->        
-        <div class="contBlan">
+    <div class="contBlan2">
 
-            <h3>Viernes</h3>
+        <h3>Viernes</h3>
 
-            <div id="gris">
-                <div>
-                    <p>Desayuno</p>
-                    <div id="plato">
-                        <h4>Nombre</h4>
-                        <img src="public/img/favicon-32x32.png" alt="">
-                        <div>
-                            <a href="#"><i class="fa-solid fa-info"></i></a>
-                        </div>
+        <div class="carrousel">
+            <div class="elemento">
+                <p>Desayuno</p>
+                <div id="plato">
+                    <h4>Nombre</h4>
+                    <img src="public/img/favicon-32x32.png" alt="">
+                    <div>
+                        <a href="#"><i class="fa-solid fa-info"></i></a>
                     </div>
                 </div>
-
-                
-                <div>
-                    <p>Media Mañana</p>
-                    <div id="plato">
-                        <h4>Nombre</h4>
-                        <img src="public/img/favicon-32x32.png" alt="">
-                        <div>
-                            <a href="#"><i class="fa-solid fa-info"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <p>Comida</p>
-                    <div id="plato">
-                        <h4>Nombre</h4>
-                        <img src="public/img/favicon-32x32.png" alt="">
-                        <div>
-                            <a href="#"><i class="fa-solid fa-info"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div>
-                    <p>Merienda</p>
-                    <div id="plato">
-                        <h4>Nombre</h4>
-                        <img src="public/img/favicon-32x32.png" alt="">
-                        <div>
-                            <a href="#"><i class="fa-solid fa-info"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <p>Cena</p>
-                    <div id="plato">
-                        <h4>Nombre</h4>
-                        <img src="public/img/favicon-32x32.png" alt="">
-                        <div>
-                            <a href="#"><i class="fa-solid fa-info"></i></a>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-        </div> 
+
+            
+            <div class="elemento">
+                <p>Media Mañana</p>
+                <div id="plato">
+                    <h4>Nombre</h4>
+                    <img src="public/img/favicon-32x32.png" alt="">
+                    <div>
+                        <a href="#"><i class="fa-solid fa-info"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="elemento">
+                <p>Comida</p>
+                <div id="plato">
+                    <h4>Nombre</h4>
+                    <img src="public/img/favicon-32x32.png" alt="">
+                    <div>
+                        <a href="#"><i class="fa-solid fa-info"></i></a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="elemento">
+                <p>Merienda</p>
+                <div id="plato">
+                    <h4>Nombre</h4>
+                    <img src="public/img/favicon-32x32.png" alt="">
+                    <div>
+                        <a href="#"><i class="fa-solid fa-info"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="elemento">
+                <p>Cena</p>
+                <div id="plato">
+                    <h4>Nombre</h4>
+                    <img src="public/img/favicon-32x32.png" alt="">
+                    <div>
+                        <a href="#"><i class="fa-solid fa-info"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
     <!-------------------------Sábado----------------------------->    
-        <div class="contBlan">
+    <div class="contBlan2">
 
-            <h3>Sábado</h3>
+        <h3>Sábado</h3>
 
-            <div id="gris">
-                <div>
-                    <p>Desayuno</p>
-                    <div id="plato">
-                        <h4>Nombre</h4>
-                        <img src="public/img/favicon-32x32.png" alt="">
-                        <div>
-                            <a href="#"><i class="fa-solid fa-info"></i></a>
-                        </div>
+        <div class="carrousel">
+            <div class="elemento">
+                <p>Desayuno</p>
+                <div id="plato">
+                    <h4>Nombre</h4>
+                    <img src="public/img/favicon-32x32.png" alt="">
+                    <div>
+                        <a href="#"><i class="fa-solid fa-info"></i></a>
                     </div>
                 </div>
-
-                
-                <div>
-                    <p>Media Mañana</p>
-                    <div id="plato">
-                        <h4>Nombre</h4>
-                        <img src="public/img/favicon-32x32.png" alt="">
-                        <div>
-                            <a href="#"><i class="fa-solid fa-info"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <p>Comida</p>
-                    <div id="plato">
-                        <h4>Nombre</h4>
-                        <img src="public/img/favicon-32x32.png" alt="">
-                        <div>
-                            <a href="#"><i class="fa-solid fa-info"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div>
-                    <p>Merienda</p>
-                    <div id="plato">
-                        <h4>Nombre</h4>
-                        <img src="public/img/favicon-32x32.png" alt="">
-                        <div>
-                            <a href="#"><i class="fa-solid fa-info"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <p>Cena</p>
-                    <div id="plato">
-                        <h4>Nombre</h4>
-                        <img src="public/img/favicon-32x32.png" alt="">
-                        <div>
-                            <a href="#"><i class="fa-solid fa-info"></i></a>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-        </div> 
+
+            
+            <div class="elemento">
+                <p>Media Mañana</p>
+                <div id="plato">
+                    <h4>Nombre</h4>
+                    <img src="public/img/favicon-32x32.png" alt="">
+                    <div>
+                        <a href="#"><i class="fa-solid fa-info"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="elemento">
+                <p>Comida</p>
+                <div id="plato">
+                    <h4>Nombre</h4>
+                    <img src="public/img/favicon-32x32.png" alt="">
+                    <div>
+                        <a href="#"><i class="fa-solid fa-info"></i></a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="elemento">
+                <p>Merienda</p>
+                <div id="plato">
+                    <h4>Nombre</h4>
+                    <img src="public/img/favicon-32x32.png" alt="">
+                    <div>
+                        <a href="#"><i class="fa-solid fa-info"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="elemento">
+                <p>Cena</p>
+                <div id="plato">
+                    <h4>Nombre</h4>
+                    <img src="public/img/favicon-32x32.png" alt="">
+                    <div>
+                        <a href="#"><i class="fa-solid fa-info"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
     <!----------------Domingo----------------------------------->    
-        <div class="contBlan">
 
-            <h3>Domingo</h3>
+    <div class="contBlan2">
 
-            <div id="gris">
-                <div>
-                    <p>Desayuno</p>
-                    <div id="plato">
-                        <h4>Nombre</h4>
-                        <img src="public/img/favicon-32x32.png" alt="">
-                        <div>
-                            <a href="#"><i class="fa-solid fa-info"></i></a>
-                        </div>
+        <h3>Domingo</h3>
+
+        <div class="carrousel">
+            <div class="elemento">
+                <p>Desayuno</p>
+                <div id="plato">
+                    <h4>Nombre</h4>
+                    <img src="public/img/favicon-32x32.png" alt="">
+                    <div>
+                        <a href="#"><i class="fa-solid fa-info"></i></a>
                     </div>
                 </div>
-
-                
-                <div>
-                    <p>Media Mañana</p>
-                    <div id="plato">
-                        <h4>Nombre</h4>
-                        <img src="public/img/favicon-32x32.png" alt="">
-                        <div>
-                            <a href="#"><i class="fa-solid fa-info"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <p>Comida</p>
-                    <div id="plato">
-                        <h4>Nombre</h4>
-                        <img src="public/img/favicon-32x32.png" alt="">
-                        <div>
-                            <a href="#"><i class="fa-solid fa-info"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div>
-                    <p>Merienda</p>
-                    <div id="plato">
-                        <h4>Nombre</h4>
-                        <img src="public/img/favicon-32x32.png" alt="">
-                        <div>
-                            <a href="#"><i class="fa-solid fa-info"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <p>Cena</p>
-                    <div id="plato">
-                        <h4>Nombre</h4>
-                        <img src="public/img/favicon-32x32.png" alt="">
-                        <div>
-                            <a href="#"><i class="fa-solid fa-info"></i></a>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-        </div> 
+
+            
+            <div class="elemento">
+                <p>Media Mañana</p>
+                <div id="plato">
+                    <h4>Nombre</h4>
+                    <img src="public/img/favicon-32x32.png" alt="">
+                    <div>
+                        <a href="#"><i class="fa-solid fa-info"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="elemento">
+                <p>Comida</p>
+                <div id="plato">
+                    <h4>Nombre</h4>
+                    <img src="public/img/favicon-32x32.png" alt="">
+                    <div>
+                        <a href="#"><i class="fa-solid fa-info"></i></a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="elemento">
+                <p>Merienda</p>
+                <div id="plato">
+                    <h4>Nombre</h4>
+                    <img src="public/img/favicon-32x32.png" alt="">
+                    <div>
+                        <a href="#"><i class="fa-solid fa-info"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="elemento">
+                <p>Cena</p>
+                <div id="plato">
+                    <h4>Nombre</h4>
+                    <img src="public/img/favicon-32x32.png" alt="">
+                    <div>
+                        <a href="#"><i class="fa-solid fa-info"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
 
 
 </body>
