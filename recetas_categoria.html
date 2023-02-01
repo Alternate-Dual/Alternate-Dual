@@ -106,90 +106,15 @@ div#caja div{
   width:130px;
 }
 
-#checkmark1 {
-    position: absolute;
-        top: 330px;
-        left: 290px;
-        height: 25px;
-        width: 25px;
-        background-color: #eee;
-}
-
-#checkmark2 {
-    position: absolute;
-        top: 330px;
-        left: 630px;
-        height: 25px;
-        width: 25px;
-        background-color: #eee;
-}
-
-#checkmark3 {
-    position: absolute;
-        top: 330px;
-        left: 970px;
-        height: 25px;
-        width: 25px;
-        background-color: #eee;
-}
-
-#checkmark4 {
-    position: absolute;
-        top: 600px;
-        left: 290px;
-        height: 25px;
-        width: 25px;
-        background-color: #eee;
-}
-
-#checkmark5 {
-    position: absolute;
-    top: 600px;
-        left: 630px;
-        height: 25px;
-        width: 25px;
-        background-color: #eee;
-}
-
-#checkmark6 {
-    position: absolute;
-        top: 600px;
-        left: 970px;
-        height: 25px;
-        width: 25px;
-        background-color: #eee;
-}
-
-#checkmark7 {
-    position: absolute;
-        top: 870px;
-        left: 290px;
-        height: 25px;
-        width: 25px;
-        background-color: #eee;
-}
-
-#checkmark8 {
-    position: absolute;
-    top: 870px;
-        left: 630px;
-        height: 25px;
-        width: 25px;
-        background-color: #eee;
-}
-
-#checkmark9 {
-    position: absolute;
-    top: 870px;
-        left: 970px;
+#checkmark {
         height: 25px;
         width: 25px;
         background-color: #eee;
 }
 
 #infoIcon {
-        margin-right: 8rem;
-    }
+        margin-right: 4rem;
+}
 
 
     </style>
@@ -202,7 +127,7 @@ div#caja div{
 
     <div class="cabeceraSemana">
         <div class="semanaSiguiente">
-            <h2 onclick=""><button>Crear receta</button></h2>
+            <h2 onclick="crearReceta()"><button>Crear receta</button></h2>
         </div>
     </div>
     <div class="menuDia">
@@ -210,15 +135,15 @@ div#caja div{
         <div id="caja">
             <div>
                 <img id="infoIcon" src="public/img/informacion.png" alt="">
-                <input type="checkbox" name="checkmark" id="checkmark1">
+                <input type="checkbox" name="checkmark" id="checkmark">
             </div>
             <div>
                 <img id="infoIcon" src="public/img/informacion.png" alt="">
-                    <input type="checkbox" name="checkmark" id="checkmark2">
+                    <input type="checkbox" name="checkmark" id="checkmark">
             </div>
             <div>
                 <img id="infoIcon" src="public/img/informacion.png" alt="">
-                    <input type="checkbox" name="checkmark" id="checkmark3">
+                    <input type="checkbox" name="checkmark" id="checkmark">
             </div>
             <span>
                 Sandwich de manzana <br> y granola
@@ -233,15 +158,15 @@ div#caja div{
         <div id="caja">    
             <div>
                 <img id="infoIcon" src="public/img/informacion.png" alt="">
-                <input type="checkbox" name="checkmark" id="checkmark4">
+                <input type="checkbox" name="checkmark" id="checkmark">
             </div>
             <div>
                 <img id="infoIcon" src="public/img/informacion.png" alt="">
-                    <input type="checkbox" name="checkmark" id="checkmark5">
+                    <input type="checkbox" name="checkmark" id="checkmark">
             </div>
             <div>
                 <img id="infoIcon" src="public/img/informacion.png" alt="">
-                    <input type="checkbox" name="checkmark" id="checkmark6">
+                    <input type="checkbox" name="checkmark" id="checkmark">
             </div>
             <span>
                 Sandwich de manzana <br> y granola
@@ -256,15 +181,15 @@ div#caja div{
         <div id="caja">  
             <div>
                 <img id="infoIcon" src="public/img/informacion.png" alt="">
-                    <input type="checkbox" name="checkmark" id="checkmark7">
+                    <input type="checkbox" name="checkmark" id="checkmark">
             </div>
             <div>
                 <img id="infoIcon" src="public/img/informacion.png" alt="">
-                    <input type="checkbox" name="checkmark" id="checkmark8">
+                    <input type="checkbox" name="checkmark" id="checkmark">
             </div>
             <div>
                 <img id="infoIcon" src="public/img/informacion.png" alt="">
-                    <input type="checkbox" name="checkmark" id="checkmark9">
+                    <input type="checkbox" name="checkmark" id="checkmark">
             </div>
             <span>
                 Sandwich de manzana <br> y granola
@@ -277,5 +202,10 @@ div#caja div{
             </span>
         </div>
     </div>
+    <script>
+        function crearReceta() {
+          location.href = "crear_receta_nutricionista.html";
+        }
+    </script>
 </body>
 </html>
