@@ -1,4 +1,5 @@
 {{> cabecera}}
+<body>
 <div id="login">
  <section class="side">
         <img src="img/imgmovil.png" alt="">
@@ -11,11 +12,11 @@
 
             <form class="login-form">
                 <div class="form-control">
-                    <input type="text" placeholder="Usuario">
+                    <input type="text" placeholder="Usuario" class="inputlogin">
                     <i class="fas fa-user"></i>
                 </div>
                 <div class="form-control">
-                    <input type="password" placeholder="Contraseña">
+                    <input type="password" placeholder="Contraseña" class="inputlogin">
                     <i class="fas fa-lock"></i>
                 </div>
 
@@ -23,8 +24,9 @@
             </form>
             
             <br>
-            <a href="#">Darse de alta como Nutricionista</a>
+            <a href="registro_nutricionista">Darse de alta</a>
         </div>
     </section>
 </div>
+
 {{> pie}}
