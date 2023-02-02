@@ -89,6 +89,30 @@ app.get("/administrar_nutricionistas", function(request, response){
     response.render('administrar_nutricionistas');
 })
 
+app.get("/nutricionista_menu", function(request, response){
+    response.render('nutricionista_menu');
+})
+
+app.get("/menu_semanal_nutri_cliente", function(request, response){
+    response.render('menu_semanal_nutri_cliente');
+})
+
+app.get("/receta_categoria_nutri", function(request, response){
+    response.render('receta_categoria_nutri');
+})
+
+app.get("/crear_receta_nutri", function(request, response){
+    response.render('crear_receta_nutri');
+})
+
+app.get("/dietas_semana_paciente", function(request, response){
+    response.render('dietas_semana_paciente');
+})
+
+app.get("/receta_desayuno_paciente", function(request, response){
+    response.render('receta_desayuno_paciente');
+})
+
 app.get("/script", function(request, response){
     response.render('script');
 })

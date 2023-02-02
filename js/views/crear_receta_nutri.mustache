@@ -1,0 +1,212 @@
+{{> cabecera}}
+{{> menu_nutricionista}}
+<body id="receta">
+
+    <h1>Crear receta</h1>
+    <br>
+    <br>
+    <div class="contener">
+
+        <!--<div class="comida">-->
+
+            <div class="foto">
+                <img src="img/.png" alt="">
+                <div id="imagen">
+                    <label id="labelImg" for="inputTag">
+                      Seleccione imagen <br/>
+                      <i class="fa fa-2x fa-camera"></i>
+                      <input id="inputTag" type="file"/>
+                      <br/>
+                      <span id="imageName"></span>
+                    </label>
+                  </div>
+            </div>
+
+            <div class="formu">
+                <form action="">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre"><br>
+
+                    <label for="nombre">Tiempo en ejecución:</label>
+                    <input type="number" id="num" name="num"><br>
+
+                    <label for="complej">Complejidad de realización</label>
+                    <select id="dificul">
+                        <option value="Fácil">Fácil</option>
+                        <option value="Intermedio">Intermedio</option>
+                        <option value="Complejo">Complejo</option><br>
+                    </select>
+
+                    <h4>Tipo de comida</h4>
+                    
+                    <input class="tipIn" type="radio" id="desay" name="desay" value="desay">
+                    <label class="tipLa" for="desay"> Desayuno</label><br>
+                    <input class="tipIn" type="radio" id="mediam" name="mediam" value="mediam">
+                    <label class="tipLa" for="mediam"> Media mañana</label><br>
+                    <input class="tipIn" type="radio" id="comid" name="comid" value="comid">
+                    <label class="tipLa" class="tip" for="comid"> Comida</label><br>
+                    <input class="tipIn" type="radio" id="meri" name="meri" value="meri">
+                    <label class="tipLa" for="meri"> Merienda</label><br>
+                    <input class="tipIn" type="radio" id="cena" name="cena" value="cena">
+                    <label class="tipLa" for="cena"> Cena</label><br>
+                   
+                </form>
+            </div>
+        <!--</div>-->
+
+        
+        <!--<div class="list">-->
+            <div class="ingre">
+
+                <h4>Ingredientes</h4>
+                <div id="list">
+                <ul>
+                    <li>ejemplo</li>
+                    <li>ej</li>
+                    <li>ej</li>
+                </ul>
+                </div>
+                <p>Añadir</p>
+
+            </div>
+
+            <div class="prepa">
+
+                <h4>Preparación</h4>
+                <div id="list">
+                <ol>
+                    <li>ej</li>
+                    <li>ej</li>
+                    <li>ej</li>
+                </ol>
+                </div>
+                <p>Añadir</p>
+                
+            </div>
+        <!--</div>-->
+        
+
+        <div class="valores">
+
+            <h4>Valores nutricionales</h4>
+
+            <label for="cal">Calorías</label>
+            <input class="valor" type="number">
+
+            <label for="carbo">Carbohidratos</label>
+            <input class="valor" type="number">
+
+            <label for="prote">Proteinas</label>
+            <input class="valor" type="number">
+
+            <label for="grasa">Grasas</label>
+            <input class="valor" type="number">
+        </div>
+
+    
+    </div> 
+    
+    <table id="recetatabla">
+
+        <tr id="recetatabla">
+            <td id="recetatabla">
+                <img src="img/.png" alt="">
+                <div id="imagen">
+                    <label id="labelImg" for="inputTag">
+                      Seleccione imagen <br/>
+                      <i class="fa fa-2x fa-camera"></i>
+                      <input id="inputTag" type="file"/>
+                      <br/>
+                      <span id="imageName"></span>
+                    </label>
+                  </div>
+            </td>
+
+            <td id="recetatabla">
+                <form action="">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre"><br>
+
+                    <label for="nombre">Tiempo en ejecución</label>
+                    <input type="number" id="num" name="num"><br>
+
+                    <label for="complej">Complejidad de realización</label>
+                    <select id="dificul">
+                        <option value="Fácil">Fácil</option>
+                        <option value="Intermedio">Intermedio</option>
+                        <option value="Complejo">Complejo</option>
+                    </select>
+
+                    
+                        <h4>Tipo de comida</h4> 
+                            <input type="radio" id="desay" name="desay" value="desay">
+                            <label for="desay"> Desayuno</label><br>
+                            <input type="radio" id="mediam" name="mediam" value="mediam">
+                            <label for="mediam"> Media mañana</label><br>
+                            <input type="radio" id="comid" name="comid" value="comid">
+                            <label for="comid"> Comida</label><br>
+                            <input type="radio" id="meri" name="meri" value="meri">
+                            <label for="meri"> Merienda</label><br>
+                            <input type="radio" id="cena" name="cena" value="cena">
+                            <label for="cena"> Cena</label>
+        
+                </form>
+            </td>
+
+        </tr>      
+
+        <tr id="recetatabla">
+            <td id="recetatabla">
+
+                <h4>Ingredientes</h4>
+
+                <div id="list">
+                <ul>
+                    <li>ej</li>
+                    <li>ej</li>
+                    <li>ej</li>
+                </ul>
+                </div>
+                <p>Añadir</p>
+
+            </td>
+            <td id="recetatabla">
+
+                <h4>Preparación</h4>
+                <div id="list">
+                <ol>
+                    <li>ej</li>
+                    <li>ej</li>
+                    <li>ej</li>
+                </ol>
+                </div>
+                <p>Añadir</p>
+            </td>
+
+            
+
+        </tr>
+
+    
+        <tr id="recetatabla">
+            <td colspan="3" id="recetatabla">
+
+                <h4>Valores nutricionales</h4>
+    
+                <label for="cal">Calorías</label>
+                <input class="valor" type="text">
+    
+                <label for="carbo">Carbohidratos</label>
+                <input class="valor" type="text">
+    
+                <label for="prote">Proteinas</label>
+                <input class="valor" type="text">
+    
+                <label for="grasa">Grasas</label>
+                <input class="valor" type="text">
+            </td>
+        </tr>
+
+    </table>
+{{> script}}
+{{> pie}}
