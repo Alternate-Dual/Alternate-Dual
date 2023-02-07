@@ -23,6 +23,14 @@ $parrafos: 'Nunito', sans-serif;
 
 body{
     font-family: $parrafos;
+    font-size:large;
+    margin:0;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    
+    background-color: $color_fondo_claro;
+
 }
 
 h1,h2,h3,h4{
@@ -375,24 +383,7 @@ button.submit:hover {
 }
 
 //Página registro nutricionista
-    .registro{
-        font-size:large;
-        font-family: 'Nunito', sans-serif;
-        margin:0;
-        text-align: center;
-        margin-top: 5%;
-        background-color: #eceff1;
 
-    h1,h2,h3,h4{
-        font-family: $titulos;
-
-    }
-
-    .inputregistro{
-        margin-top: 2%;
-        margin-bottom: 1%;
-        
-    }
 
     .inputregistro{
         font-size:large;
@@ -401,7 +392,7 @@ button.submit:hover {
         margin-bottom: 3%;
     }
     
-    button.boton{
+    button.btnVerde {
         font-size:large;
         font-family: 'Nunito', sans-serif;
         background-color: #7ed957;
@@ -415,7 +406,7 @@ button.submit:hover {
         margin-bottom: 2%;
     }
 
-    button:hover.boton{
+    button.btnVerde:hover{
         color: #7ed957;
         border-radius: 12px;
         background-color: white;
@@ -437,7 +428,7 @@ button.submit:hover {
     dialog::backdrop {
         background-color: #eceff1;
     }
-}
+
 
 //Perfil Nutricionista
 
@@ -976,18 +967,6 @@ div#caja div{
 
 //Crear Receta nutricionista
 
-body#receta{
-    font-size:large;
-    font-family: 'Nunito', sans-serif;
-    margin:0;
-    text-align: center;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    
-    background-color: #eceff1;
-
-}
-
 .foto{
     grid-area: foto;
 }
@@ -1091,27 +1070,7 @@ table td #recetatabla{
 /*-------------------------*/
 
 // Dietas Semanal Paciente
-body#dietasemcli{
-    font-size:large;
-    font-family: 'Nunito', sans-serif;
-    margin:0;
-    text-align: center;
-    margin-top: 5%;
-    
-    background-color: #eceff1;
 
-}
-
-
-#gris{
-display:inline-flex;
-flex-direction: row;
-flex-wrap: wrap;
-justify-content: center;
-align-items: center;
-
-
-}
 
 #plato{
 background-color: #e7ebec;
@@ -1150,7 +1109,9 @@ padding-bottom: 2%;
 width: 60%;
 display:inline-flex;
 flex-direction: column;
-justify-content: center;   
+justify-content: center; 
+text-align: center;
+  
 
 }
 
@@ -1193,23 +1154,6 @@ flex:1 0 auto;
 
 //Receta Cliente
 
-body#recetacliente{
-    font-size: large;
-    font-family: 'Nunito', sans-serif;
-    margin:0;
-    
-    margin-top: 1%;
-    
-    background-color: #eceff1;
-
-}
-
-
-
-h1,h2,h3,h4{
-    font-family: 'Work Sans', sans-serif;
-
-}
 
 h1 {
     margin-bottom: 4%;

@@ -15,15 +15,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 //Conexion BDD y sesiones---------------------------------
-const mysql = require('mysql')  
-const myconn = require('express-myconnection')
-const dbOptions = {
-    host: 'localhost',
-    port: 3307,
-    user: 'root',
-    password: '',
-    database: 'nutrifit'
-}
+//const mysql = require('mysql')  
+//const myconn = require('express-myconnection')
+//const dbOptions = {
+    //host: 'localhost',
+  //  port: 3307,
+  //  user: 'root',
+ //   password: '',
+  //  database: 'nutrifit'
+//}
 
 app.use(session({
     secret: 'secret',
@@ -32,7 +32,7 @@ app.use(session({
 }));
 
 // Middlewares (conector)----------------------
-app.use(myconn(mysql, dbOptions, 'single'))
+// app.use(myconn(mysql, dbOptions, 'single'))
 
 // Arrancar servidor ---------------------------
 app.listen(3000, function () {

@@ -9,6 +9,12 @@
 
 body {
   font-family: "Nunito", sans-serif;
+  font-size: large;
+  margin: 0;
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background-color: #eceff1;
 }
 
 h1, h2, h3, h4 {
@@ -325,28 +331,14 @@ button.submit:hover {
     display: none;
   }
 }
-.registro {
-  font-size: large;
-  font-family: "Nunito", sans-serif;
-  margin: 0;
-  text-align: center;
-  margin-top: 5%;
-  background-color: #eceff1;
-}
-.registro h1, .registro h2, .registro h3, .registro h4 {
-  font-family: "Work Sans", sans-serif;
-}
-.registro .inputregistro {
-  margin-top: 2%;
-  margin-bottom: 1%;
-}
-.registro .inputregistro {
+.inputregistro {
   font-size: large;
   font-family: "Nunito", sans-serif;
   margin-top: 1%;
   margin-bottom: 3%;
 }
-.registro button.boton {
+
+button.btnVerde {
   font-size: large;
   font-family: "Nunito", sans-serif;
   background-color: #7ed957;
@@ -359,14 +351,16 @@ button.submit:hover {
   margin-top: 2%;
   margin-bottom: 2%;
 }
-.registro button:hover.boton {
+
+button.btnVerde:hover {
   color: #7ed957;
   border-radius: 12px;
   background-color: white;
   border: 1px solid #7ed957;
   cursor: pointer;
 }
-.registro dialog {
+
+dialog {
   min-width: 100%;
   min-height: 100%;
   margin-top: 2.8%;
@@ -374,10 +368,12 @@ button.submit:hover {
   border: none;
   margin-left: 0.05%;
 }
-.registro dialog::-webkit-backdrop {
+
+dialog::-webkit-backdrop {
   background-color: #eceff1;
 }
-.registro dialog::backdrop {
+
+dialog::backdrop {
   background-color: #eceff1;
 }
 
@@ -893,16 +889,6 @@ div#caja div {
     display: inline-block;
   }
 }
-body#receta {
-  font-size: large;
-  font-family: "Nunito", sans-serif;
-  margin: 0;
-  text-align: center;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  background-color: #eceff1;
-}
-
 .foto {
   grid-area: foto;
 }
@@ -992,23 +978,6 @@ table td #recetatabla {
 }
 
 /*-------------------------*/
-body#dietasemcli {
-  font-size: large;
-  font-family: "Nunito", sans-serif;
-  margin: 0;
-  text-align: center;
-  margin-top: 5%;
-  background-color: #eceff1;
-}
-
-#gris {
-  display: inline-flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
 #plato {
   background-color: #e7ebec;
   padding: 1em;
@@ -1046,6 +1015,7 @@ a #dietacliente {
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
 }
 
 .carrousel {
@@ -1075,18 +1045,6 @@ a #dietacliente {
     flex: 1 0 auto;
   }
 }
-body#recetacliente {
-  font-size: large;
-  font-family: "Nunito", sans-serif;
-  margin: 0;
-  margin-top: 1%;
-  background-color: #eceff1;
-}
-
-h1, h2, h3, h4 {
-  font-family: "Work Sans", sans-serif;
-}
-
 h1 {
   margin-bottom: 4%;
 }
