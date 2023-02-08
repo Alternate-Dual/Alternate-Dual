@@ -82,7 +82,7 @@ app.get("/perfil_nutricionista", function(request, response){
 })
 
 app.get("/perfil_paciente", function(request, response){
-    response.render('perfil_paciente');
+    response.render('perfil_paciente', {peso:'60kg'});
 })
 
 app.get("/administrar_nutricionistas", function(request, response){

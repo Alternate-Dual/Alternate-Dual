@@ -38,6 +38,29 @@ h1,h2,h3,h4{
 
 }
 
+
+button.btnVerde {
+    font-size:large;
+    font-family: 'Nunito', sans-serif;
+    background-color: #7ed957;
+    border: none;
+    color: white;
+    padding: 10px;
+    min-width: 15%;
+    text-align: center;
+    border-radius: 12px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+button.btnVerde:hover{
+    color: #7ed957;
+    border-radius: 12px;
+    background-color: white;
+    border: 1px solid #7ed957;
+    cursor: pointer;
+}
+
 header{
     position: fixed;
     width: 100%;
@@ -392,27 +415,7 @@ button.submit:hover {
         margin-bottom: 3%;
     }
     
-    button.btnVerde {
-        font-size:large;
-        font-family: 'Nunito', sans-serif;
-        background-color: #7ed957;
-        border: none;
-        color: white;
-        padding: 10px;
-        min-width: 15%;
-        text-align: center;
-        border-radius: 12px;
-        margin-top: 2%;
-        margin-bottom: 2%;
-    }
 
-    button.btnVerde:hover{
-        color: #7ed957;
-        border-radius: 12px;
-        background-color: white;
-        border: 1px solid #7ed957;
-        cursor: pointer;
-    }
 
     dialog {
         min-width: 100%;
@@ -627,6 +630,7 @@ td.admin{
 table tr:nth-child(2n+1).admin{
     background-color: white;
 }
+
 
 //Menu_semanal_nutricionista_cliente
 #bodyMenuSemanal {
@@ -1153,11 +1157,6 @@ flex:1 0 auto;
 }
 
 //Receta Cliente
-
-
-h1 {
-    margin-bottom: 4%;
-}
 
 .receta1{
 grid-area:nombre;
