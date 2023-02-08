@@ -369,10 +369,6 @@ dialog {
   margin-left: 0.05%;
 }
 
-dialog::-webkit-backdrop {
-  background-color: #eceff1;
-}
-
 dialog::backdrop {
   background-color: #eceff1;
 }
