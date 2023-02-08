@@ -21,6 +21,28 @@ h1, h2, h3, h4 {
   font-family: "Work Sans", sans-serif;
 }
 
+button.btnVerde {
+  font-size: large;
+  font-family: "Nunito", sans-serif;
+  background-color: #7ed957;
+  border: 1px solid #7ed957;
+  color: white;
+  padding: 10px;
+  min-width: 15%;
+  text-align: center;
+  border-radius: 12px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+button.btnVerde:hover {
+  color: #7ed957;
+  border-radius: 12px;
+  background-color: white;
+  border: 1px solid #7ed957;
+  cursor: pointer;
+}
+
 header {
   position: fixed;
   width: 100%;
@@ -336,28 +358,6 @@ button.submit:hover {
   font-family: "Nunito", sans-serif;
   margin-top: 1%;
   margin-bottom: 3%;
-}
-
-button.btnVerde {
-  font-size: large;
-  font-family: "Nunito", sans-serif;
-  background-color: #7ed957;
-  border: none;
-  color: white;
-  padding: 10px;
-  min-width: 15%;
-  text-align: center;
-  border-radius: 12px;
-  margin-top: 2%;
-  margin-bottom: 2%;
-}
-
-button.btnVerde:hover {
-  color: #7ed957;
-  border-radius: 12px;
-  background-color: white;
-  border: 1px solid #7ed957;
-  cursor: pointer;
 }
 
 dialog {
@@ -1045,10 +1045,6 @@ a #dietacliente {
     flex: 1 0 auto;
   }
 }
-h1 {
-  margin-bottom: 4%;
-}
-
 .receta1 {
   grid-area: nombre;
 }
