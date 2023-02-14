@@ -1,4 +1,14 @@
-{{> cabecera}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png"> <!-- Favicon -->
+    <link rel="stylesheet" href="../css/style.css"> <!-- style.css ubicado en la carpeta public -->
+    <script src="https://kit.fontawesome.com/4a0af06348.js" crossorigin="anonymous"></script> <!-- Script para libreria de iconos -->
+</head>
+
 <body>
     <h1>Datos personales</h1>
     <br>
@@ -43,8 +53,11 @@
         <button type="submit" class="btnVerde">Confirmar</button>
         </form>
 
-        <a href="index_nutricionista">Ir nutricionista</a>
+        <a href="./index_nutricionista.html">Ir nutricionista</a>
 
     </dialog>
 </div>
-{{> pie}}
+
+
+</body>
+</html>
