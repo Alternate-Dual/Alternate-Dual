@@ -136,7 +136,33 @@
 
     <div class="contBlan2">
         <h3>Mi entrenamiento</h3>
+            <div class="carrousel">
+                <h4>Hoy</h4>
+                <div id="ejercicio">
+                    <img src="" alt="">
+                    <button>Empezar</button>
+                    <input type="checkbox">
+                    <p>Tonificar brazos</p>
+                    <p>6 ejercicios - 40min</p>
+                </div>
+
+                <h4>Próximo día</h4>
+                <div id="ejercicio">
+                    <img src="" alt="">
+                    <button>Empezar</button>
+                    <input type="checkbox">
+                    <p>Tonificar brazos</p>
+                    <p>6 ejercicios - 40min</p>
+                </div>
+
+            </div>
     </div>
+
+    <div class="contBlan2">
+        <h3>Objetivo diario</h3>
+    </div>
+
+
     
     <script src="../js/app.js"></script>
 </body>
