@@ -1,3 +1,44 @@
+<?php //SESIONES
+    include_once '../database.php'
+
+    session_start();
+
+    if(isset($_GET['cerrar_sesion'])){
+        session_unset();
+
+        session_destroy();
+    }
+
+    if(isset($_SESSION['rol'])){
+        switch($_SESSION['rol']){
+            case 1:
+                header('location: index_admin.php');
+            break;
+
+            case 2:
+                header('location: index_nutricionista.php');
+            break;
+
+            case 3:
+                header('location: index_paciente.php');
+            break;
+
+            default:
+        }
+    }
+
+    if(isset($_POST['correo_electronico']) && isset($_POST['contraseña'])){
+        $correo_electronico = $_POST['correo_electronico'];
+        $contraseña = $_POST['contraseña'];
+
+        $db = new Database();
+        $query = $db->connect()->prepare('SELECT*FROM usuarios WHERE correo_electronico = :correo_electronico AND contraseña = :contraseña');
+        $query->execute(['correo_electronico' => $correo_electronico, 'contraseña' => $contraseña]);
+
+        row =
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,24 +59,22 @@
     <section class="main">
         <div class="login-container">
             <p class="title">¡ Bienvenid@ de nuevo !</p>
-            <a href="../views/index_admin.html"><div class="separator"></div></a><br>
+            <div class="separator"></div><br>
 
-            <form class="login-form">
+            <form class="login-form" method="POST" action="#">
                 <div class="form-control">
-                    <input type="text" placeholder="Usuario" class="inputlogin">
+                    <input type="text" placeholder="Correo electronico" class="inputlogin" name="correo_electronico">
                     <i class="fas fa-user"></i>
                 </div>
                 <div class="form-control">
-                    <input type="password" placeholder="Contraseña" class="inputlogin">
+                    <input type="password" placeholder="Contraseña" class="inputlogin" name="contraseña">
                     <i class="fas fa-lock"></i>
                 </div>
-
                 <button class="submit">Acceder</button>
-                <a href="../views/index_paciente.html">*</a>
             </form>
             
             <br>
-            <a href="../views/registro_nutricionista.html">Darse de alta</a>
+            <a href="../views/registro_nutricionista.php">Darse de alta</a>
 
         </div>
     </section>
