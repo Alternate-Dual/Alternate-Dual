@@ -13,48 +13,66 @@
     <h1>Datos personales</h1>
     <br>
     <br>
-    <form id="registro">
-       
-        <label for="nombre">Nombre</label><br>
-        <input type="text" id="nombre" name="nombre" class="inputregistro"><br>
 
-        <label for="nombre">Apellidos</label><br>
-        <input type="text" id="apellidos" name="apellidos" class="inputregistro"><br>
+    <div class="contBlan">
+        <form id="registro">
+        
+        <div class="detNom">
+            <div>
+            <label for="nombre">Nombre</label><br>
+            <input type="text" id="nombre" name="nombre" class="inputregistro"><br>
+            </div>
 
-        <label for="fecha">Fecha de nacimiento</label><br>
-        <input type="date" id="start" name="trip-start" min="1950-01-01" class="inputregistro"><br>
+            <div>
+            <label for="nombre">Apellido</label><br>
+            <input type="text" id="apellidos" name="apellidos" class="inputregistro"><br>
+            </div>
+        </div>
+            <label for="fecha">Fecha de nacimiento</label><br>
+            <input type="date" id="start" name="trip-start" min="1950-01-01" class="inputregistro"><br>
 
-        <label for="dni">DNI</label><br>
-        <input type="text" id="dni" name="dni" class="inputregistro"><br>
-     
-        <label for="sexo">Sexo</label><br>
-        <input type="radio" id="mujer" name="sexo" value="mujer" class="inputregistro">
-        <label for="mujer">Mujer</label>
-        <input type="radio" id="hombre" name="sexo" value="hombre" class="inputregistro">
-        <label for="hombre">Hombre</label><br>
+            <label for="dni">DNI</label><br>
+            <input type="text" id="dni" name="dni" class="inputregistro"><br>
+        
+        
+            <label for="sexo">Sexo</label><br>
+            <div class="generoRad">
+                <div>
+                    <input type="radio" id="mujer" name="sexo" value="mujer" class="inputregistro">
+                    <label for="mujer">Mujer</label>
+                </div>
+                <div>
+                    <input type="radio" id="hombre" name="sexo" value="hombre" class="inputregistro">
+                    <label for="hombre">Hombre</label><br>
+                </div>
+        </div>        
 
-    </form>
+        </form>
 
-    <button class="btnVerde" onclick="window.modal1.showModal();" >Siguiente</button>
+        <button class="btnVerde" onclick="window.modal1.showModal();" >Siguiente</button>
+
+    </div>
 
     <dialog id="modal1">
 
         <h1>Datos de contacto</h1>
         <br>
         <br>
-        <form>
-        <br>
-        <label for="correo">Correo electrónico</label><br>
-        <input type="text" id="correo" name="correo" class="inputregistro"><br>
 
-        <label for="correo">Contraseña</label><br>
-        <input type="text" id="contraseña" name="contraseña" class="inputregistro">
-        <br>
-        <button type="submit" class="btnVerde">Confirmar</button>
-        </form>
+        <div class="contBlan">
+            <form>
+            <br>
+            <label for="correo">Correo electrónico</label><br>
+            <input type="text" id="correo" name="correo" class="inputregistro"><br>
 
-        <a href="./index_nutricionista.html">Ir nutricionista</a>
+            <label for="correo">Contraseña</label><br>
+            <input type="text" id="contraseña" name="contraseña" class="inputregistro">
+            <br>
+            <button type="submit" class="btnVerde">Confirmar</button>
+            </form>
 
+            <a href="./index_nutricionista.html">Ir nutricionista</a>
+        </div>
     </dialog>
 </div>
 
