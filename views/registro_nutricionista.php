@@ -15,13 +15,13 @@
     <br>
 
     <div class="contBlan">
-        <form name="formulario" method="post" id="register-form">
+        <form name="formulario" method="post" id="signupForm">
         
         <div class="detNom">
 
             <div class="form-group">
                 <label for="nombre">Nombre</label><br>
-                <input type="text" id="name" name="name" class="form-control"><br>
+                <input type="text" id="fullname" name="fullname" class="form-control"><br>
             </div>
 
             <div class="form-group">
