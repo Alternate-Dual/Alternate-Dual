@@ -9,9 +9,9 @@
     private $charset;
 
     public function __construct(){
-        $this->host = 'localhost';
+        $this->host = 'localhost:3306';
         $this->db = 'nutrifit';
-        //$this->port = '3307';
+        //$this->port = '3306';
         $this->user = 'root';
         $this->password = '';
         $this->charset = 'utf8mb4';

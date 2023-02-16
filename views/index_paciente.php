@@ -1,3 +1,18 @@
+<?php 
+include_once '../database.php';
+
+session_start();
+
+if(!isset($_SESSION['rol'])){
+    header('location: login.php');
+}else{
+    if($_SESSION['rol'] != 3){
+        header('location: login.php');
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,11 +39,11 @@
             <img src="../img/icon1.jpg">
         </div>
         <div id="profilemenu">
-            <h3>¡ Hola **** !<br><span>Paciente</span></h3>
+            <h3>¡ Hola ****!<br><span>Paciente</span></h3>
             <ul>
                 <li><i class="fa-regular fa-user"></i><a href="perfil_paciente.php">Mi perfil</a></li>
                 <li><a href="perfil_paciente.php"><i class="fa-solid fa-sliders"></i>Ajustes</a></li>
-                <li><a href="login.php"><i class="fa-solid fa-arrow-right-from-bracket"></i>Cerrar sesión</a></li>
+                <li><a href="login.php?cerrar_sesion=1"><i class="fa-solid fa-arrow-right-from-bracket"></i>Cerrar sesión</a></li>
             </ul>
         </div>
     </div>

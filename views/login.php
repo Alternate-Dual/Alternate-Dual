@@ -1,5 +1,5 @@
 <?php //SESIONES
-    include_once '../database.php'
+    include_once '../database.php';
 
     session_start();
 
@@ -27,15 +27,40 @@
         }
     }
 
-    if(isset($_POST['correo_electronico']) && isset($_POST['contraseña'])){
+    if(isset($_POST['correo_electronico']) && isset($_POST['password'])){
         $correo_electronico = $_POST['correo_electronico'];
-        $contraseña = $_POST['contraseña'];
+        $password = $_POST['password'];
 
         $db = new Database();
-        $query = $db->connect()->prepare('SELECT*FROM usuarios WHERE correo_electronico = :correo_electronico AND contraseña = :contraseña');
-        $query->execute(['correo_electronico' => $correo_electronico, 'contraseña' => $contraseña]);
+        $query = $db->connect()->prepare('SELECT*FROM usuarios WHERE correo_electronico = :correo_electronico AND password = :password');
+        $query->execute(['correo_electronico' => $correo_electronico, 'password' => $password]);
 
-        row =
+        $row = $query->fetch(PDO::FETCH_NUM);
+        if($row == true){
+            // validar rol
+            $rol = $row[8];
+            $_SESSION['rol'] = $rol;
+
+            switch($_SESSION['rol']){
+                case 1:
+                    header('location:index_admin.php');
+                break;
+    
+                case 2:
+                    header('location:index_nutricionista.php');
+                break;
+    
+                case 3:
+                    header('location:index_paciente.php');
+                break;
+    
+                default:
+            }
+        } else{
+            // no existe el usuario
+            $errorLogin = "Nombre de usuario y/o password es incorrecto";
+            include_once 'login.php';
+        }
     }
 ?>
 
@@ -67,9 +92,14 @@
                     <i class="fas fa-user"></i>
                 </div>
                 <div class="form-control">
-                    <input type="password" placeholder="Contraseña" class="inputlogin" name="contraseña">
+                    <input type="password" placeholder="Contraseña" class="inputlogin" name="password">
                     <i class="fas fa-lock"></i>
                 </div>
+                <?php 
+                if(isset($errorLogin)){
+                    echo $errorLogin;
+                }
+                ?>
                 <button class="submit">Acceder</button>
             </form>
             

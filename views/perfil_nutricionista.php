@@ -4,15 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png"> <!-- Favicon -->
-    <link rel="stylesheet" href="/css/style.css"> <!-- style.css ubicado en la carpeta public -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png"> <!-- Favicon -->
+    <link rel="stylesheet" href="../css/style.css"> <!-- style.css ubicado en la carpeta public -->
     <script src="https://kit.fontawesome.com/4a0af06348.js" crossorigin="anonymous"></script> <!-- Script para libreria de iconos -->
 </head>
 
-<div class="centrarContenidoPerfil">
-
   <header>
-    <a href="index_nutricionista" id="logo"><img src="img/3.png"></a>
+    <a href="index_nutricionista" id="logo"><img src="../img/3.png"></a>
     <nav>
         <ul id="menu">
             <li><a href="index_nutricionista"><i class="fa-regular fa-address-book"></i> Pacientes</a></li>
@@ -31,7 +29,7 @@
             <ul>
                 <li><i class="fa-regular fa-user"></i><a href="perfil_nutricionista.php">Mi perfil</a></li>
                 <li><a href="perfil_nutricionista.php"><i class="fa-solid fa-sliders"></i>Ajustes</a></li>
-                <li><a href="login.php"><i class="fa-solid fa-arrow-right-from-bracket"></i>Cerrar sesión</a></li>
+                <li><a href="login.php?cerrar_sesion=1"><i class="fa-solid fa-arrow-right-from-bracket"></i>Cerrar sesión</a></li>
             </ul>
         </div>
     </div>
@@ -40,21 +38,21 @@
         <i class="fa-solid fa-bars"></i>
     </div>
    </header>
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    
-      <img src="../img/icon.png" alt="cara" />
-      <p>Nombre del nutricionista</p>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   
+   <div class="centrarContenidoPerfil">
+   <img src="../img/icon.png" alt="cara" />
+    <p>Nombre del nutricionista</p>
     </div>
 
     <div>
     <br>
+
       <h4 class="perfil">Mis datos</h4>
       
       <div class="FondoDatosNutricionista">

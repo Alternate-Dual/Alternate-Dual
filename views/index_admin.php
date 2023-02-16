@@ -1,3 +1,17 @@
+<?php 
+
+session_start();
+
+if(!isset($_SESSION['rol'])){
+    header('location: login.php');
+}else{
+    if($_SESSION['rol'] != 1){
+        header('location: login.php');
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,9 +39,9 @@
                 <img src="../img/icon2.png">
             </div>
             <div id="profilemenu">
-                <h3>¡ Hola **** !<br><span>Administrador</span></h3>
+                <h3>¡ Hola Admin !<br><span>Administrador</span></h3>
                 <ul>
-                    <li><a href="login.php"><i class="fa-solid fa-arrow-right-from-bracket"></i>Cerrar sesión</a></li>
+                    <li><a href="login.php?cerrar_sesion=1"><i class="fa-solid fa-arrow-right-from-bracket"></i>Cerrar sesión</a></li>
                 </ul>
             </div>
         </div>
