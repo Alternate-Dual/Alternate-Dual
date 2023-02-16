@@ -26,7 +26,7 @@ body{
     font-size:large;
     margin:0;
     text-align: center;
-    margin-top: 5%;
+    margin-top: 2%;
     margin-bottom: 5%;
     
     background-color: $color_fondo_claro;
@@ -45,8 +45,10 @@ button.btnVerde {
     background-color: #7ed957;
     border: 1px solid #7ed957;
     color: white;
-    padding: 10px;
-    min-width: 15%;
+    padding: 3%;
+    padding-left: 20%;
+    padding-right: 20%;
+    max-width: 60%;
     text-align: center;
     border-radius: 12px;
     margin-top: 2%;
@@ -412,24 +414,77 @@ button.submit:hover {
         font-size:large;
         font-family: 'Nunito', sans-serif;
         margin-top: 1%;
-        margin-bottom: 3%;
+        margin-bottom: 10%;
+        padding: 0 10px;
+        border-radius: 5px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        height: 40px;
+        width: 100%;
+        
+    }
+    .detNom{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .generoRad input[type=radio]{
+        height: 20px;
+        width: 30px;
+        border-radius: 100%;
+        left: 133px;
+    }
+
+
+    .contBlan{
+        max-width: 30%;
+        max-height: 50%;
+        margin-top: 2%;
+        border-radius: 18px;
+        background-color: white;
+        margin-left:auto;
+        margin-right: auto; 
+        padding: 5%;
+        box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+              0 32px 64px -48px rgba(0,0,0,0.5);
     }
     
-
-
     dialog {
         min-width: 100%;
         min-height: 100%;
-        margin-top: 2.8%;
-        background-color: #eceff1;
+        margin-top: 5%;
         border: none;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #eceff1;
        
-        margin-left: 0.05%;
-           
     }
+
+    
 
     dialog::backdrop {
         background-color: #eceff1;
+    }
+
+    @media screen and (max-width:800px) {
+        .detNom{
+            display: flex;
+            flex-direction: column;
+
+        } 
+
+        .contBlan{
+            max-width: 90%;
+            max-height: 50%;
+            margin-top: 2%;
+            border-radius: 18px;
+            background-color: white;
+            margin-left: 4.5%;
+            margin-right: 2%;
+            padding: 5%;
+            box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+                  0 32px 64px -48px rgba(0,0,0,0.5);
+        } 
     }
 
 
