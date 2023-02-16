@@ -15,21 +15,18 @@
     <br>
 
     <div class="contBlan">
-        <form name="formulario" id="registro">
+        <form name="formulario" method="post" id="register-form">
         
         <div class="detNom">
-            <div>
-            <label for="nombre">Nombre</label><br>
-            <input type="text" id="nombre" class="inputregistro"><br>
-            
+
+            <div class="form-group">
+                <label for="nombre">Nombre</label><br>
+                <input type="text" id="name" name="name" class="form-control"><br>
             </div>
 
-            <div>
-            <label for="nombre">Apellido</label><br>
-            <input type="text" id="apellidos" name="username" class="inputregistro"><br>
-            <div id="formTest">
-                <p id="usernameTest" name="usernameTest">test</p><br>
-            </div>
+            <div class="form-group">
+                <label for="nombre">Apellido</label><br>
+                <input type="text" id="apellidos" name="name" class="form-control"><br>
             </div>
         </div>
             <label for="fecha">Fecha de nacimiento</label><br>
@@ -68,18 +65,18 @@
         <div class="contBlan">
             <form>
             <br>
-            <label for="correo">Correo electrónico</label><br>
-            <input type="text" id="correo" name="useremail" class="inputregistro"><br>
-            <p id="useremailTest" name="useremailTest">test</p><br>
-
-            <label for="correo">Contraseña</label><br>
-            <input type="text" id="contraseña" name="userpassid" class="inputregistro"><br>
-
-            <p id="userpasswordTest" name="userpassidTest">test</p><br>
-
-            <div id="formTest">
-                <button type="submit" class="btnVerde">Confirmar</button>
+            <div class="form-group">
+                <label for="correo">Correo electrónico</label><br>
+                <input type="text" id="correo" name="useremail" class="form-control"><br>
             </div>
+
+            <div class="form-group">
+                <label for="password">Contraseña</label><br>
+                <input type="text" id="contraseña" name="userpassid" class="form-control"><br>
+            </div>
+           
+                <button type="submit" class="btnVerde">Confirmar</button>
+            
             </form>
 
             <a href="./index_nutricionista.html">Ir nutricionista</a>
