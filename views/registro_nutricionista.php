@@ -15,17 +15,21 @@
     <br>
 
     <div class="contBlan">
-        <form id="registro">
+        <form name="formulario" id="registro">
         
         <div class="detNom">
             <div>
             <label for="nombre">Nombre</label><br>
-            <input type="text" id="nombre" name="nombre" class="inputregistro"><br>
+            <input type="text" id="nombre" class="inputregistro"><br>
+            
             </div>
 
             <div>
             <label for="nombre">Apellido</label><br>
-            <input type="text" id="apellidos" name="apellidos" class="inputregistro"><br>
+            <input type="text" id="apellidos" name="username" class="inputregistro"><br>
+            <div id="formTest">
+                <p id="usernameTest" name="usernameTest">test</p><br>
+            </div>
             </div>
         </div>
             <label for="fecha">Fecha de nacimiento</label><br>
@@ -33,6 +37,8 @@
 
             <label for="dni">DNI</label><br>
             <input type="text" id="dni" name="dni" class="inputregistro"><br>
+            <p id="userdniTest" name="userdniTest">test</p><br>
+
         
         
             <label for="sexo">Sexo</label><br>
@@ -63,18 +69,25 @@
             <form>
             <br>
             <label for="correo">Correo electrónico</label><br>
-            <input type="text" id="correo" name="correo" class="inputregistro"><br>
+            <input type="text" id="correo" name="useremail" class="inputregistro"><br>
+            <p id="useremailTest" name="useremailTest">test</p><br>
 
             <label for="correo">Contraseña</label><br>
-            <input type="text" id="contraseña" name="contraseña" class="inputregistro">
-            <br>
-            <button type="submit" class="btnVerde">Confirmar</button>
+            <input type="text" id="contraseña" name="userpassid" class="inputregistro"><br>
+
+            <p id="userpasswordTest" name="userpassidTest">test</p><br>
+
+            <div id="formTest">
+                <button type="submit" class="btnVerde">Confirmar</button>
+            </div>
             </form>
 
             <a href="./index_nutricionista.html">Ir nutricionista</a>
         </div>
     </dialog>
 </div>
+
+<script src="../js/appRegistro.js"></script>
 
 
 </body>
