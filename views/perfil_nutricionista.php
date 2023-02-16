@@ -1,3 +1,9 @@
+<?php
+include_once '../database.php';
+
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,7 +50,7 @@
    <br>
    <br>
    <br>
-   
+
    <div class="centrarContenidoPerfil">
    <img src="../img/icon.png" alt="cara" />
     <p>Nombre del nutricionista</p>
