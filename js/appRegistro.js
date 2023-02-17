@@ -1,76 +1,99 @@
-$.validator.setDefaults( {
+/*$().validator.setDefaults( {
     submitHandler: function () {
        alert( "submitted!" );
     }
- });
- 
- 
- $(document).ready(function(){
-    $('#signupForm').validate({
-       rules: {
-          fullname: {
-             required: true,
-             minlength: 5
-          },
-          comments: {
-             required: true
-          },
-          password: {
-             required: true,
-             minlength: 5
-          },
-          confirm_password: {
-             required: true,
-             minlength: 5,
-             equalTo: "#password"
-          },
-          email: {
-             required: true,
-             email: true
-          },
-          agree: "required"
-       },
-       messages: {           
-          fullname: {
-             required: "Por favor ingresa tu nombre completo",
-             minlength: "Tu nombre debe ser de no menos de 5 caracteres"
-          },
-          comments: "Por favor ingresa un comentario",
-          password: {
-             required: "Por favor ingresa una contraseña",
-             minlength: "Tu contraseña debe ser de no menos de 5 caracteres de longitud"
-          },
-          confirm_password: {
-             required: "Ingresa un password",
-             minlength: "Tu contraseña debe ser de no menos de 5 caracteres de longitud",
-             equalTo: "Por favor ingresa la misma contraseña de arriba"
-          },
-          email: "Por favor ingresa un correo válido",
-          agree: "Por favor acepta nuestra política",
-          luckynumber: {
-             required: "Por favor"
-          }
-       },
-       errorElement: "em",
-       errorPlacement: function (error, element) {
-          // Add the `help-block` class to the error element
-          error.addClass("help-block");
- 
-          if (element.prop( "type" ) === "checkbox") {
-             error.insertAfter(element.parent("label") );
-          } else {
-             error.insertAfter(element);
-          }
-       },
-       highlight: function ( element, errorClass, validClass ) {
-          $( element ).parents( ".col-sm-10" ).addClass( "has-error" ).removeClass( "has-success" );
-       },
-       unhighlight: function (element, errorClass, validClass) {
-          $( element ).parents( ".col-sm-10" ).addClass( "has-success" ).removeClass( "has-error" );  
-       } 
-    });
+ });*/
+
+ $("#enviar").click(function() {
+   if ($("#signupForm").valid()) {
+     window.modal1.showModal();
+   }
  });
 
+$(document).ready(function () {
+   $.validator.addMethod("dni", function(value, element) {
+      return this.optional(element) ||  /^.*[0-9].*$/i.test(value);
+  }, "RFEWGHTHYR.");
+  $("#signupForm").validate({
+    rules: {
+      fullname: {
+        required: true,
+        minlength: 2,
+        pattern:/^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\s]*)+$/
+      },
+      subname: {
+        required: true,
+        minlength: 2,
+        pattern:/^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\s]*)+$/
+      },
 
- 
- 
+      date: {
+        required: true,
+        date: true
+      },
+
+      dni: {
+         required: true,
+         //minlength: 9,
+         pattern: /^\d{8}[a-zA-Z]$/
+      },
+
+      email: {
+         required: true,
+         email: true
+       },
+
+      password: {
+        required: true,
+        pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,15}$/
+      },
+     
+    },
+    messages: {
+      fullname: {
+        required: "Por favor ingresa tu nombre",
+        minlength: "Tu nombre debe ser de no menos de 2 caracteres",
+        pattern: "El nombre debe empepezar por mayúscula, no se acepta números ni caracteres especiales"
+      },
+      subname: {
+        required: "Por favor ingresa tu apellido",
+        minlength: "Tu apellido debe ser de no menos de 2 caracteres",
+        pattern: "El apellido debe empepezar por mayúscula, no se acepta números ni caracteres especiales"
+      },
+
+      dni: {
+        required: "Por favor ingresa tu DNI",
+       //minlength: "El DNI no es válido",
+       pattern:"DNI no válido"
+      },
+
+      password: {
+        required: "Por favor ingresa una contraseña",
+        pattern:"Minimo 8 caracteres,Maximo 15, Al menos una letra mayúscula, Al menos una letra minucula, Al menos un dígito, No espacios en blanco, Al menos 1 caracter especial"
+      },
+
+      date: "Por favor ingrese un valor mayor o igual a 1950-01-01.",
+      email: "Por favor ingresa un correo válido"
+    },
+
+    errorPlacement: function (error, element) {
+       console.log("Error", error, element);
+      if (element.is(":radio")) {
+        error.appendTo(element.parents(".form-group"));
+      } else {
+        error.insertAfter(element);
+        $(element).addClass("error");
+      }
+    },
+    submitHandler: function (form) {
+      //Llamada a Swal, plugin
+      Swal.fire({
+        position: "center-start",
+        icon: "success",
+        title: "Te has registrado correctamente.",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    },
+  });
+});

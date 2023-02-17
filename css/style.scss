@@ -410,11 +410,10 @@ button.submit:hover {
 //Página registro nutricionista
 
 
-    .inputregistro{
+.inputregistro{
         font-size:large;
         font-family: 'Nunito', sans-serif;
-        margin-top: 1%;
-        margin-bottom: 10%;
+        margin-top: 5%;
         padding: 0 10px;
         border-radius: 5px;
         font-size: 16px;
@@ -423,9 +422,18 @@ button.submit:hover {
         width: 100%;
         
     }
+
+    .form-group{
+        margin-bottom: 5%;
+    }
+
     .detNom{
         display: flex;
         flex-direction: row;
+    }
+
+    #group{
+        max-width: 50%;
     }
 
     .generoRad input[type=radio]{
@@ -435,6 +443,9 @@ button.submit:hover {
         left: 133px;
     }
 
+    .error{
+        color:red;
+    }
 
     .contBlan{
         max-width: 30%;
@@ -472,6 +483,9 @@ button.submit:hover {
             flex-direction: column;
 
         } 
+        #group{
+            max-width: 100%;
+        }
 
         .contBlan{
             max-width: 90%;
