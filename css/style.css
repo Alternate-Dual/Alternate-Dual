@@ -2,7 +2,8 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   text-decoration: none;
   list-style: none;
 }
@@ -12,8 +13,8 @@ body {
   font-size: large;
   margin: 0;
   text-align: center;
-  margin-top: 2%;
-  margin-bottom: 5%;
+  /*margin-top: 2%;
+    margin-bottom: 5%;*/
   background-color: #eceff1;
 }
 
@@ -23,7 +24,7 @@ h1, h2, h3, h4 {
 
 button.btnVerde {
   font-size: large;
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
   background-color: #7ed957;
   border: 1px solid #7ed957;
   color: white;
@@ -51,21 +52,34 @@ header {
   top: 0;
   right: 0;
   z-index: 1000;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: white;
   padding: 28px 12%;
-  transition: all 0.5s ease;
+  -webkit-transition: all .50s ease;
+  transition: all .50s ease;
 }
+
 header a#logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 header a#logo img {
   width: 50%;
 }
+
 header ul#menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 header ul#menu a {
   color: #545454;
   font-family: "Work Sans", sans-serif;
@@ -73,18 +87,26 @@ header ul#menu a {
   font-weight: 500;
   padding: 5px 0;
   margin: 0px 30px;
-  transition: all 0.3s ease;
+  -webkit-transition: all .30s ease;
+  transition: all .30s ease;
 }
+
 header ul#menu a:hover {
-  color: #50c31e;
+  color: #50c31eff;
 }
+
 header div#user {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-left: 15%;
   position: fixed;
   right: 15vw;
 }
+
 header div#user div#profile {
   position: relative;
   width: 60px;
@@ -93,6 +115,7 @@ header div#user div#profile {
   overflow: hidden;
   cursor: pointer;
 }
+
 header div#user div#profile img {
   position: absolute;
   top: 0;
@@ -102,34 +125,41 @@ header div#user div#profile img {
   -o-object-fit: cover;
      object-fit: cover;
 }
+
 header div#user div#profilemenu {
   position: absolute;
   top: 120px;
   right: -10px;
   padding: 10px 20px;
-  background: rgb(243, 240, 240);
+  background: #f3f0f0;
   width: 200px;
-  box-sizing: 0 5px 25px rgba(0, 0, 0, 0.1);
+  -webkit-box-sizing: 0 5px 25px rgba(0, 0, 0, 0.1);
+          box-sizing: 0 5px 25px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   visibility: hidden;
   opacity: 0;
 }
+
 header div#user div#profilemenu.active {
   top: 80px;
   visibility: visible;
   opacity: 1;
 }
+
 header div#user div#profilemenu::before {
-  content: "";
+  content: '';
   position: absolute;
   top: -5px;
   right: 28px;
   width: 20px;
   height: 20px;
-  background: rgb(243, 240, 240);
-  transform: rotate(45deg);
+  background: #f3f0f0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
+
 header div#user div#profilemenu h3 {
   width: 100%;
   text-align: center;
@@ -139,40 +169,55 @@ header div#user div#profilemenu h3 {
   padding: 20px 0;
   line-height: 1.2em;
 }
+
 header div#user div#profilemenu h3 span {
   font-size: 14px;
   font-weight: 400;
   font-family: "Nunito", sans-serif;
 }
+
 header div#user div#profilemenu ul li {
   list-style: none;
   padding: 10px 0;
   border-top: 1px solid #545454;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 header div#user div#profilemenu ul li i {
   max-width: 20px;
   margin-right: 10px;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   opacity: 0.5;
   color: black;
 }
+
 header div#user div#profilemenu ul li:hover i {
   opacity: 1;
 }
+
 header div#user div#profilemenu ul li a {
   display: inline-block;
   text-decoration: none;
   color: black;
   font-weight: 500;
   font-family: "Nunito", sans-serif;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
+
 header div#user div#profilemenu ul li:hover a {
-  color: #50c31e;
+  color: #50c31eff;
 }
+
 header div#menuicon i {
   font-size: 35px;
   color: #545454;
@@ -180,9 +225,11 @@ header div#menuicon i {
   z-index: 10001;
   margin-left: 10vh;
 }
+
 header div#menuicon {
   display: none;
 }
+
 @media (max-width: 900px) {
   header div#menuicon {
     display: block;
@@ -192,13 +239,15 @@ header div#menuicon {
 @media (max-width: 900px) {
   header {
     padding: 14px 2%;
-    transition: 0.2s;
+    -webkit-transition: .2s;
+    transition: .2s;
   }
   ul#menu a {
     padding: 5px 0;
     margin: 0px 20px;
   }
 }
+
 @media (max-width: 900px) {
   div#menuicon {
     display: block;
@@ -209,41 +258,60 @@ header div#menuicon {
     right: -100%;
     width: 270px;
     height: 26vh;
-    background: #7ed957;
+    background: #7ed957ff;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     border-radius: 10px;
-    transition: all 0.5s ease;
+    -webkit-transition: all .50s ease;
+    transition: all .50s ease;
   }
   ul#menu li a {
     display: block;
     margin: 12px 0;
     padding: 0px 25px;
-    transition: all 0.5s ease;
+    -webkit-transition: all .50s ease;
+    transition: all .50s ease;
     color: #545454;
   }
   ul#menu li a:hover {
     color: #545454;
-    transform: translateY(5px);
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
   }
   ul#menu.open {
     right: 2%;
   }
 }
+
 div#login {
-  font-family: "Work Sans", sans-serif;
+  font-family: 'Work Sans', sans-serif;
   color: #303433;
   min-height: 100vh;
   width: 100%;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
 }
 
 section {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 section.side {
@@ -259,9 +327,16 @@ section.side {
 .login-container {
   max-width: 450px;
   padding: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .title {
@@ -289,8 +364,13 @@ section.side {
 
 .login-form {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .form-control {
@@ -319,9 +399,11 @@ button {
   position: absolute;
   left: 32px;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   color: #888;
-  transition: color 0.4s;
+  -webkit-transition: color   0.4s;
+  transition: color   0.4s;
 }
 
 button.submit {
@@ -333,6 +415,7 @@ button.submit {
   font-weight: bold;
   background: #50c31e;
   cursor: pointer;
+  -webkit-transition: opacity 0.4s;
   transition: opacity 0.4s;
 }
 
@@ -347,17 +430,24 @@ button.submit:hover {
 /* ----  Responsiveness   ----  */
 @media (max-width: 780px) {
   div#login {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .side {
     display: none;
   }
 }
+
 .inputregistro {
   font-size: large;
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
   margin-top: 5%;
   padding: 0 10px;
   border-radius: 5px;
@@ -372,8 +462,13 @@ button.submit:hover {
 }
 
 .detNom {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 #group {
@@ -400,7 +495,8 @@ button.submit:hover {
   margin-left: auto;
   margin-right: auto;
   padding: 5%;
-  box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1), 0 32px 64px -48px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1), 0 32px 64px -48px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1), 0 32px 64px -48px rgba(0, 0, 0, 0.5);
 }
 
 dialog {
@@ -423,8 +519,13 @@ dialog::backdrop {
 
 @media screen and (max-width: 800px) {
   .detNom {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   #group {
     max-width: 100%;
@@ -438,11 +539,13 @@ dialog::backdrop {
     margin-left: 4.5%;
     margin-right: 2%;
     padding: 5%;
-    box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1), 0 32px 64px -48px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1), 0 32px 64px -48px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1), 0 32px 64px -48px rgba(0, 0, 0, 0.5);
   }
 }
+
 .datosNutricionista, .ContenedorPesos, h4 {
-  font-family: "Work Sans", sans-serif;
+  font-family: 'Work Sans', sans-serif;
 }
 
 .centrarContenidoPerfil {
@@ -461,11 +564,21 @@ dialog::backdrop {
   background-color: rgba(255, 0, 0, 0);
   padding: 5px;
   --height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .contenedorActualizarPeso {
@@ -479,7 +592,8 @@ dialog::backdrop {
   padding: 10px;
   text-align: center;
   width: 200px;
-  box-shadow: 0px 5px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 5px rgba(0, 0, 0, 0.5);
   border: 0px;
   border-radius: 15px;
   background-color: #7ED957;
@@ -487,7 +601,8 @@ dialog::backdrop {
 }
 
 .contenedorActualizarPeso button:hover {
-  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .ContenedorPesos {
@@ -517,7 +632,8 @@ dialog::backdrop {
 
 .datosNutricionista:hover {
   cursor: pointer;
-  transform: scale(1.03);
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
   background-color: #899CA9;
   color: white;
   border-radius: 10px;
@@ -536,7 +652,7 @@ h4.perfil {
 }
 
 .datosCliente, .ContenedorPesos, h4 {
-  font-family: "Work Sans", sans-serif;
+  font-family: 'Work Sans', sans-serif;
 }
 
 .centrarContenidoPerfil {
@@ -555,11 +671,21 @@ h4.perfil {
   background-color: rgba(255, 0, 0, 0);
   padding: 5px;
   --height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .contenedorActualizarPeso {
@@ -573,7 +699,8 @@ h4.perfil {
   padding: 10px;
   text-align: center;
   width: 200px;
-  box-shadow: 0px 5px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 5px rgba(0, 0, 0, 0.5);
   border: 0px;
   border-radius: 15px;
   background-color: #7ED957;
@@ -581,7 +708,8 @@ h4.perfil {
 }
 
 .contenedorActualizarPeso button:hover {
-  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .ContenedorPesos {
@@ -606,7 +734,8 @@ h4.perfil {
 
 .datosCliente:hover {
   cursor: pointer;
-  transform: scale(1.03);
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
   background-color: #899CA9;
   color: white;
   border-radius: 10px;
@@ -641,11 +770,17 @@ table tr:nth-child(2n+1).admin {
 .centrarContenidoPerfil {
   height: 100px;
   width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: left;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
   margin-left: 8rem;
   margin-right: 8rem;
-  justify-content: left;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
   background-color: rgba(0, 255, 255, 0);
 }
 
@@ -664,8 +799,10 @@ table tr:nth-child(2n+1).admin {
   width: auto;
   margin-left: 8rem;
   margin-right: 8rem;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 560px 450px;
+  -ms-grid-columns: 560px 450px;
+      grid-template-columns: 560px 450px;
   background-color: rgba(220, 26, 23, 0);
   color: #0a0a0a;
 }
@@ -673,26 +810,39 @@ table tr:nth-child(2n+1).admin {
 .semanaActual {
   background-color: rgba(0, 255, 255, 0);
   height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: right;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
 }
 
 .semanaSiguiente {
   background-color: rgba(149, 0, 255, 0);
   height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-left: 25rem;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   float: right;
-  justify-content: right;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
   cursor: pointer;
 }
 
 .menuDia {
   position: static;
   height: auto;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+          box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   border-radius: 15px;
   width: auto;
   padding: 10px;
@@ -704,12 +854,12 @@ table tr:nth-child(2n+1).admin {
 
 #menuDiah3 {
   margin-left: 2rem;
-  font-family: "Work Sans", sans-serif;
+  font-family: 'Work Sans', sans-serif;
 }
 
 #menuDiah5 {
   margin-left: 2rem;
-  font-family: "Work Sans", sans-serif;
+  font-family: 'Work Sans', sans-serif;
   background-color: rgba(0, 255, 255, 0);
 }
 
@@ -719,16 +869,25 @@ table tr:nth-child(2n+1).admin {
 }
 
 div#caja {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 300px 300px 300px 150px;
-  grid-template-rows: repeat(1, 170px);
+  -ms-grid-columns: 300px 300px 300px 150px;
+      grid-template-columns: 300px 300px 300px 150px;
+  -ms-grid-rows: (170px)[1];
+      grid-template-rows: repeat(1, 170px);
   margin-left: 2rem;
   background-color: rgba(0, 255, 255, 0);
 }
 
 #imgNombreComidas {
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-left: 0rem;
   margin-right: 2rem;
@@ -739,13 +898,20 @@ div#caja {
 }
 
 div#caja {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 300px 300px 300px 20px;
-  grid-template-rows: 190px;
+  -ms-grid-columns: 300px 300px 300px 20px;
+      grid-template-columns: 300px 300px 300px 20px;
+  -ms-grid-rows: 190px;
+      grid-template-rows: 190px;
   margin-left: 2rem;
   margin-bottom: 2rem;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: rgba(0, 255, 255, 0);
 }
 
@@ -753,8 +919,14 @@ div#caja div {
   background-color: rgba(196, 195, 200, 0.71);
   padding: 20px;
   border-radius: 10px;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 150px;
   width: 250px;
@@ -781,26 +953,38 @@ div#caja div {
     margin-bottom: 2%;
     padding: 2%;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     overflow-x: auto;
-    flex: 1 0 auto;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
     display: inline-block;
   }
 }
+
 @media screen and (min-width: 800px) {
   .menuDia {
     background-color: white;
     margin-bottom: 2%;
     padding: 2%;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     overflow-x: auto;
-    flex: 1 0 auto;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
     display: inline-block;
   }
 }
+
 #bodyMenuSemanal {
   margin: 0%;
   background-color: #eceff1;
@@ -809,11 +993,17 @@ div#caja div {
 .centrarContenidoPerfil {
   height: 100px;
   width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: left;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
   margin-left: 8rem;
   margin-right: 8rem;
-  justify-content: left;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
   background-color: rgba(0, 255, 255, 0);
 }
 
@@ -825,8 +1015,14 @@ div#caja div {
 .cabeceraSemana {
   height: 50px;
   width: auto;
-  justify-content: right;
-  align-items: center;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-left: 8rem;
   margin-right: 8rem;
@@ -835,22 +1031,29 @@ div#caja div {
 }
 
 .semanaSiguiente button {
-  background-color: rgb(5, 107, 61);
+  background-color: #056b3d;
   border: solid 0px;
   border-radius: 20px;
   padding: 10px;
   color: #ffffff;
   height: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-left: 22rem;
-  align-items: center;
-  justify-content: right;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
   cursor: pointer;
 }
 
 .menuDia {
   height: auto;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+          box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   border-radius: 15px;
   width: auto;
   padding: 10px;
@@ -861,12 +1064,12 @@ div#caja div {
 
 #menuDiah3 {
   margin-left: 2rem;
-  font-family: "Work Sans", sans-serif;
+  font-family: 'Work Sans', sans-serif;
 }
 
 #menuDiah5 {
   margin-left: 2rem;
-  font-family: "Work Sans", sans-serif;
+  font-family: 'Work Sans', sans-serif;
   background-color: rgba(0, 255, 255, 0);
 }
 
@@ -876,16 +1079,25 @@ div#caja div {
 }
 
 div#caja {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 300px 300px 300px 150px;
-  grid-template-rows: repeat(1, 170px);
+  -ms-grid-columns: 300px 300px 300px 150px;
+      grid-template-columns: 300px 300px 300px 150px;
+  -ms-grid-rows: (170px)[1];
+      grid-template-rows: repeat(1, 170px);
   margin-left: 2rem;
   background-color: rgba(0, 255, 255, 0);
 }
 
 #imgNombreComidas {
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-left: 0rem;
   margin-right: 2rem;
@@ -896,13 +1108,20 @@ div#caja {
 }
 
 div#caja {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 300px 300px 300px;
-  grid-template-rows: 190px;
+  -ms-grid-columns: 300px 300px 300px;
+      grid-template-columns: 300px 300px 300px;
+  -ms-grid-rows: 190px;
+      grid-template-rows: 190px;
   margin-left: 2rem;
   margin-bottom: 2rem;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: rgba(0, 255, 255, 0);
 }
 
@@ -910,8 +1129,14 @@ div#caja div {
   background-color: rgba(196, 195, 200, 0.71);
   padding: 20px;
   border-radius: 10px;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 150px;
   width: 250px;
@@ -933,53 +1158,84 @@ div#caja div {
     margin-bottom: 2%;
     padding: 2%;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     overflow-x: auto;
-    flex: 1 0 auto;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
     display: inline-block;
   }
 }
+
 @media screen and (min-width: 800px) {
   .menuDia {
     background-color: white;
     margin-bottom: 2%;
     padding: 2%;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     overflow-x: auto;
-    flex: 1 0 auto;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
     display: inline-block;
   }
 }
+
 .foto {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: foto;
 }
 
 .formu {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 3;
   grid-area: formu;
 }
 
 .tipo {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 3;
   grid-area: tipo;
 }
 
 .ingre {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
   grid-area: ingre;
 }
 
 .prepa {
+  -ms-grid-row: 3;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 3;
   grid-area: prepa;
 }
 
 .valores {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 6;
   grid-area: valores;
 }
 
 .contener {
+  display: -ms-grid;
   display: grid;
-  grid-template-areas: "foto foto foto formu formu formu" "foto foto foto tipo tipo tipo" "ingre ingre ingre prepa prepa prepa" "valores valores valores valores valores valores";
+      grid-template-areas: 'foto foto foto formu formu formu' 'foto foto foto tipo tipo tipo' 'ingre ingre ingre prepa prepa prepa' 'valores valores valores valores valores valores';
   gap: 20px;
 }
 
@@ -1015,9 +1271,15 @@ table td #recetatabla {
 }
 
 #list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /*-----div de la imagen-----*/
@@ -1051,16 +1313,30 @@ table td #recetatabla {
   width: 7em;
   height: 10em;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #check > div {
   margin-top: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin: 10px;
 }
 
@@ -1072,23 +1348,40 @@ table td #recetatabla {
   padding-top: 1%;
   padding-bottom: 2%;
   width: 60%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: stretch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   text-align: center;
 }
 
 .carrousel {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   overflow-x: auto;
   text-align: center;
 }
 
 .elemento {
-  flex: 1 0 auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
   text-align: center;
 }
 
@@ -1100,34 +1393,53 @@ table td #recetatabla {
     width: 100%;
   }
   .carrousel {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     overflow-x: auto;
   }
   .elemento {
-    flex: 1 0 auto;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
     margin-left: 3em;
   }
 }
+
 .receta1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
   grid-area: nombre;
 }
 
 .receta2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
   grid-area: receta2;
 }
 
 .receta3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 3;
   grid-area: receta3;
 }
 
 .receta4 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 6;
   grid-area: receta4;
 }
 
 .contenedor {
+  display: -ms-grid;
   display: grid;
-  grid-template-areas: "nombre nombre nombre nombre nombre nombre" "receta2 receta2 receta2 receta3 receta3 receta3" "receta4 receta4 receta4 receta4 receta4 receta4";
+      grid-template-areas: 'nombre nombre nombre nombre nombre nombre' 'receta2 receta2 receta2 receta3 receta3 receta3' 'receta4 receta4 receta4 receta4 receta4 receta4';
   gap: 20px;
   padding-left: 20%;
   padding-right: 20%;
@@ -1141,16 +1453,23 @@ table td #recetatabla {
 }
 
 .foto1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: foto;
 }
 
 .foto2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
   grid-area: nombre;
 }
 
 .receta1 {
+  display: -ms-grid;
   display: grid;
-  grid-template-areas: "foto foto nombre nombre";
+      grid-template-areas: 'foto foto nombre nombre';
   gap: 50px;
 }
 
@@ -1159,13 +1478,20 @@ table td #recetatabla {
 }
 
 #list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 img#plato {
   margin-top: 5%;
   height: 70%;
   width: 66%;
-}/*# sourceMappingURL=style.css.map */
+}
+/*# sourceMappingURL=style.css.map */

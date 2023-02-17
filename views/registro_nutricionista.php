@@ -9,35 +9,38 @@
     <script src="https://kit.fontawesome.com/4a0af06348.js" crossorigin="anonymous"></script> <!-- Script para libreria de iconos -->
     
     <script src="../jquery/jquery-3.6.3.js"></script>
-  <script src="../jquery/jquery.validate.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../jquery/jquery.validate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
     <h1>Datos personales</h1>
     <br>
     <br>
+    <?php
+        //include("../includes/database.php");
+        //include("../includes/controlador_registrar_usuario.php");
 
+    ?>
     <div class="contBlan">
-        <form name="formulario" method="post" id="signupForm">
-        
+        <form name="formulario" method="post" id="signupForm" action="">
         <div class="detNom">
 
             <div id="group" class="form-group">
                 <label for="nombre">Nombre</label><br>
-                <input type="text"  name="fullname" class="inputregistro"><br>
+                <input type="text" name="nombre" class="inputregistro"><br>
                 
             </div>
 
             <div id="group" class="form-group">
-                <label for="apellido">Apellido</label><br>
-                <input type="text"  name="subname" class="inputregistro "><br>
+                <label for="apellido">Apellidos</label><br>
+                <input type="text"  name="apellidos" class="inputregistro "><br>
             </div>
         </div>
         <div class="form-group">
             <label for="fecha">Fecha de nacimiento</label><br>
-            <input type="date" name="date" min="1950-01-01" class="inputregistro"><br>
+            <input type="date" name="fecha_nacimiento" min="1950-01-01" class="inputregistro"><br>
             </div>
 
             <div class="form-group">
@@ -45,9 +48,6 @@
             <input type="text" id="dni" name="dni" class="inputregistro"><br>
             </div>
             
-
-        
-        
             <div class="form-group">
             <label for="sexo">Sexo</label><br>
             <div class="generoRad">
@@ -75,23 +75,19 @@
         <br>
 
         <div class="contBlan">
-            <form name="formulario" method="post" id="signupForm">
+            <form name="formulario" method="post" id="signupForm" action="">
             <br>
             <div class="form-group">
                 <label for="correo">Correo electrónico</label><br>
-                <input type="text" id="email" name="email" class="inputregistro"><br>
+                <input type="text" id="email" name="correo_electronico" class="inputregistro"><br>
             </div>
 
             <div class="form-group">
                 <label for="password">Contraseña</label><br>
                 <input type="text" id="password" name="password" class="inputregistro"><br>
             </div>
-           
-                <button type="submit" id="enviar" class="btnVerde">Confirmar</button>
-            
+                <button type="submit" id="enviar" class="btnVerde" name="registro">Confirmar</button>
             </form>
-
-            <a href="./index_nutricionista.html">Ir nutricionista</a>
         </div>
     </dialog>
 </div>

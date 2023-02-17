@@ -16,18 +16,18 @@ $(document).ready(function () {
   }, "RFEWGHTHYR.");
   $("#signupForm").validate({
     rules: {
-      fullname: {
+      nombre: {
         required: true,
         minlength: 2,
         pattern:/^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\s]*)+$/
       },
-      subname: {
+      apellidos: {
         required: true,
         minlength: 2,
         pattern:/^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\s]*)+$/
       },
 
-      date: {
+      fecha_nacimiento: {
         required: true,
         date: true
       },
@@ -38,7 +38,7 @@ $(document).ready(function () {
          pattern: /^\d{8}[a-zA-Z]$/
       },
 
-      email: {
+      correo_electronico: {
          required: true,
          email: true
        },
@@ -50,12 +50,12 @@ $(document).ready(function () {
      
     },
     messages: {
-      fullname: {
+      nombre: {
         required: "Por favor ingresa tu nombre",
         minlength: "Tu nombre debe ser de no menos de 2 caracteres",
         pattern: "El nombre debe empepezar por mayúscula, no se acepta números ni caracteres especiales"
       },
-      subname: {
+      apellidos: {
         required: "Por favor ingresa tu apellido",
         minlength: "Tu apellido debe ser de no menos de 2 caracteres",
         pattern: "El apellido debe empepezar por mayúscula, no se acepta números ni caracteres especiales"
@@ -72,8 +72,8 @@ $(document).ready(function () {
         pattern:"Minimo 8 caracteres,Maximo 15, Al menos una letra mayúscula, Al menos una letra minucula, Al menos un dígito, No espacios en blanco, Al menos 1 caracter especial"
       },
 
-      date: "Por favor ingrese un valor mayor o igual a 1950-01-01.",
-      email: "Por favor ingresa un correo válido"
+      fecha_nacimiento: "Por favor ingrese un valor mayor o igual a 1950-01-01.",
+      correo_electronico: "Por favor ingresa un correo válido"
     },
 
     errorPlacement: function (error, element) {
