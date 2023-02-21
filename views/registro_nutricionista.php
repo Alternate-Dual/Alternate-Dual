@@ -36,7 +36,7 @@
 
             <div id="group" class="form-group">
                 <label for="apellido">Apellidos</label><br>
-                <input type="text"  name="apellidos" class="inputregistro " required><br>
+                <input type="text"  name="apellidos" class="inputregistro" required><br>
             </div>
         </div>
         <div class="form-group">
@@ -53,7 +53,7 @@
             <label for="sexo">Sexo</label><br>
             <div class="generoRad">
                 <div>
-                    <input type="radio" id="mujer" name="sexo" value="mujer" class="inputregistro">
+                    <input type="radio" id="mujer" name="sexo" value="mujer" class="inputregistro" >
                     <label for="mujer">Mujer</label>
                 </div>
                 <div>
@@ -61,23 +61,9 @@
                     <label for="hombre">Hombre</label><br>
                 </div>
         </div>
-        </div>        
-
-        </form>
-
-        <button class="btnVerde" type="submit" id="enviar" name="submit" onclick="window.modal1.showModal();" >Siguiente</button>
-
-    </div>
-
-    <dialog id="modal1">
-
-        <h1>Datos de contacto</h1>
-        <br>
-        <br>
-
-        <div class="contBlan">
-            
-            <div class="form-group">
+        </div>  
+        
+        <div class="form-group">
                 <label for="correo">Correo electrónico</label><br>
                 <input type="email" id="email" form="signupForm" name="correo_electronico" class="inputregistro" required><br>
             </div>
@@ -89,8 +75,15 @@
                 <button type="submit" id="enviar" form="signupForm" class="btnVerde" name="registro">Confirmar</button>
            
         </div>
-    </dialog>
-</div>
+
+        </form>
+
+       
+
+    </div>
+
+   
+
 
 <script src="../js/appRegistro.js"></script>
 

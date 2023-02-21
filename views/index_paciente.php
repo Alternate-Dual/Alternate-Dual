@@ -147,48 +147,6 @@ if(!isset($_SESSION['rol'])){
         </div>
     </div>
 
-    <!----------------- entrenamiento ---------->
-
-    <div class="contBlan2">
-        <h3>Mi entrenamiento</h3>
-        <br>
-            <div class="carrousel">
-                <div class="elemento">
-                    <h4>Hoy</h4>
-                    
-                        <img src="" alt="">
-                        <div id="ejercicio">
-                        <button class="btnEmpezar">Empezar</button>
-                        <input type="checkbox">
-                        <p>Tonificar brazos</p>
-                        <p>6 ejercicios - 40min</p>
-                    </div>
-                </div>
-
-                <div class="elemento">
-                <h4>Próximo día</h4>
-                    <div id="ejercicio">
-                        <img src="" alt="">
-                        <input type="checkbox">
-                        <p>Tonificar brazos</p>
-                        <p>6 ejercicios - 40min</p>
-                    </div>
-                </div>
-
-            </div>
-    </div>
-
-
-   <!-- Objetivo--> 
-    <div class="contBlan2">
-        <h3>Objetivo diario</h3>
-        <br>
-        <p>Puntos conseguidos</p>
-        <p>¡Suigue así para llegar a los 100 puntos!</p>
-       
-            <input type="range" disabled>
-      
-    </div>
 
     <!-- mi progreso -->
     <div class="contBlan2">

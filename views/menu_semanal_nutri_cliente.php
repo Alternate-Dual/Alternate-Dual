@@ -67,8 +67,8 @@ if(!isset($_SESSION['rol'])){
         <h4>Nombre del cliente</h4>
     </div>
 
-    <div class="cabeceraSemana">
-        <div class="semanaActual">
+  
+      
             <h2>Semana 1</h2>
         </div>
         <div class="semanaSiguiente">
@@ -91,7 +91,7 @@ if(!isset($_SESSION['rol'])){
                 <img id="infoIcon" src="/img/informacion.png" alt="">
                 <input type="checkbox" name="checkmark3" id="checkmark">
             </div>
-            <h2 onclick=""><img id="slider" src="/img/flecha-correcta.png" alt=""></h2>
+        
             <span>
                 Sandwich de manzana <br> y granola
             </span>
