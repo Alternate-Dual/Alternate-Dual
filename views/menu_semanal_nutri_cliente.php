@@ -77,7 +77,7 @@ if(!isset($_SESSION['rol'])){
     </div>
     <div class="menuDia">
         <h3 id="menuDiah3">Lunes</h3>
-        <h5 id="menuDiah5"><a href="receta_categoria_nutri">Desayuno</a><input type="search" placeholder="🔍Buscar" name="" id="searchMenuDia"></h5>
+        <h5 id="menuDiah5"><a href="receta_categoria_nutri.php">Desayuno</a><input type="search" placeholder="🔍Buscar" name="" id="searchMenuDia"></h5>
         <div id="caja">
             <div id="NombreComidas"><img id="imgNombreComidas" src="/img/desayuno1.jpg" alt="">
                 <img id="infoIcon" onclick="" src="/img/informacion.png" alt="">

@@ -60,22 +60,20 @@ if(!isset($_SESSION['rol'])){
     <br>
     <br>
     <br>
-    <br>
     <h1>Crear receta</h1>
-    <br>
     <br>
     <div class="contener">
 
         <!--<div class="comida">-->
 
-            <div class="foto">
+            <div class="foto" style="background-color:#545454;">
                 <img src="../img/.png" alt="">
-                <div id="imagen">
+                <div id="imagen" style="color:white;">
                     <label id="labelImg" for="inputTag">
                       Seleccione imagen <br/>
                       <i class="fa fa-2x fa-camera"></i>
                       <input id="inputTag" type="file"/>
-                      <br/>
+                      <br>
                       <span id="imageName"></span>
                     </label>
                   </div>
@@ -86,7 +84,7 @@ if(!isset($_SESSION['rol'])){
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre" name="nombre"><br>
 
-                    <label for="nombre">Tiempo en ejecución:</label>
+                    <label for="nombre">Tiempo en ejecución (min):</label>
                     <input type="number" id="num" name="num"><br>
 
                     <label for="complej">Complejidad de realización</label>
@@ -98,15 +96,15 @@ if(!isset($_SESSION['rol'])){
 
                     <h4>Tipo de comida</h4>
                     
-                    <input class="tipIn" type="radio" id="desay" name="desay" value="desay">
+                    <input class="tipIn" type="radio" id="desay" name="tipo_comida" value="desay">
                     <label class="tipLa" for="desay"> Desayuno</label><br>
-                    <input class="tipIn" type="radio" id="mediam" name="mediam" value="mediam">
+                    <input class="tipIn" type="radio" id="mediam" name="tipo_comida" value="mediam">
                     <label class="tipLa" for="mediam"> Media mañana</label><br>
-                    <input class="tipIn" type="radio" id="comid" name="comid" value="comid">
-                    <label class="tipLa" class="tip" for="comid"> Comida</label><br>
-                    <input class="tipIn" type="radio" id="meri" name="meri" value="meri">
+                    <input class="tipIn" type="radio" id="almuer" name="tipo_comida" value="almuer">
+                    <label class="tipLa" for="almuer"> Almuerzo</label><br>
+                    <input class="tipIn" type="radio" id="meri" name="tipo_comida" value="meri">
                     <label class="tipLa" for="meri"> Merienda</label><br>
-                    <input class="tipIn" type="radio" id="cena" name="cena" value="cena">
+                    <input class="tipIn" type="radio" id="cena" name="tipo_comida" value="cena">
                     <label class="tipLa" for="cena"> Cena</label><br>
                    
                 </form>
@@ -116,38 +114,25 @@ if(!isset($_SESSION['rol'])){
         
         <!--<div class="list">-->
             <div class="ingre">
-
-                <h4>Ingredientes</h4>
-                <div id="list">
-                <ul>
-                    <li>ejemplo</li>
-                    <li>ej</li>
-                    <li>ej</li>
-                </ul>
-                </div>
-                <p>Añadir</p>
-
+                <h4>Ingredientes</h4><br>
+                <form>
+                <textarea id="ingredientes" name="ingredientes" rows="4" cols="50"></textarea>
+                </form>
             </div>
 
             <div class="prepa">
-
-                <h4>Preparación</h4>
-                <div id="list">
-                <ol>
-                    <li>ej</li>
-                    <li>ej</li>
-                    <li>ej</li>
-                </ol>
-                </div>
-                <p>Añadir</p>
-                
+                <h4>Preparación</h4><br>
+                <form>
+                <textarea id="preparacion" name="preparacion" rows="4" cols="50"></textarea>
+                </form>
             </div>
+            <br>
         <!--</div>-->
         
 
         <div class="valores">
-
-            <h4>Valores nutricionales</h4>
+            <br>
+            <h4>Valores nutricionales</h4> <br><br>
 
             <label for="cal">Calorías</label>
             <input class="valor" type="number">
@@ -160,113 +145,14 @@ if(!isset($_SESSION['rol'])){
 
             <label for="grasa">Grasas</label>
             <input class="valor" type="number">
-        </div>
 
+            <br><br>
+
+            <button onclick="añadirIngrediente" class="btnVerde" style="padding-left: 10vh; padding-right: 10vh;">Añadir</button>
+        </div>
     
     </div> 
     
-    <table id="recetatabla">
-
-        <tr id="recetatabla">
-            <td id="recetatabla">
-                <img src="img/.png" alt="">
-                <div id="imagen">
-                    <label id="labelImg" for="inputTag">
-                      Seleccione imagen <br/>
-                      <i class="fa fa-2x fa-camera"></i>
-                      <input id="inputTag" type="file"/>
-                      <br/>
-                      <span id="imageName"></span>
-                    </label>
-                  </div>
-            </td>
-
-            <td id="recetatabla">
-                <form action="">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" name="nombre"><br>
-
-                    <label for="nombre">Tiempo en ejecución</label>
-                    <input type="number" id="num" name="num"><br>
-
-                    <label for="complej">Complejidad de realización</label>
-                    <select id="dificul">
-                        <option value="Fácil">Fácil</option>
-                        <option value="Intermedio">Intermedio</option>
-                        <option value="Complejo">Complejo</option>
-                    </select>
-
-                    
-                        <h4>Tipo de comida</h4> 
-                            <input type="radio" id="desay" name="desay" value="desay">
-                            <label for="desay"> Desayuno</label><br>
-                            <input type="radio" id="mediam" name="mediam" value="mediam">
-                            <label for="mediam"> Media mañana</label><br>
-                            <input type="radio" id="comid" name="comid" value="comid">
-                            <label for="comid"> Comida</label><br>
-                            <input type="radio" id="meri" name="meri" value="meri">
-                            <label for="meri"> Merienda</label><br>
-                            <input type="radio" id="cena" name="cena" value="cena">
-                            <label for="cena"> Cena</label>
-        
-                </form>
-            </td>
-
-        </tr>      
-
-        <tr id="recetatabla">
-            <td id="recetatabla">
-
-                <h4>Ingredientes</h4>
-
-                <div id="list">
-                <ul>
-                    <li>ej</li>
-                    <li>ej</li>
-                    <li>ej</li>
-                </ul>
-                </div>
-                <p>Añadir</p>
-
-            </td>
-            <td id="recetatabla">
-
-                <h4>Preparación</h4>
-                <div id="list">
-                <ol>
-                    <li>ej</li>
-                    <li>ej</li>
-                    <li>ej</li>
-                </ol>
-                </div>
-                <p>Añadir</p>
-            </td>
-
-            
-
-        </tr>
-
-    
-        <tr id="recetatabla">
-            <td colspan="3" id="recetatabla">
-
-                <h4>Valores nutricionales</h4>
-    
-                <label for="cal">Calorías</label>
-                <input class="valor" type="text">
-    
-                <label for="carbo">Carbohidratos</label>
-                <input class="valor" type="text">
-    
-                <label for="prote">Proteinas</label>
-                <input class="valor" type="text">
-    
-                <label for="grasa">Grasas</label>
-                <input class="valor" type="text">
-            </td>
-        </tr>
-
-    </table>
     <script src="../js/app.js"></script>
 </body>
 </html>
