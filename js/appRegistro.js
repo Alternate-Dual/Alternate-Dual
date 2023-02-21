@@ -1,8 +1,8 @@
-/*$().validator.setDefaults( {
+$().validator.setDefaults( {
     submitHandler: function () {
        alert( "submitted!" );
     }
- });*/
+ });
 
  $("#enviar").click(function() {
    if ($("#signupForm").valid()) {
@@ -47,7 +47,7 @@ $(document).ready(function () {
 
       password: {
         required: true,
-        pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,15}$/
+        pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})$/
       },
      
     },
@@ -73,7 +73,7 @@ $(document).ready(function () {
 
       password: {
         required: "Por favor ingresa una contraseña",
-        pattern:"Minimo 8 caracteres,Maximo 15, Al menos una letra mayúscula, Al menos una letra minucula, Al menos un dígito, No espacios en blanco, Al menos 1 caracter especial"
+        pattern:"Minimo 8 caracteres,Maximo 15, Al menos una letra mayúscula, Al menos una letra minucula, Al menos un dígito, No espacios en blanco"
       },
 
       fecha_nacimiento: "Por favor ingrese un valor mayor o igual a 1950-01-01.",
