@@ -677,6 +677,30 @@ h4.perfil{
     border-radius: 10px;
 }
 
+
+//Inicio paciente
+.btnEmpezar{
+    font-family: 'Nunito', sans-serif;
+    background-color: #7ed957;
+    border: 1px solid #7ed957;
+    color: white;
+    padding: 3%;
+    max-width: 60%;
+    text-align: center;
+    border-radius: 12px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+
+}
+
+#ejercicio{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+
+
 //Admin
 h1.admin{
     margin-bottom: 3%;
@@ -1173,10 +1197,9 @@ margin: 10px;
 .contBlan2{
 border-radius: 18px;
 background-color: white;
-margin-top: 2%; 
 margin-bottom: 2%;
-padding-top: 1%;
-padding-bottom: 2%;
+padding:2%;
+
 width: 60%;
 display:inline-flex;
 flex-direction: column;
@@ -1202,6 +1225,7 @@ flex:1 0 auto;
 text-align: center;
 
 }
+
 
 
 @media screen and (max-width:1000px) {

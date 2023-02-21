@@ -15,6 +15,7 @@
 </head>
 
 <body>
+    <br>
     <h1>Datos personales</h1>
     <br>
     <br>
@@ -24,28 +25,28 @@
 
     ?>
     <div class="contBlan">
-        <form name="formulario" method="post" id="signupForm" action="">
+        <form name="formulario" method="post" id="signupForm" action="" novalidate="novalidate">
         <div class="detNom">
 
             <div id="group" class="form-group">
                 <label for="nombre">Nombre</label><br>
-                <input type="text" name="nombre" class="inputregistro"><br>
+                <input type="text" name="nombre" class="inputregistro" required><br>
                 
             </div>
 
             <div id="group" class="form-group">
                 <label for="apellido">Apellidos</label><br>
-                <input type="text"  name="apellidos" class="inputregistro "><br>
+                <input type="text"  name="apellidos" class="inputregistro " required><br>
             </div>
         </div>
         <div class="form-group">
             <label for="fecha">Fecha de nacimiento</label><br>
-            <input type="date" name="fecha_nacimiento" min="1950-01-01" class="inputregistro"><br>
+            <input type="date" name="fecha_nacimiento" min="1950-01-01" class="inputregistro" required><br>
             </div>
 
             <div class="form-group">
             <label for="dni">DNI</label><br>
-            <input type="text" id="dni" name="dni" class="inputregistro"><br>
+            <input type="text" id="dni" name="dni" class="inputregistro" required><br>
             </div>
             
             <div class="form-group">
@@ -64,7 +65,7 @@
 
         </form>
 
-        <button class="btnVerde" type="submit" id="enviar" onclick="window.modal1.showModal();" >Siguiente</button>
+        <button class="btnVerde" type="submit" id="enviar" name="submit" onclick="window.modal1.showModal();" >Siguiente</button>
 
     </div>
 
@@ -75,19 +76,18 @@
         <br>
 
         <div class="contBlan">
-            <form name="formulario" method="post" id="signupForm" action="">
-            <br>
+            
             <div class="form-group">
                 <label for="correo">Correo electrónico</label><br>
-                <input type="text" id="email" name="correo_electronico" class="inputregistro"><br>
+                <input type="email" id="email" form="signupForm" name="correo_electronico" class="inputregistro" required><br>
             </div>
 
             <div class="form-group">
                 <label for="password">Contraseña</label><br>
-                <input type="text" id="password" name="password" class="inputregistro"><br>
+                <input type="password" id="password" form="signupForm" name="password" class="inputregistro" required><br>
             </div>
-                <button type="submit" id="enviar" class="btnVerde" name="registro">Confirmar</button>
-            </form>
+                <button type="submit" id="enviar" form="signupForm" class="btnVerde" name="registro">Confirmar</button>
+           
         </div>
     </dialog>
 </div>

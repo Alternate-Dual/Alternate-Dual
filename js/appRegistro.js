@@ -38,6 +38,8 @@ $(document).ready(function () {
          pattern: /^\d{8}[a-zA-Z]$/
       },
 
+      sexo: "required",
+
       correo_electronico: {
          required: true,
          email: true
@@ -66,6 +68,8 @@ $(document).ready(function () {
        //minlength: "El DNI no es válido",
        pattern:"DNI no válido"
       },
+
+      sexo: "Este campo es obligatorio.",
 
       password: {
         required: "Por favor ingresa una contraseña",
