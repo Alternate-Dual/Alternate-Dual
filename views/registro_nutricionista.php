@@ -17,12 +17,9 @@
 <body>
     <br>
     <h1>Datos personales</h1>
-    <br>
-    <br>
     <?php
-        //include("../includes/database.php");
-        //include("../includes/controlador_registrar_usuario.php");
-
+        include("../includes/database.php");
+        include("../includes/controlador_registrar_usuario.php");
     ?>
     <div class="contBlan">
         <form name="formulario" method="post" id="signupForm" action="" novalidate="novalidate">
@@ -72,14 +69,14 @@
                 <label for="password">Contraseña</label><br>
                 <input type="password" id="password" form="signupForm" name="password" class="inputregistro" required><br>
             </div>
-                <button type="submit" id="enviar" form="signupForm" class="btnVerde" name="registro">Confirmar</button>
+                <button type="submit" id="enviar" form="signupForm" class="btnVerde" name="registro" value="Registrar">Confirmar</button>
            
         </div>
 
         </form>
 
-       
-
+        <br>
+        <br>
     </div>
 
    
