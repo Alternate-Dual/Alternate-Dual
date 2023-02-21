@@ -1,5 +1,4 @@
 <?php 
-include("database.php");
 if(!empty($_POST["registro"])){
     if(empty($_POST["nombre"]) or empty($_POST["apellidos"]) or empty($_POST["fecha_nacimiento"]) or empty($_POST["dni"]) or empty($_POST["sexo"]) or empty($_POST["correo_electronico"]) or empty($_POST["password"])){
         echo '<div>uno de los campos esta vacio</div>';
