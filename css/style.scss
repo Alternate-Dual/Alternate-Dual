@@ -734,11 +734,8 @@ table tr:nth-child(2n+1).admin{
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
-    overflow-x: auto;
-    
     text-align: center; 
-    margin-top: 2%; 
-    margin-bottom: 2%;     
+    width: auto;    
     
     }
 
@@ -959,7 +956,6 @@ div#caja{
 
 .contBlan3{
     border-radius: 18px;
-    margin-bottom: 2%;
     padding:2%;
     
     width: 60%;
@@ -973,12 +969,21 @@ div#caja{
     }
 
 .scrollY{
-    display: flex;
+    
     overflow-y:scroll;
     flex-wrap: wrap;
     overflow-x: hidden;
     max-height:600px;
+    width: 100%;
+
 }
+
+.elemento2{
+    margin-left:2%;
+    text-align: center;
+    
+    }
+
 
 .cabeceraSemana{
     height: 50px;
