@@ -818,13 +818,6 @@ table tr:nth-child(2n+1).admin{
     border-radius: 20px;
 }
 
-div#caja{
-    display: grid;
-    grid-template-columns: 300px 300px 300px 150px;
-    grid-template-rows: repeat(1,170px);
-    margin-left: 2rem;
-    background-color: rgba(0, 255, 255, 0);
-}
 
 #imgNombreComidas {
         align-items: center;
@@ -986,17 +979,6 @@ div#caja{
     
 }
 
-
-#menuDiah3 {
-    margin-left: 2rem;
-    font-family: 'Work Sans', sans-serif;
-}
-
-#menuDiah5 {
-    margin-left: 2rem;
-    font-family: 'Work Sans', sans-serif;
-    background-color: rgba(0, 255, 255, 0);
-}
 
 #searchMenuDia {
     width: 100px;
