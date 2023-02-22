@@ -71,11 +71,9 @@ if(!isset($_SESSION['rol'])){
       
             <h2>Semana 1</h2>
         </div>
-        <div class="semanaSiguiente">
-            <h2 onclick=""><img src="/img/flecha-correcta.png" alt=""></h2>
-        </div>
-    </div>
-    <div class="menuDia">
+        
+   
+    <div class="contBlan2">
         <h3 id="menuDiah3">Lunes</h3>
         <h5 id="menuDiah5"><a href="receta_categoria_nutri.php">Desayuno</a><input type="search" placeholder="🔍Buscar" name="" id="searchMenuDia"></h5>
         <div id="caja">
@@ -116,7 +114,7 @@ if(!isset($_SESSION['rol'])){
                 <img id="infoIcon" src="/img/informacion.png" alt="">
                 <input type="checkbox" name="checkmark" id="checkmark">
             </div>
-            <h2 onclick=""><img id="slider" src="/img/flecha-correcta.png" alt=""></h2>
+           
             <span>
                 Sandwich de manzana y granola
             </span>

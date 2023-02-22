@@ -739,8 +739,6 @@ table tr:nth-child(2n+1).admin{
     width: auto;
     display: flex;
     align-items: left;
-    margin-left: 8rem;
-    margin-right: 8rem;
     justify-content: left;
     background-color: rgba(0, 255, 255, 0);
 }
@@ -770,17 +768,6 @@ table tr:nth-child(2n+1).admin{
     margin-top: 30px;
 }
 
-.cabeceraSemana{
-    height: 50px;
-    width: auto;
-    margin-left: 8rem;
-    margin-right: 8rem;
-    display: grid;
-    grid-template-columns: 560px 450px;
-    background-color: rgba(220, 26, 23, 0);
-    color: #0a0a0a;
-}
-
 .semanaActual {
     background-color: rgba(0, 255, 255, 0);
     height: 50px;
@@ -789,17 +776,7 @@ table tr:nth-child(2n+1).admin{
     justify-content: right;
 }
 
-.semanaSiguiente {
-    background-color: rgba(149, 0, 255, 0);
-    height: 50px;
-    display: flex;
-    margin-left: 25rem;
-    align-items: center;
-    float: right;
-    justify-content: right;
-    cursor: pointer;
-    
-}
+
 
 
 #menuDiah5 {
@@ -898,12 +875,10 @@ div#caja{
         
         }
 
-        #caja{
-            
-        }
+        
     }
 
-@media screen and (min-width:800px) {
+@media screen and (max-width:800px) {
 
     
     .contBlan2{
@@ -934,8 +909,7 @@ div#caja{
     width: auto;
     display: flex;
     align-items: left;
-    margin-left: 8rem;
-    margin-right: 8rem;
+   
     justify-content: left;
     background-color: rgba(0, 255, 255, 0);
 }
@@ -945,44 +919,58 @@ div#caja{
     width: 5rem;
 }
 
+.contBlan3{
+    border-radius: 18px;
+    margin-bottom: 2%;
+    padding:2%;
+    
+    width: 60%;
+    display:inline-flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: stretch;
+    text-align: center;
+      
+    
+    }
+
+.scrollY{
+    display: flex;
+    overflow-y:scroll;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    max-height:600px;
+}
 
 .cabeceraSemana{
     height: 50px;
-    width: auto;
-    justify-content: right;
+    width: 60%;
+    margin-left: 30%;
+    justify-content: flex-end;
     align-items: center;
     display: flex;
-    margin-left: 8rem;
-    margin-right: 8rem;
+   
     background-color: rgba(220, 26, 23, 0);
     color: #0a0a0a;
 }
 
 .semanaSiguiente button {
-    background-color: rgb(5, 107, 61);
-    border: solid 0px;
-    border-radius: 20px;
-    padding: 10px;
-    color: #ffffff;
-    height: 25px;
-    display: flex;
-    margin-left: 22rem;
-    align-items: center;
-    justify-content: right;
-    cursor: pointer;
+    font-size:large;
+    font-family: 'Nunito', sans-serif;
+    background-color: #7ed957;
+    border: 1px solid #7ed957;
+    color: white;
+    padding: 3%;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 150%;
+    text-align: center;
+    border-radius: 12px;
+    margin-top: 2%;
+    margin-bottom: 2%;
     
 }
 
-.menuDia {
-    height: auto;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-    border-radius: 15px;
-    width: auto;
-    padding: 10px;
-    margin-left: 8rem;
-    margin-right: 8rem;
-    background-color: #ffffff;
-}
 
 #menuDiah3 {
     margin-left: 2rem;
@@ -1052,37 +1040,32 @@ div#caja div{
         margin-right: 0rem;
 }
 
+
 @media screen and (max-width:800px) {
 
-    
-.menuDia{
-        background-color: white;
-        margin-bottom: 2%;
-        padding: 2%;
-        width: 100%;
-        display:flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    flex:1 0 auto;
-    display: inline-block;
+    .cabeceraSemana{
+        height: 50px;
+        width: 60%;
+      
+        justify-content: center;
+        align-items: center;
+        display: flex;
+       
+        background-color: rgba(220, 26, 23, 0);
+        color: #0a0a0a;
     }
+    
+ 
+    .scrollY{
+        flex:2 2 auto;
+        flex-wrap: wrap;
+        overflow-y:scroll;
+        overflow-x: hidden;
+        max-height:500px;
+    }
+    
 }
 
-@media screen and (min-width:800px) {
-
-    
-.menuDia{
-        background-color: white;
-        margin-bottom: 2%;
-        padding: 2%;
-        width: 100%;
-        display:flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    flex:1 0 auto;
-    display: inline-block;
-    }
-}
 
 //Crear Receta nutricionista
 
