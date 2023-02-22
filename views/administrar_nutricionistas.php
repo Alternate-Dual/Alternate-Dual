@@ -60,42 +60,46 @@ if(!isset($_SESSION['rol'])){
     <br>
     <h1 class="admin">Nutricionistas</h1>
 
+    <?php
+     include ("../includes/database.php");
+     include ("../includes/eliminar_usuario.php");
+    ?>
+
     <table class="admin">
-
-        <tr class="admin">
+        
+        <?php
+        $db = new Database();
+        $conexion = $db->connect();
+        
+        $sql=$conexion->query("select * from usuarios where rol_id='2'");
+        while ($datos = $sql->fetchObject()){ ?>
+            <tr class="admin">
             <td class="admin"><img src="../img/favicon-32x32.png" alt=""></td>
-            <td class="admin">Carlos Herrera Ruiz</td>
-            <td class="admin">Certificacón</td>
-            <td class="admin"><a href="#"><i class="fa-regular fa-eye"></i></a></td>
+            <td class="admin"><?= $datos->nombre?> <?= $datos->apellidos?></td>
             <td class="admin">
-                <button type="submit" class="btnVerde">Aceptar</button>
-                <button type="submit" class="btnVerde">Rechazar</button>
-                <button type="submit" class="btnVerde">Contactar</button>
+                <button type="submit" class="btnVerde" style="transition: all .30s ease;" onclick="window.location.href='#abrir_modal'">Contactar</button> <br>
+                    <div id="abrir_modal" class="modal-window">
+                          <div>
+                            <a href="#" title="Close" class="modal-close">Cerrar</a>
+                            <h3>Nombre y apellidos: </h3>
+                            <p><?= $datos->nombre?> <?= $datos->apellidos?></p>
+                            <h3>Fecha de nacimiento:</h3>
+                            <p><?= $datos->fecha_nacimiento?></p>
+                            <h3>DNI:</h3>
+                            <p><?= $datos->dni?></p>
+                            <h3>Correo electronico:</h3>
+                            <p><?= $datos->correo_electronico?></p>
+                        </div>
+                    </div>
+                <button type="submit" class="btnVerde" style="transition: all .30s ease;">Modificar</button> <br>
+                <button type="submit" class="btnVerde" style="transition: all .30s ease;" onclick="window.location.href='index_admin.php?id=<?= $datos->id ?>'">Eliminar</button>
             </td>
         </tr>
+        <?php }
+        ?>
 
-        <tr>
-            <td class="admin"><img src="../img/favicon-32x32.png" alt=""></td>
-            <td class="admin">Rosa Martinez García</td>
-            <td class="admin"></td>
-            <td class="admin"></td>
-            <td class="admin">
-                <button type="submit" class="btnVerde">Eliminar</button>
-                <button type="submit" class="btnVerde">Contactar</button>
-            </td>
-        </tr>
-
-        <tr class="admin">
-            <td class="admin"><img src="../img/favicon-32x32.png" alt=""></td>
-            <td class="admin">Lorena Gonzalez Mendez</td>
-            <td class="admin"></td>
-            <td class="admin"></td>
-            <td class="admin">
-                <button type="submit" class="btnVerde">Eliminar</button>
-                <button type="submit" class="btnVerde">Contactar</button>
-            </td>
-        </tr>
     </table>
+    
     <script src="../js/app.js"></script>
 </body>
 </html>
