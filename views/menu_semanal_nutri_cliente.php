@@ -62,11 +62,12 @@ if(!isset($_SESSION['rol'])){
     <br>
     <br>
     
-    <div class="centrarContenidoPerfil">
-        <img src="/img/icon1.jpg" alt="cara" />
-        <h4>Nombre del cliente</h4>
+    <div class="contBlan3">
+        <div class="centrarContenidoPerfil">
+            <img src="../img/icon1.jpg" alt="cara" />
+            <h4>Nombre del cliente</h4>
+        </div>
     </div>
-
   
       
             <h2>Semana 1</h2>
