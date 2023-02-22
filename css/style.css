@@ -557,10 +557,19 @@ dialog::backdrop {
   border-radius: 18px;
   background-color: white;
   width: 60%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: stretch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   text-align: center;
 }
 
@@ -798,9 +807,15 @@ table tr:nth-child(2n+1).admin {
 }
 
 .carrousel2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   text-align: center;
   width: auto;
 }
@@ -815,10 +830,19 @@ table tr:nth-child(2n+1).admin {
   width: 14em;
   height: 9em;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-radius: 10px;
 }
 
@@ -888,20 +912,20 @@ table tr:nth-child(2n+1).admin {
           justify-content: right;
 }
 
-<<<<<<< Updated upstream
 .cabeza {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-left: 7%;
   margin-right: 7%;
   margin-top: 2%;
-=======
-#menuDiah5 {
-  margin-left: 2rem;
-  font-family: 'Work Sans', sans-serif;
-  background-color: rgba(0, 255, 255, 0);
->>>>>>> Stashed changes
 }
 
 #menuDia {
@@ -1096,12 +1120,6 @@ div#caja {
 }
 
 .scrollY {
-<<<<<<< Updated upstream
-=======
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
->>>>>>> Stashed changes
   overflow-y: scroll;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -1309,7 +1327,10 @@ div#caja div {
 .contener {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: 'foto foto foto formu formu formu' 'foto foto foto tipo tipo tipo' 'ingre ingre ingre prepa prepa prepa' 'valores valores valores valores valores valores';
+      grid-template-areas: 'foto foto foto formu formu formu'
+ 'foto foto foto tipo tipo tipo'
+ 'ingre ingre ingre prepa prepa prepa'
+ 'valores valores valores valores valores valores';
   gap: 20px;
 }
 
@@ -1511,7 +1532,9 @@ table td #recetatabla {
 .contenedor {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: 'nombre nombre nombre nombre nombre nombre' 'receta2 receta2 receta2 receta3 receta3 receta3' 'receta4 receta4 receta4 receta4 receta4 receta4';
+      grid-template-areas: 'nombre nombre nombre nombre nombre nombre'
+ 'receta2 receta2 receta2 receta3 receta3 receta3'
+ 'receta4 receta4 receta4 receta4 receta4 receta4';
   gap: 20px;
   padding-left: 20%;
   padding-right: 20%;
