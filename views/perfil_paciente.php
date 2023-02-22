@@ -59,9 +59,7 @@ if(!isset($_SESSION['rol'])){
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
+
 
 <div class="contBlan3">
         <div class="centrarContenidoPerfil">
@@ -88,6 +86,7 @@ if(!isset($_SESSION['rol'])){
     </div>
 
     <!-- Progreso historial -->
+    <br>
     <div>
       <h4>MI PROGRESO</h4>
       <br>
