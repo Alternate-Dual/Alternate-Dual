@@ -12,6 +12,7 @@
     <script src="../jquery/jquery.validate.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.css">
 </head>
 
 <body>
@@ -22,6 +23,7 @@
         include("../includes/controlador_registrar_usuario.php");
     ?>
     <div class="contBlan">
+        <a href="login.php" style="margin-right: 100vh;">🡰</a>
         <form name="formulario" method="post" id="signupForm" action="" novalidate="novalidate">
         <div class="detNom">
 

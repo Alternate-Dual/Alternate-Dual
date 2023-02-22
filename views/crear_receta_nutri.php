@@ -61,11 +61,12 @@ if(!isset($_SESSION['rol'])){
     <br>
     <br>
     <h1>Crear receta</h1>
+    <?php
+        include("../includes/database.php");
+        include("../includes/controlador_crear_receta.php");
+    ?>
     <br>
     <div class="contener">
-
-        <!--<div class="comida">-->
-
             <div class="foto" style="background-color:#545454;">
                 <img src="../img/.png" alt="">
                 <div id="imagen" style="color:white;">
@@ -80,34 +81,33 @@ if(!isset($_SESSION['rol'])){
             </div>
 
             <div class="formu">
-                <form action="">
+            <form name="crear_receta_form" method="post" action="" novalidate="novalidate" id="crearReceta">
                     <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre"><br>
-
-                    <label for="nombre">Tiempo en ejecución (min):</label>
-                    <input type="number" id="num" name="num"><br>
-
-                    <label for="complej">Complejidad de realización</label>
-                    <select id="dificul">
-                        <option value="Fácil">Fácil</option>
-                        <option value="Intermedio">Intermedio</option>
-                        <option value="Complejo">Complejo</option><br>
-                    </select>
-
-                    <h4>Tipo de comida</h4>
+                    <input type="text" id="nombre_receta" name="nombre_receta"><br>
                     
-                    <input class="tipIn" type="radio" id="desay" name="tipo_comida" value="desay">
-                    <label class="tipLa" for="desay"> Desayuno</label><br>
-                    <input class="tipIn" type="radio" id="mediam" name="tipo_comida" value="mediam">
-                    <label class="tipLa" for="mediam"> Media mañana</label><br>
-                    <input class="tipIn" type="radio" id="almuer" name="tipo_comida" value="almuer">
-                    <label class="tipLa" for="almuer"> Almuerzo</label><br>
-                    <input class="tipIn" type="radio" id="meri" name="tipo_comida" value="meri">
-                    <label class="tipLa" for="meri"> Merienda</label><br>
+                    <label for="nombre">Tiempo en ejecución (min):</label>
+                    <input type="number" id="tiempo_ejecucion" name="tiempo_ejecucion"><br>
+                    <br>
+                   <h4>Complejidad de realización</h4>
+                   <input class="tipIn" type="radio" id="facil" name="complejidad" value="facil">
+                    <label class="tipLa" for="facil"> Fácil</label>
+                    <input class="tipIn" type="radio" id="intermedio" name="complejidad" value="intermedio">
+                    <label class="tipLa" for="intermedio"> Intermedio</label>
+                    <input class="tipIn" type="radio" id="complejo" name="complejidad" value="complejo">
+                    <label class="tipLa" for="almuerzo">Complejo</label>
+                    <br>
+                    <br>
+                    <h4>Tipo de comida</h4>
+                    <input class="tipIn" type="radio" id="desayuno" name="tipo_comida" value="desayuno">
+                    <label class="tipLa" for="desayuno"> Desayuno</label><br>
+                    <input class="tipIn" type="radio" id="media_mañana" name="tipo_comida" value="media_mañana">
+                    <label class="tipLa" for="media_mañana"> Media mañana</label><br>
+                    <input class="tipIn" type="radio" id="almuerzo" name="tipo_comida" value="almuerzo">
+                    <label class="tipLa" for="almuerzo"> Almuerzo</label><br>
+                    <input class="tipIn" type="radio" id="merienda" name="tipo_comida" value="merienda">
+                    <label class="tipLa" for="merienda"> Merienda</label><br>
                     <input class="tipIn" type="radio" id="cena" name="tipo_comida" value="cena">
                     <label class="tipLa" for="cena"> Cena</label><br>
-                   
-                </form>
             </div>
         <!--</div>-->
 
@@ -115,16 +115,12 @@ if(!isset($_SESSION['rol'])){
         <!--<div class="list">-->
             <div class="ingre">
                 <h4>Ingredientes</h4><br>
-                <form>
                 <textarea id="ingredientes" name="ingredientes" rows="4" cols="50"></textarea>
-                </form>
             </div>
 
             <div class="prepa">
                 <h4>Preparación</h4><br>
-                <form>
                 <textarea id="preparacion" name="preparacion" rows="4" cols="50"></textarea>
-                </form>
             </div>
             <br>
         <!--</div>-->
@@ -134,21 +130,21 @@ if(!isset($_SESSION['rol'])){
             <br>
             <h4>Valores nutricionales</h4> <br><br>
 
-            <label for="cal">Calorías</label>
-            <input class="valor" type="number">
+            <label for="calorias">Calorías</label>
+            <input class="valor" type="number" name="calorias">
 
-            <label for="carbo">Carbohidratos</label>
-            <input class="valor" type="number">
+            <label for="carbohidratos">Carbohidratos</label>
+            <input class="valor" type="number" name="carbohidratos">
 
-            <label for="prote">Proteinas</label>
-            <input class="valor" type="number">
+            <label for="proteinas">Proteinas</label>
+            <input class="valor" type="number" name="proteinas">
 
-            <label for="grasa">Grasas</label>
-            <input class="valor" type="number">
+            <label for="grasas">Grasas</label>
+            <input class="valor" type="number" name="grasas">
 
             <br><br>
-
-            <button onclick="añadirIngrediente" class="btnVerde" style="padding-left: 10vh; padding-right: 10vh;">Añadir</button>
+</form>
+            <button type="submit" form="crearReceta" name="crear_receta" value="Crear" class="btnVerde" style="padding-left: 10vh; padding-right: 10vh;">Añadir</button>
         </div>
     
     </div> 
