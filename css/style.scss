@@ -729,6 +729,38 @@ table tr:nth-child(2n+1).admin{
 
 
 //Menu_semanal_nutricionista_cliente
+
+.carrousel2{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-x: auto;
+    
+    text-align: center; 
+    margin-top: 2%; 
+    margin-bottom: 2%;     
+    
+    }
+
+.plato2{
+    background-color: #e7ebec;
+    padding: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    margin-bottom: 2%;
+    
+    width: 14em;
+    height: 9em;
+    
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    } 
+
 #bodyMenuSemanal {
     margin: 0%;
     background-color: #eceff1;
@@ -758,6 +790,9 @@ table tr:nth-child(2n+1).admin{
     
     }
 
+
+   
+
 .centrarContenidoPerfil img {
     border-radius: 50%; 
     width: 5rem;
@@ -778,11 +813,14 @@ table tr:nth-child(2n+1).admin{
 
 
 
+.cabeza{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-top: 2%;
 
-#menuDiah5 {
-    margin-left: 2rem;
-    font-family: 'Work Sans', sans-serif;
-    background-color: rgba(0, 255, 255, 0);
 }
 
 #menuDia{
@@ -1190,6 +1228,7 @@ flex-direction: column;
 justify-content: space-between;
 align-items: center;
 } 
+
 
 #check >div{
 margin-top: 50%;

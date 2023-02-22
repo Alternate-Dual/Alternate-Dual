@@ -655,6 +655,33 @@ table tr:nth-child(2n+1).admin {
   background-color: white;
 }
 
+.carrousel2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow-x: auto;
+  text-align: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.plato2 {
+  background-color: #e7ebec;
+  padding: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+  margin-bottom: 2%;
+  width: 14em;
+  height: 9em;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+}
+
 #bodyMenuSemanal {
   margin: 0%;
   background-color: #eceff1;
@@ -700,10 +727,13 @@ table tr:nth-child(2n+1).admin {
   justify-content: right;
 }
 
-#menuDiah5 {
-  margin-left: 2rem;
-  font-family: "Work Sans", sans-serif;
-  background-color: rgba(0, 255, 255, 0);
+.cabeza {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 7%;
+  margin-right: 7%;
+  margin-top: 2%;
 }
 
 #menuDia {
