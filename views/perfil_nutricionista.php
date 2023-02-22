@@ -62,7 +62,7 @@ if(!isset($_SESSION['rol'])){
    <div class="contBlan3">
         <div class="centrarContenidoPerfil">
             <img src="../img/icon1.jpg" alt="cara" />
-            <h4>Nombre del cliente</h4>
+            <h4>Nombre del Nutricionista</h4>
         </div>
     </div>
 

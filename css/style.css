@@ -680,18 +680,6 @@ h4.perfil {
   font-family: 'Work Sans', sans-serif;
 }
 
-.centrarContenidoPerfil {
-  height: 120px;
-  width: auto;
-  text-align: center;
-  background-color: rgba(0, 255, 255, 0);
-}
-
-.centrarContenidoPerfil img {
-  border-radius: 50%;
-  width: 4rem;
-}
-
 .centrarContenedorPesos {
   background-color: rgba(255, 0, 0, 0);
   padding: 5px;
@@ -888,16 +876,6 @@ table tr:nth-child(2n+1).admin {
   text-align: center;
 }
 
-.centrarContenidoPerfil img {
-  border-radius: 50%;
-  width: 5rem;
-}
-
-.centrarContenidoPerfil h4 {
-  margin-left: 5px;
-  margin-top: 30px;
-}
-
 .semanaActual {
   background-color: rgba(0, 255, 255, 0);
   height: 50px;
@@ -1082,15 +1060,9 @@ div#caja {
 .centrarContenidoPerfil {
   height: 100px;
   width: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
+  align-items: left;
+  justify-content: left;
   background-color: rgba(0, 255, 255, 0);
 }
 
