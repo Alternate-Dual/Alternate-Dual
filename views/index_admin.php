@@ -59,37 +59,35 @@ if(!isset($_SESSION['rol'])){
     <br>
     <br>
     <h1 class="admin">Pacientes</h1>
-    
+
+    <?php
+    include("../includes/database.php");
+    include "../includes/eliminar_usuario.php";
+    ?>
+
     <table class="admin">
 
-        <tr class="admin">
-            <td class="admin"><img src="../img/favicon-32x32.png" alt=""></td>
-            <td class="admin">Adrián Fernandez Ruiz</td>
-            <td class="admin">
-                <button type="submit" class="btnVerde">Eliminar</button>
-                <button type="submit" class="btnVerde">Contactar</button>
-            </td class="admin">
-        </tr>
+        <?php
+        $db = new Database();
+        $conexion = $db->connect();
 
-        <tr class="admin">
+        $sql=$conexion->query("select * from usuarios where rol_id='3'");
+        while ($datos = $sql->fetchObject()){ ?>
+            <tr class="admin">
             <td class="admin"><img src="../img/favicon-32x32.png" alt=""></td>
-            <td class="admin">Juan Sanchez Gonzalez</td>
+            <td class="admin"><?= $datos->nombre?> <?= $datos->apellidos?></td>
             <td class="admin">
-                <button type="submit" class="btnVerde">Eliminar</button>
-                <button type="submit" class="btnVerde">Contactar</button>
+                <button type="submit" class="btnVerde" style="transition: all .30s ease;">Contactar</button> <br>
+                <button type="submit" class="btnVerde" style="transition: all .30s ease;">Modificar</button> <br>
+                <button type="submit" class="btnVerde" style="transition: all .30s ease;" onclick="window.location.href='index_admin.php?id=<?= $datos->id ?>'">Eliminar</button>
             </td>
         </tr>
-
-        <tr class="admin">
-            <td class="admin"><img src="../img/favicon-32x32.png" alt=""></td>
-            <td class="admin">Jesús Gonzalez Herrera</td>
-            <td class="admin">
-                <button type="submit" class="btnVerde">Eliminar</button>
-                <button type="submit" class="btnVerde">Contactar</button>
-            </td>
-        </tr>
+        <?php }
+        ?>
 
     </table>
+    <br>
+    <br>
     <script src="../js/app.js"></script>
 </body>
 </html>
