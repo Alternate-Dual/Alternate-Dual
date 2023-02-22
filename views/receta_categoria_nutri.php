@@ -59,34 +59,40 @@ if(!isset($_SESSION['rol'])){
     <br>
     <br>
     <br>
-    <br>
-    <br>
-    
-    <div class="centrarContenidoPerfil">
-        <img src="../img/icon1.jpg" alt="cara" />
-        <h4>Nombre del cliente</h4>
+
+   
+    <div class="contBlan3">
+        <div class="centrarContenidoPerfil">
+            <img src="../img/icon1.jpg" alt="cara" />
+            <h4>Nombre del cliente</h4>
+        </div>
+
+        <div class="cabeceraSemana">
+            <div class="semanaSiguiente">
+                <button class="buton" onclick="crearReceta()">Crear receta</button>
+            </div>
+        </div>
+
     </div>
 
-    <div class="cabeceraSemana">
-        <div class="semanaSiguiente">
-            <button class="buton" onclick="crearReceta()">Crear receta</button>
-        </div>
-    </div>
-    <div class="menuDia">
-        <h3 id="menuDiah3">Desayuno</h3>
+    <div class="contBlan2">
+        <h3>Desayuno</h3>
+
+        <div class="scrollY">
         <div id="caja">
-            <div>
-                <img id="infoIcon" src="../img/informacion.png" alt="">
+            <div><img id="imgNombreComidas" src="../img/desayuno1.jpg" alt="">
+                <img id="infoIcon" src="/img/informacion.png" alt="">
                 <input type="checkbox" name="checkmark" id="checkmark">
             </div>
-            <div>
-                <img id="infoIcon" src="../img/informacion.png" alt="">
-                    <input type="checkbox" name="checkmark" id="checkmark">
+            <div><img id="imgNombreComidas" src="../img/desayuno1.jpg" alt="">
+                <img id="infoIcon" src="/img/informacion.png" alt="">
+                <input type="checkbox" name="checkmark" id="checkmark">
             </div>
-            <div>
-                <img id="infoIcon" src="../img/informacion.png" alt="">
-                    <input type="checkbox" name="checkmark" id="checkmark">
+            <div><img id="imgNombreComidas" src="../img/desayuno1.jpg" alt="">
+                <img id="infoIcon" src="/img/informacion.png" alt="">
+                <input type="checkbox" name="checkmark3" id="checkmark">
             </div>
+        
             <span>
                 Sandwich de manzana <br> y granola
             </span>
@@ -97,51 +103,77 @@ if(!isset($_SESSION['rol'])){
                 Sandwich de manzana <br> y granola
             </span>
         </div>
-        <div id="caja">    
-            <div>
-                <img id="infoIcon" src="../img/informacion.png" alt="">
-                <input type="checkbox" name="checkmark" id="checkmark">
-            </div>
-            <div>
-                <img id="infoIcon" src="../img/informacion.png" alt="">
+            <div id="caja">    
+                <div>
+                    <img id="infoIcon" src="../img/informacion.png" alt="">
                     <input type="checkbox" name="checkmark" id="checkmark">
+                </div>
+                <div>
+                    <img id="infoIcon" src="../img/informacion.png" alt="">
+                        <input type="checkbox" name="checkmark" id="checkmark">
+                </div>
+                <div>
+                    <img id="infoIcon" src="../img/informacion.png" alt="">
+                        <input type="checkbox" name="checkmark" id="checkmark">
+                </div>
+                <span>
+                    Sandwich de manzana <br> y granola
+                </span>
+                <span>
+                    Sandwich de manzana <br> y granola
+                </span>
+                <span>
+                    Sandwich de manzana <br> y granola
+                </span>
+            </div>  
+            <div id="caja">  
+                <div>
+                    <img id="infoIcon" src="../img/informacion.png" alt="">
+                        <input type="checkbox" name="checkmark" id="checkmark">
+                </div>
+                <div>
+                    <img id="infoIcon" src="../img/informacion.png" alt="">
+                        <input type="checkbox" name="checkmark" id="checkmark">
+                </div>
+                <div>
+                    <img id="infoIcon" src="../img/informacion.png" alt="">
+                        <input type="checkbox" name="checkmark" id="checkmark">
+                </div>
+                <span>
+                    Sandwich de manzana <br> y granola
+                </span>
+                <span>
+                    Sandwich de manzana <br> y granola
+                </span>
+                <span>
+                    Sandwich de manzana <br> y granola
+                </span>
             </div>
-            <div>
-                <img id="infoIcon" src="../img/informacion.png" alt="">
-                    <input type="checkbox" name="checkmark" id="checkmark">
+
+            <div id="caja">  
+                <div>
+                    <img id="infoIcon" src="../img/informacion.png" alt="">
+                        <input type="checkbox" name="checkmark" id="checkmark">
+                </div>
+                <div>
+                    <img id="infoIcon" src="../img/informacion.png" alt="">
+                        <input type="checkbox" name="checkmark" id="checkmark">
+                </div>
+                <div>
+                    <img id="infoIcon" src="../img/informacion.png" alt="">
+                        <input type="checkbox" name="checkmark" id="checkmark">
+                </div>
+                <span>
+                    Sandwich de manzana <br> y granola
+                </span>
+                <span>
+                    Sandwich de manzana <br> y granola
+                </span>
+                <span>
+                    Sandwich de manzana <br> y granola
+                </span>
             </div>
-            <span>
-                Sandwich de manzana <br> y granola
-            </span>
-            <span>
-                Sandwich de manzana <br> y granola
-            </span>
-            <span>
-                Sandwich de manzana <br> y granola
-            </span>
-        </div>  
-        <div id="caja">  
-            <div>
-                <img id="infoIcon" src="../img/informacion.png" alt="">
-                    <input type="checkbox" name="checkmark" id="checkmark">
-            </div>
-            <div>
-                <img id="infoIcon" src="../img/informacion.png" alt="">
-                    <input type="checkbox" name="checkmark" id="checkmark">
-            </div>
-            <div>
-                <img id="infoIcon" src="../img/informacion.png" alt="">
-                    <input type="checkbox" name="checkmark" id="checkmark">
-            </div>
-            <span>
-                Sandwich de manzana <br> y granola
-            </span>
-            <span>
-                Sandwich de manzana <br> y granola
-            </span>
-            <span>
-                Sandwich de manzana <br> y granola
-            </span>
+
         </div>
     </div>
     
