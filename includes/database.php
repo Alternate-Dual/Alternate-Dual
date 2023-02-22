@@ -9,7 +9,7 @@
     private $charset;
 
     public function __construct(){
-        $this->host = 'localhost:3306';
+        $this->host = 'localhost:3307';
         $this->db = 'nutrifit';
         //$this->port = '3306';
         $this->user = 'root';

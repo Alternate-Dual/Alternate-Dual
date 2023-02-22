@@ -58,10 +58,7 @@ if(!isset($_SESSION['rol'])){
     <br>
     <br>
     <br>
-    <br>
-    <br>
-    <br>
-    
+
     <div class="contBlan3">
         <div class="centrarContenidoPerfil">
             <img src="../img/icon1.jpg" alt="cara" />
@@ -80,14 +77,12 @@ if(!isset($_SESSION['rol'])){
         <br>
 
         <div class="cabeza">
-            <h3><a href="receta_categoria_nutri.php">Desayuno</a></h3>
+            <h3><a href="receta_categoria_desayuno_nutri.php">Desayuno</a></h3>
 
             <div class="buscar">
             <input type="search" placeholder="🔍Buscar" name="" id="searchMenuDia">
             </div>
-        </div>
-        
-
+        </div>        
        
         <div class="carrousel2">
             

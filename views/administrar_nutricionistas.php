@@ -99,7 +99,8 @@ if(!isset($_SESSION['rol'])){
         ?>
 
     </table>
-    
+    <br>
+    <br>
     <script src="../js/app.js"></script>
 </body>
 </html>
