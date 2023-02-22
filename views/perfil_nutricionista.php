@@ -59,17 +59,19 @@ if(!isset($_SESSION['rol'])){
    <br>
    <br>
 
-   <div class="centrarContenidoPerfil">
-   <img src="../img/icon.png" alt="cara" />
-    <p>Nombre del nutricionista</p>
+   <div class="contBlan3">
+        <div class="centrarContenidoPerfil">
+            <img src="../img/icon1.jpg" alt="cara" />
+            <h4>Nombre del cliente</h4>
+        </div>
     </div>
 
     <div>
     <br>
 
-      <h4 class="perfil">Mis datos</h4>
-      
-      <div class="FondoDatosNutricionista">
+      <h4>Mis datos</h4>
+      <br>
+      <div class="contBlan1">
         <div class="datosNutricionista"><img src="../img/carnet.png" alt=""> Nombre y Apellidos</div>
             <hr/>
         <div class="datosNutricionista" contenteditable="true">02/03/1986</div>
@@ -85,8 +87,9 @@ if(!isset($_SESSION['rol'])){
     <br>
     <div>
       <br>
-      <h4 class="perfil">Mi cuenta</h4>
-      <div class="FondoDatosNutricionista">
+      <h4>Mi cuenta</h4>
+      <br>
+      <div class="contBlan1">
         <div class="datosNutricionista"><a href="#"><img src="../img/contrasena.png" alt=""> Cambiar contraseña</a></div>
             <hr/>
         <div class="datosNutricionista"><img src="../img/salida.png" alt=""><a href="login.php"> Cerrar sesión</a></div>

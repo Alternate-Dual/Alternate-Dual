@@ -511,6 +511,19 @@ button.submit:hover {
     font-family: 'Work Sans', sans-serif;
 
 }
+
+.contBlan1{
+    border-radius: 18px;
+    background-color: white;
+    
+    width: 60%;
+    display:inline-flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: stretch;
+    text-align: center;
+}
+
 .centrarContenidoPerfil{
     height: 120px;
     width: auto;

@@ -62,11 +62,12 @@ if(!isset($_SESSION['rol'])){
 <br>
 <br>
 <br>
-<br>
 
-<div class="centrarContenidoPerfil">
-      <img src="../img/icon1.jpg" alt="cara" />
-      <p>Nombre del cliente</p>
+<div class="contBlan3">
+        <div class="centrarContenidoPerfil">
+            <img src="../img/icon1.jpg" alt="cara" />
+            <h4>Nombre del cliente</h4>
+        </div>
     </div>
 
     <!-- Contenedores Peso Inicial y Peso Actual -->
@@ -88,9 +89,9 @@ if(!isset($_SESSION['rol'])){
 
     <!-- Progreso historial -->
     <div>
-      <h4 class="perfil">MI PROGRESO</h4>
+      <h4>MI PROGRESO</h4>
       <br>
-      <div class="FondoDatosCliente">
+      <div class="contBlan1">
         <div class="datosCliente"><img src="../img/grafico.png" alt="grafico"> Historial de peso</div>
             <hr />
         <div class="datosCliente"><img src="../img/nutricion.png" alt=""> Historial de comidas</div>
@@ -100,9 +101,9 @@ if(!isset($_SESSION['rol'])){
     <br>
     <!-- Datos Cliente -->
     <div>
-      <h4 class="perfil">MIS DATOS</h4>
+      <h4>MIS DATOS</h4>
       <br>
-      <div class="FondoDatosCliente">
+      <div class="contBlan1">
         <div class="datosCliente" ><img src="../img/imc.png" alt=""> IMC</div>
             <hr />
         <div class="datosCliente" ><img src="../img/cuerpo-humano.png" alt=""> % de Grasa corporal</div>
@@ -122,9 +123,9 @@ if(!isset($_SESSION['rol'])){
     <br>
     <!-- Cuenta Cliente -->
     <div>
-      <h4 class="perfil">MI CUENTA</h4>
+      <h4>MI CUENTA</h4>
       <br>
-      <div class="FondoDatosCliente">
+      <div class="contBlan1">
         <div class="datosCliente"><img src="../img/carnet.png" alt=""> Nombre y apellidos</div>
         <hr />
         <div class="datosCliente"><img src="../img/campana.png" alt=""> Notificaciones</div>
