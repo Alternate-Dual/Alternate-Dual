@@ -61,7 +61,7 @@ if(!isset($_SESSION['rol'])){
 
    <div class="contBlan3">
         <div class="centrarContenidoPerfil">
-            <img src="../img/icon1.jpg" alt="cara" />
+            <img src="../img/icon.png" alt="cara" /><br><br>
             <h4>Nombre del Nutricionista</h4>
         </div>
     </div>
@@ -93,7 +93,7 @@ if(!isset($_SESSION['rol'])){
         <div class="datosNutricionista"><a href="#"><img src="../img/contrasena.png" alt=""> Cambiar contraseña</a></div>
             <hr/>
         <div class="datosNutricionista"><img src="../img/salida.png" alt=""><a href="login.php"> Cerrar sesión</a></div>
-      </div>
+      </div><br><br><br>
     </div>
     <script src="../js/app.js"></script>
 </body>

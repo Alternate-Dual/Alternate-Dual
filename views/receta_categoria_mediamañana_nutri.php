@@ -74,7 +74,7 @@ if(!isset($_SESSION['rol'])){
     </div>
 
     <div class="contBlan2">
-        <h3>Desayuno</h3>
+        <h3>Media mañana</h3>
         <br>
         <?php
             include ("../includes/database.php");
@@ -86,7 +86,7 @@ if(!isset($_SESSION['rol'])){
             $db = new Database();
             $conexion = $db->connect();
             
-            $sql=$conexion->query("select * from receta where tipo_comida='desayuno'");
+            $sql=$conexion->query("select * from receta where tipo_comida='media_mañana'");
             while ($datos = $sql->fetchObject()){ ?>
                 <div class="elemento">
                     <div class="plato2">
