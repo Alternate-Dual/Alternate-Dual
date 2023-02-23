@@ -1146,6 +1146,8 @@ table td #recetatabla{
 
 
 
+
+
 /*-----div de la imagen-----*/
 .imagen{
 
@@ -1261,7 +1263,7 @@ margin-left: 3em;
 //Receta Cliente
 
 .receta1{
-grid-area:nombre;
+grid-area:receta1;
 
 }
 
@@ -1284,9 +1286,9 @@ grid-area: receta4;
 
 display: grid;
 grid-template-areas: 
-'nombre nombre nombre nombre nombre nombre'
-'receta2 receta2 receta2 receta3 receta3 receta3'
-'receta4 receta4 receta4 receta4 receta4 receta4';
+'receta1 '
+'receta2 '
+'receta4 ';
 gap: 20px;
 padding-left: 20%;
 padding-right: 20%;
@@ -1312,7 +1314,7 @@ grid-area: nombre;
 .receta1{
 display: grid;
 grid-template-areas:
-'foto foto nombre nombre';
+'foto  nombre ';
 gap: 50px;
 }
 
@@ -1332,6 +1334,30 @@ margin-top: 5%;
 height: 70%;
 width: 66%;
 
+}
+
+@media screen and (max-width:1000px) {
+    .contenedor{
+
+        display: grid;
+        grid-template-areas: 
+        'receta1 '
+        'receta2'
+        'receta3 '
+        'receta4 ';
+        gap: 20px;
+        padding-left: 20%;
+        padding-right: 20%;
+        
+        }
+    .receta1{
+        display: grid;
+        grid-template-areas:
+        'foto ',
+        'nombre ';
+        gap: 50px;
+        }
+        
 }
 
 /*Cuadro modal Admin*/

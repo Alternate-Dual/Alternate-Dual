@@ -421,6 +421,10 @@ dialog {
   background-color: #eceff1;
 }
 
+dialog::-webkit-backdrop {
+  background-color: #eceff1;
+}
+
 dialog::backdrop {
   background-color: #eceff1;
 }
@@ -1086,7 +1090,7 @@ table td #recetatabla {
   }
 }
 .receta1 {
-  grid-area: nombre;
+  grid-area: receta1;
 }
 
 .receta2 {
@@ -1103,7 +1107,7 @@ table td #recetatabla {
 
 .contenedor {
   display: grid;
-  grid-template-areas: "nombre nombre nombre nombre nombre nombre" "receta2 receta2 receta2 receta3 receta3 receta3" "receta4 receta4 receta4 receta4 receta4 receta4";
+  grid-template-areas: "receta1 " "receta2 " "receta4 ";
   gap: 20px;
   padding-left: 20%;
   padding-right: 20%;
@@ -1126,7 +1130,7 @@ table td #recetatabla {
 
 .receta1 {
   display: grid;
-  grid-template-areas: "foto foto nombre nombre";
+  grid-template-areas: "foto  nombre ";
   gap: 50px;
 }
 
@@ -1146,6 +1150,20 @@ img#plato {
   width: 66%;
 }
 
+@media screen and (max-width: 1000px) {
+  .contenedor {
+    display: grid;
+    grid-template-areas: "receta1 " "receta2" "receta3 " "receta4 ";
+    gap: 20px;
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+  .receta1 {
+    display: grid;
+    grid-template-areas: "foto ", "nombre ";
+    gap: 50px;
+  }
+}
 /*Cuadro modal Admin*/
 .modal-window {
   text-align: left;
