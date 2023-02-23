@@ -66,13 +66,12 @@ if(!isset($_SESSION['rol'])){
         </div>
     </div>
   
-      
      <h2>Semana 1</h2>
      <br>
         
      <?php
         include ("../includes/database.php");
-    ?>
+      ?>
    
     <div class="contBlan2">
         <h2>Lunes</h2>
