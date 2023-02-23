@@ -66,10 +66,12 @@ if(!isset($_SESSION['rol'])){
         </div>
     </div>
   
-      
-            <h2>Semana 1</h2>
-            <br>
+     <h2>Semana 1</h2>
+     <br>
         
+     <?php
+        include ("../includes/database.php");
+      ?>
    
     <div class="contBlan2">
         <h2>Lunes</h2>
@@ -77,54 +79,36 @@ if(!isset($_SESSION['rol'])){
         <br>
 
         <div class="cabeza">
-            <h3><a href="receta_categoria_desayuno_nutri.php">Desayuno</a></h3>
-
+            <h3 class="enlace_menu_semanal"><a href="receta_categoria_desayuno_nutri.php">Desayuno</a></h3>
             <div class="buscar">
             <input type="search" placeholder="🔍Buscar" name="" id="searchMenuDia">
             </div>
         </div>        
        
         <div class="carrousel2">
-            
+            <?php
+                $db = new Database();
+                $conexion = $db->connect();
                 
-            <div class="elemento">
-                
-                <div class="plato2">
-                <img id="imgNombreComidas" src="../img/desayuno1.jpg" alt="">
-                    <div id="check">
-                        <a href="receta_desayuno_paciente.php" id="dietacliente"><i class="fa-solid fa-info"></i></a>
-                        <input type="checkbox" id="dietaclientein">
+                $sql=$conexion->query("select * from receta where tipo_comida='desayuno' ORDER BY id DESC
+                LIMIT 3");
+                while ($datos = $sql->fetchObject()){ ?>
+                    <div class="elemento">
+                        <div class="plato2">
+                        <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
+                            <div id="check">
+                                <a href="#abrir_modal" id="dietacliente"><i class="fa-solid fa-info"></i></a>
+                                <input type="checkbox" id="dietaclientein">
+                            </div>
+                        </div>
+                        <p><?= $datos->nombre_receta?></p>
                     </div>
-                </div>
-                <p>Sandwich de manzana y granola</p>
-            </div>
-            <div class="elemento">
-                
-                <div class="plato2">
-                <img id="imgNombreComidas" src="../img/desayuno1.jpg" alt="">
-                    <div id="check">
-                        <a href="receta_desayuno_paciente.php" id="dietacliente"><i class="fa-solid fa-info"></i></a>
-                        <input type="checkbox" id="dietaclientein">
-                    </div>
-                </div>
-                <p>Sandwich de manzana y granola</p>
-            </div>
-
-            <div class="elemento">
-                
-                <div class="plato2">
-                <img id="imgNombreComidas" src="../img/desayuno1.jpg" alt="">
-                    <div id="check">
-                        <a href="receta_desayuno_paciente.php" id="dietacliente"><i class="fa-solid fa-info"></i></a>
-                        <input type="checkbox" id="dietaclientein">
-                    </div>
-                </div>
-                <p>Sandwich de manzana y granola</p>
-            </div>
-
+                    <?php }
+                    ?>
         </div>
+
     <div class="cabeza">
-            <h3><a href="receta_categoria_nutri.php">Media mañana</a></h3>
+            <h3 id="enlace_menu_semanal"><a href="receta_categoria_mediamañana_nutri.php">Media mañana</a></h3>
 
             <div class="buscar">
             <input type="search" placeholder="🔍Buscar" name="" id="searchMenuDia">
@@ -132,47 +116,29 @@ if(!isset($_SESSION['rol'])){
         </div>
         
         <div class="carrousel2">
-            
+                <?php
+                $db = new Database();
+                $conexion = $db->connect();
                 
-            <div class="elemento">
-            
-            <div class="plato2">
-            <img id="imgNombreComidas" src="/img/desayuno1.jpg" alt="">
-                <div id="check">
-                    <a href="receta_desayuno_paciente.php" id="dietacliente"><i class="fa-solid fa-info"></i></a>
-                    <input type="checkbox" id="dietaclientein">
-                </div>
-            </div>
-            <p>Sandwich de manzana y granola</p>
+                $sql=$conexion->query("select * from receta where tipo_comida='media_mañana' ORDER BY id DESC
+                LIMIT 3");
+                while ($datos = $sql->fetchObject()){ ?>
+                    <div class="elemento">
+                        <div class="plato2">
+                        <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
+                            <div id="check">
+                                <a href="#abrir_modal" id="dietacliente"><i class="fa-solid fa-info"></i></a>
+                                <input type="checkbox" id="dietaclientein">
+                            </div>
+                        </div>
+                        <p><?= $datos->nombre_receta?></p>
+                    </div>
+                    <?php }
+                    ?>
         </div>
-        <div class="elemento">
-            
-            <div class="plato2">
-            <img id="imgNombreComidas" src="/img/desayuno1.jpg" alt="">
-                <div id="check">
-                    <a href="receta_desayuno_paciente.php" id="dietacliente"><i class="fa-solid fa-info"></i></a>
-                    <input type="checkbox" id="dietaclientein">
-                </div>
-            </div>
-            <p>Sandwich de manzana y granola</p>
-        </div>
-
-        <div class="elemento">
-            
-            <div class="plato2">
-            <img id="imgNombreComidas" src="/img/desayuno1.jpg" alt="">
-                <div id="check">
-                    <a href="receta_desayuno_paciente.php" id="dietacliente"><i class="fa-solid fa-info"></i></a>
-                    <input type="checkbox" id="dietaclientein">
-                </div>
-            </div>
-            <p>Sandwich de manzana y granola</p>
-        </div>
-
-    </div>
 
         <div class="cabeza">
-            <h3><a href="receta_categoria_nutri.php">Comida</a></h3>
+            <h3 id="enlace_menu_semanal"><a href="receta_categoria_almuerzo_nutri.php">Almuerzo</a></h3>
 
             <div class="buscar">
             <input type="search" placeholder="🔍Buscar" name="" id="searchMenuDia">
@@ -180,95 +146,60 @@ if(!isset($_SESSION['rol'])){
         </div>
        
         <div class="carrousel2">
-            
+           
+                 <?php
+                $db = new Database();
+                $conexion = $db->connect();
                 
-            <div class="elemento">
-            
-            <div class="plato2">
-            <img id="imgNombreComidas" src="/img/desayuno1.jpg" alt="">
-                <div id="check">
-                    <a href="receta_desayuno_paciente.php" id="dietacliente"><i class="fa-solid fa-info"></i></a>
-                    <input type="checkbox" id="dietaclientein">
-                </div>
-            </div>
-            <p>Sandwich de manzana y granola</p>
+                $sql=$conexion->query("select * from receta where tipo_comida='almuerzo' ORDER BY id DESC
+                LIMIT 3");
+                while ($datos = $sql->fetchObject()){ ?>
+                    <div class="elemento">
+                        <div class="plato2">
+                        <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
+                            <div id="check">
+                                <a href="#abrir_modal" id="dietacliente"><i class="fa-solid fa-info"></i></a>
+                                <input type="checkbox" id="dietaclientein">
+                            </div>
+                        </div>
+                        <p><?= $datos->nombre_receta?></p>
+                    </div>
+                    <?php }
+                    ?>
         </div>
-        <div class="elemento">
-            
-            <div class="plato2">
-            <img id="imgNombreComidas" src="/img/desayuno1.jpg" alt="">
-                <div id="check">
-                    <a href="receta_desayuno_paciente.php" id="dietacliente"><i class="fa-solid fa-info"></i></a>
-                    <input type="checkbox" id="dietaclientein">
-                </div>
-            </div>
-            <p>Sandwich de manzana y granola</p>
-        </div>
-
-        <div class="elemento">
-            
-            <div class="plato2">
-            <img id="imgNombreComidas" src="/img/desayuno1.jpg" alt="">
-                <div id="check">
-                    <a href="receta_desayuno_paciente.php" id="dietacliente"><i class="fa-solid fa-info"></i></a>
-                    <input type="checkbox" id="dietaclientein">
-                </div>
-            </div>
-            <p>Sandwich de manzana y granola</p>
-        </div>
-
-    </div>
 
     <div class="cabeza">
-            <h3><a href="receta_categoria_nutri.php">Merienda</a></h3>
+            <h3 id="enlace_menu_semanal"><a href="receta_categoria_merienda_nutri.php">Merienda</a></h3>
 
             <div class="buscar">
             <input type="search" placeholder="🔍Buscar" name="" id="searchMenuDia">
             </div>
         </div>
         
-        <div class="carrousel2">
-            
+        <div class="carrousel2">  
+                 <?php
+                $db = new Database();
+                $conexion = $db->connect();
                 
-                <div class="elemento">
-                
-                <div class="plato2">
-                <img id="imgNombreComidas" src="/img/desayuno1.jpg" alt="">
-                    <div id="check">
-                        <a href="receta_desayuno_paciente.php" id="dietacliente"><i class="fa-solid fa-info"></i></a>
-                        <input type="checkbox" id="dietaclientein">
+                $sql=$conexion->query("select * from receta where tipo_comida='merienda' ORDER BY id DESC
+                LIMIT 3");
+                while ($datos = $sql->fetchObject()){ ?>
+                    <div class="elemento">
+                        <div class="plato2">
+                        <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
+                            <div id="check">
+                                <a href="#abrir_modal" id="dietacliente"><i class="fa-solid fa-info"></i></a>
+                                <input type="checkbox" id="dietaclientein">
+                            </div>
+                        </div>
+                        <p><?= $datos->nombre_receta?></p>
                     </div>
-                </div>
-                <p>Sandwich de manzana y granola</p>
-            </div>
-            <div class="elemento">
-                
-                <div class="plato2">
-                <img id="imgNombreComidas" src="/img/desayuno1.jpg" alt="">
-                    <div id="check">
-                        <a href="receta_desayuno_paciente.php" id="dietacliente"><i class="fa-solid fa-info"></i></a>
-                        <input type="checkbox" id="dietaclientein">
-                    </div>
-                </div>
-                <p>Sandwich de manzana y granola</p>
-            </div>
-
-            <div class="elemento">
-                
-                <div class="plato2">
-                <img id="imgNombreComidas" src="/img/desayuno1.jpg" alt="">
-                    <div id="check">
-                        <a href="receta_desayuno_paciente.php" id="dietacliente"><i class="fa-solid fa-info"></i></a>
-                        <input type="checkbox" id="dietaclientein">
-                    </div>
-                </div>
-                <p>Sandwich de manzana y granola</p>
-            </div>
-
+                    <?php }
+                    ?>
         </div>
 
         <div class="cabeza">
-            <h3><a href="receta_categoria_nutri.php">Cena</a></h3>
+            <h3 id="enlace_menu_semanal"><a href="receta_categoria_cena_nutri.php">Cena</a></h3>
 
             <div class="buscar">
             <input type="search" placeholder="🔍Buscar" name="" id="searchMenuDia">
@@ -276,46 +207,27 @@ if(!isset($_SESSION['rol'])){
         </div>
         
         <div class="carrousel2">
-            
+                <?php
+                $db = new Database();
+                $conexion = $db->connect();
                 
-                <div class="elemento">
-                
-                <div class="plato2">
-                <img id="imgNombreComidas" src="/img/desayuno1.jpg" alt="">
-                    <div id="check">
-                        <a href="receta_desayuno_paciente.php" id="dietacliente"><i class="fa-solid fa-info"></i></a>
-                        <input type="checkbox" id="dietaclientein">
+                $sql=$conexion->query("select * from receta where tipo_comida='cena' ORDER BY id DESC
+                LIMIT 3");
+                while ($datos = $sql->fetchObject()){ ?>
+                    <div class="elemento">
+                        <div class="plato2">
+                        <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
+                            <div id="check">
+                                <a href="#abrir_modal" id="dietacliente"><i class="fa-solid fa-info"></i></a>
+                                <input type="checkbox" id="dietaclientein">
+                            </div>
+                        </div>
+                        <p><?= $datos->nombre_receta?></p>
                     </div>
-                </div>
-                <p>Sandwich de manzana y granola</p>
-            </div>
-            <div class="elemento">
-                
-                <div class="plato2">
-                <img id="imgNombreComidas" src="/img/desayuno1.jpg" alt="">
-                    <div id="check">
-                        <a href="receta_desayuno_paciente.php" id="dietacliente"><i class="fa-solid fa-info"></i></a>
-                        <input type="checkbox" id="dietaclientein">
-                    </div>
-                </div>
-                <p>Sandwich de manzana y granola</p>
-            </div>
-
-            <div class="elemento">
-                
-                <div class="plato2">
-                <img id="imgNombreComidas" src="/img/desayuno1.jpg" alt="">
-                    <div id="check">
-                        <a href="receta_desayuno_paciente.php" id="dietacliente"><i class="fa-solid fa-info"></i></a>
-                        <input type="checkbox" id="dietaclientein">
-                    </div>
-                </div>
-                <p>Sandwich de manzana y granola</p>
-            </div>
-
+                    <?php }
+                    ?>
         </div>
         
-       
     </div>
     
     <script src="../js/app.js"></script>
