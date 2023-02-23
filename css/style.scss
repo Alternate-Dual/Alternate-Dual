@@ -1300,9 +1300,9 @@ grid-area: receta4;
 
 display: grid;
 grid-template-areas: 
-'receta1 '
-'receta2 '
-'receta4 ';
+'receta1 receta1 receta1 receta1 receta1 receta1'
+'receta2 receta2 receta2 receta3 receta3 receta3'
+'receta4 receta4 receta4 receta4 receta4 receta4';
 gap: 20px;
 padding-left: 20%;
 padding-right: 20%;
