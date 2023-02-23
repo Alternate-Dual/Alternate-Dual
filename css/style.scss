@@ -1144,7 +1144,21 @@ table td #recetatabla{
     align-items: center;
 }
 
-
+@media screen and (max-width:800px) {
+    .contener{
+        display: grid;
+        grid-template-areas: 
+        'foto foto foto'
+        'formu formu formu'
+        'tipo tipo tipo'
+        'ingre ingre ingre'
+        'prepa prepa prepa'
+        'valores valores valores valores valores valores';
+        gap: 20px;
+        
+        ;
+    }
+}
 
 
 
@@ -1336,29 +1350,7 @@ width: 66%;
 
 }
 
-@media screen and (max-width:1000px) {
-    .contenedor{
 
-        display: grid;
-        grid-template-areas: 
-        'receta1 '
-        'receta2'
-        'receta3 '
-        'receta4 ';
-        gap: 20px;
-        padding-left: 20%;
-        padding-right: 20%;
-        
-        }
-    .receta1{
-        display: grid;
-        grid-template-areas:
-        'foto ',
-        'nombre ';
-        gap: 50px;
-        }
-        
-}
 
 /*Cuadro modal Admin*/
 
