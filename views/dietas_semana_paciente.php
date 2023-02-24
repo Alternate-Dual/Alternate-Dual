@@ -79,8 +79,8 @@ if(!isset($_SESSION['rol'])){
                        $conexion = $db->connect();
                        $sql=$conexion->query("select * from receta where tipo_comida='desayuno' LIMIT 1");
                        while ($datos = $sql->fetchObject()){ ?>
-                       <h4><?= $datos->nombre_receta?></h4>
-                       <img src="<?= $datos->foto?>" alt="">
+                       <h4 id="fuente"><?= $datos->nombre_receta?></h4>
+                       <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
                        <div id="check">
                            <a href="receta_desayuno_paciente.php" id="dietacliente"><i class="fa-solid fa-info"></i></a>
                        </div>
@@ -88,52 +88,56 @@ if(!isset($_SESSION['rol'])){
                    ?>
                     </div>
                 </div>
-    
                 
+
                 <div class="elemento">
-                    <p>Media Mañana</p>
-                    <div id="plato">
-                        <h4>Nombre</h4>
-                        <img src="../img/favicon-32x32.png" alt="">
-                        <div id="check">
-                            <a href="receta_desayuno_paciente.php" id="dietacliente"><i class="fa-solid fa-info"></i></a>
-                        </div>
+                <p>Media Mañana</p>
+                <div class="plato2">
+                <img id="imgNombreComidas" src="../img/desayuno1.jpg" alt="">
+                    <div id="check">
+                        <a href="receta_desayuno_paciente.php" id="dietacliente"><i class="fa-solid fa-info"></i></a>
+                        <input type="checkbox" id="dietaclientein">
                     </div>
                 </div>
+                <p>Sandwich de manzana y granola uhadfoihauswrfioauwhs</p>
+            </div>
     
-                <div class="elemento">
-                    <p>Comida</p>
-                    <div id="plato">
-                        <h4>Nombre</h4>
-                        <img src="/img/favicon-32x32.png" alt="">
-                        <div id="check">
-                            <a href="receta_desayuno_paciente" id="dietacliente"><i class="fa-solid fa-info"></i></a>
-                        </div>
+            <div class="elemento">
+                <p>Comida</p>
+                <div class="plato2">
+                <img id="imgNombreComidas" src="../img/desayuno1.jpg" alt="">
+                    <div id="check">
+                        <a href="receta_desayuno_paciente.php" id="dietacliente"><i class="fa-solid fa-info"></i></a>
+                        <input type="checkbox" id="dietaclientein">
                     </div>
                 </div>
+                <p>Sandwich de manzana y granola</p>
+            </div>
     
-    
-                <div class="elemento">
-                    <p>Merienda</p>
-                    <div id="plato">
-                        <h4>Nombre</h4>
-                        <img src="/img/favicon-32x32.png" alt="">
-                        <div id="check" id="dietacliente">
-                            <a href="receta_desayuno_paciente" id="dietacliente"><i class="fa-solid fa-info"></i></a>
-                        </div>
+            <div class="elemento">
+                <p>Merienda</p>
+                <div class="plato2">
+                <img id="imgNombreComidas" src="../img/desayuno1.jpg" alt="">
+                    <div id="check">
+                        <a href="receta_desayuno_paciente.php" id="dietacliente"><i class="fa-solid fa-info"></i></a>
+                        <input type="checkbox" id="dietaclientein">
                     </div>
                 </div>
+                <p>Sandwich de manzana y granola</p>
+            </div>
+                
     
-                <div class="elemento">
-                    <p>Cena</p>
-                    <div id="plato">
-                        <h4>Nombre</h4>
-                        <img src="/img/favicon-32x32.png" alt="">
-                        <div id="check">
-                            <a href="receta_desayuno_paciente" id="dietacliente"><i class="fa-solid fa-info"></i></a>
-                        </div>
+            <div class="elemento">
+                <p>Cena</p>
+                <div class="plato2">
+                <img id="imgNombreComidas" src="../img/desayuno1.jpg" alt="">
+                    <div id="check">
+                        <a href="receta_desayuno_paciente.php" id="dietacliente"><i class="fa-solid fa-info"></i></a>
+                        <input type="checkbox" id="dietaclientein">
                     </div>
                 </div>
+                <p>Sandwich de manzana y granola</p>
+            </div>
     
             </div>
         </div>

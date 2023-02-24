@@ -662,9 +662,9 @@ table tr:nth-child(2n+1).admin {
 .carrousel2 {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   text-align: center;
-  width: auto;
+  max-width: 100%;
 }
 
 .plato2 {
@@ -791,19 +791,12 @@ div#caja {
     align-items: stretch;
     text-align: center;
   }
-}
-@media screen and (max-width: 800px) {
-  .contBlan2 {
-    border-radius: 18px;
-    background-color: white;
-    margin-bottom: 2%;
-    padding: 2%;
-    width: 60%;
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
+  .carrousel2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     text-align: center;
+    max-width: 100%;
   }
 }
 #bodyMenuSemanal {
@@ -828,11 +821,6 @@ div#caja {
   overflow-x: hidden;
   max-height: 600px;
   width: 100%;
-}
-
-.elemento2 {
-  margin-left: 2%;
-  text-align: center;
 }
 
 .cabeceraSemana {
@@ -1031,6 +1019,10 @@ table td #recetatabla {
 }
 
 /*-------------------------*/
+#fuente {
+  font-size: xx-small;
+}
+
 #plato {
   background-color: #e7ebec;
   padding: 2em;
@@ -1058,7 +1050,7 @@ table td #recetatabla {
   background-color: white;
   margin-bottom: 2%;
   padding: 2%;
-  width: 60%;
+  width: 50%;
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
@@ -1069,14 +1061,17 @@ table td #recetatabla {
 .carrousel {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  overflow-x: auto;
+  flex-wrap: nowrap;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  max-width: 100%;
   text-align: center;
 }
 
 .elemento {
-  flex: 1 0 auto;
   text-align: center;
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
 @media screen and (max-width: 1000px) {
@@ -1090,10 +1085,6 @@ table td #recetatabla {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
-  }
-  .elemento {
-    flex: 1 0 auto;
-    margin-left: 3em;
   }
 }
 .receta1 {

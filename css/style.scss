@@ -738,9 +738,9 @@ table tr:nth-child(2n+1).admin{
 .carrousel2{
     display:flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     text-align: center; 
-    width: auto;    
+    max-width: 100%;     
     
     }
 
@@ -889,28 +889,16 @@ div#caja{
           
         
         }
+        .carrousel2{
+            display:flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            text-align: center; 
+            max-width: 100%;     
+            
+            }
 
         
-    }
-
-@media screen and (max-width:800px) {
-
-    
-    .contBlan2{
-        border-radius: 18px;
-        background-color: white;
-        margin-bottom: 2%;
-        padding:2%;
-        
-        width: 60%;
-        display:inline-flex;
-        flex-direction: column;
-        justify-content: center; 
-        align-items: stretch;
-        text-align: center;
-          
-        
-        }
     }
 
 //Receta Categoria Nutricionista
@@ -943,12 +931,6 @@ div#caja{
     width: 100%;
 
 }
-
-.elemento2{
-    margin-left:2%;
-    text-align: center;
-    
-    }
 
 
 .cabeceraSemana{
@@ -1187,7 +1169,9 @@ table td #recetatabla{
 
 // Dietas Semanal Paciente
 
-
+#fuente{
+    font-size:xx-small;
+}
 #plato{
 background-color: #e7ebec;
 padding: 2em;
@@ -1220,7 +1204,7 @@ background-color: white;
 margin-bottom: 2%;
 padding:2%;
 
-width: 60%;
+width: 50%;
 display:inline-flex;
 flex-direction: column;
 justify-content: center; 
@@ -1233,17 +1217,21 @@ text-align: center;
 .carrousel{
 display:flex;
 flex-direction: row;
-flex-wrap: wrap;
-overflow-x: auto;
+flex-wrap: nowrap;
+overflow-y: hidden;
+overflow-x: scroll;
+max-width: 100%; 
+text-align: center;  
 
-text-align: center;       
+
 
 }
 
 .elemento{
-flex:1 0 auto;
-text-align: center;
 
+text-align: center;
+margin-left: 1em;
+margin-right: 1em;
 }
 
 
@@ -1268,10 +1256,6 @@ overflow-x: auto;
 
 }
 
-.elemento{
-flex:1 0 auto;
-margin-left: 3em;
-}
 }
 
 //Receta Cliente
