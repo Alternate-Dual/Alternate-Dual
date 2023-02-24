@@ -56,15 +56,14 @@ if(!isset($_SESSION['rol'])){
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
-<body >
+<body>
     
     <h1>Semana 1</h1>
     <br>
     <br>
+    <?php
+        include ("../includes/database.php");
+      ?>
     <!-----------------------Lunes------------------------------------------------>
         
         <div class="contBlan2">
@@ -75,12 +74,18 @@ if(!isset($_SESSION['rol'])){
                 <div class="elemento">
                     <p>Desayuno</p>
                     <div id="plato">
-                        <h4>Nombre</h4>
-                        <img src="../img/favicon-32x32.png" alt="">
-                        <div id="check">
-                            <a href="receta_desayuno_paciente.php" id="dietacliente"><i class="fa-solid fa-info"></i></a>
-                            <input type="checkbox" id="dietaclientein">
-                        </div>
+                   <?php
+                       $db = new Database();
+                       $conexion = $db->connect();
+                       $sql=$conexion->query("select * from receta where tipo_comida='desayuno' LIMIT 1");
+                       while ($datos = $sql->fetchObject()){ ?>
+                       <h4><?= $datos->nombre_receta?></h4>
+                       <img src="<?= $datos->foto?>" alt="">
+                       <div id="check">
+                           <a href="receta_desayuno_paciente.php" id="dietacliente"><i class="fa-solid fa-info"></i></a>
+                       </div>
+                       <?php }
+                   ?>
                     </div>
                 </div>
     
@@ -92,7 +97,6 @@ if(!isset($_SESSION['rol'])){
                         <img src="../img/favicon-32x32.png" alt="">
                         <div id="check">
                             <a href="receta_desayuno_paciente.php" id="dietacliente"><i class="fa-solid fa-info"></i></a>
-                            <input type="checkbox" id="dietaclientein">
                         </div>
                     </div>
                 </div>
@@ -104,7 +108,6 @@ if(!isset($_SESSION['rol'])){
                         <img src="/img/favicon-32x32.png" alt="">
                         <div id="check">
                             <a href="receta_desayuno_paciente" id="dietacliente"><i class="fa-solid fa-info"></i></a>
-                            <input type="checkbox" id="dietaclientein">
                         </div>
                     </div>
                 </div>
@@ -117,7 +120,6 @@ if(!isset($_SESSION['rol'])){
                         <img src="/img/favicon-32x32.png" alt="">
                         <div id="check" id="dietacliente">
                             <a href="receta_desayuno_paciente" id="dietacliente"><i class="fa-solid fa-info"></i></a>
-                            <input type="checkbox" id="dietaclientein">
                         </div>
                     </div>
                 </div>
@@ -129,7 +131,6 @@ if(!isset($_SESSION['rol'])){
                         <img src="/img/favicon-32x32.png" alt="">
                         <div id="check">
                             <a href="receta_desayuno_paciente" id="dietacliente"><i class="fa-solid fa-info"></i></a>
-                            <input type="checkbox" id="dietaclientein">
                         </div>
                     </div>
                 </div>

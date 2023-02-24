@@ -68,20 +68,20 @@ if(!isset($_SESSION['rol'])){
     <br>
     <div class="contener">
             <div class="foto" style="background-color:#545454;">
+        <form name="crear_receta_form" method="post" action="" novalidate="novalidate" id="crearReceta" enctype="multipart/form-data">
                 <img src="../img/.png" alt="">
                 <div id="imagen" style="color:white;">
                     <label id="labelImg" for="inputTag">
-                      Seleccione imagen <br/>
-                      <i class="fa fa-2x fa-camera"></i>
-                      <input id="inputTag" type="file"/>
-                      <br>
-                      <span id="imageName"></span>
+                        <i class="fa fa-2x fa-camera"></i>
+                        <p>Por favor, seleccione una imagen</p>
+                        <input type="file" name="foto"/>
+                        <br>
+                        <span id="imageName"></span>
                     </label>
                   </div>
             </div>
 
             <div class="formu">
-            <form name="crear_receta_form" method="post" action="" novalidate="novalidate" id="crearReceta">
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre_receta" name="nombre_receta"><br>
                     
@@ -109,10 +109,7 @@ if(!isset($_SESSION['rol'])){
                     <input class="tipIn" type="radio" id="cena" name="tipo_comida" value="cena">
                     <label class="tipLa" for="cena"> Cena</label><br>
             </div>
-        <!--</div>-->
 
-        
-        <!--<div class="list">-->
             <div class="ingre">
                 <h4>Ingredientes</h4><br>
                 <textarea id="ingredientes" name="ingredientes" rows="4" cols="50"></textarea>
@@ -122,33 +119,32 @@ if(!isset($_SESSION['rol'])){
                 <h4>Preparación</h4><br>
                 <textarea id="preparacion" name="preparacion" rows="4" cols="50"></textarea>
             </div>
-            <br>
-        <!--</div>-->
+           <br>
         
-
         <div class="valores">
             <br>
             <h4>Valores nutricionales</h4> <br><br>
 
-            <label for="calorias">Calorías</label>
+            <label for="calorias">Calorías (kcal)</label>
             <input class="valor" type="number" name="calorias">
 
-            <label for="carbohidratos">Carbohidratos</label>
+            <label for="carbohidratos">Carbohidratos (g)</label>
             <input class="valor" type="number" name="carbohidratos">
 
-            <label for="proteinas">Proteinas</label>
+            <label for="proteinas">Proteinas (g)</label>
             <input class="valor" type="number" name="proteinas">
 
-            <label for="grasas">Grasas</label>
+            <label for="grasas">Grasas (g)</label>
             <input class="valor" type="number" name="grasas">
 
             <br><br>
-</form>
-            <button type="submit" form="crearReceta" name="crear_receta" value="Crear" class="btnVerde" style="padding-left: 10vh; padding-right: 10vh;">Añadir</button>
+        </form>
+            <button type="submit" form="crearReceta" name="crear_receta" value="Crear" class="btnVerde" style="padding-left: 8vh; padding-right: 8vh; transition: all .30s ease;">Añadir</button>
         </div>
     
     </div> 
-    
+    <br>
+    <br>
     <script src="../js/app.js"></script>
 </body>
 </html>

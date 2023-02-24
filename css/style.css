@@ -1002,6 +1002,13 @@ table td #recetatabla {
   align-items: center;
 }
 
+@media screen and (max-width: 800px) {
+  .contener {
+    display: grid;
+    grid-template-areas: "foto foto foto" "formu formu formu" "tipo tipo tipo" "ingre ingre ingre" "prepa prepa prepa" "valores valores valores valores valores valores";
+    gap: 20px;
+  }
+}
 /*-----div de la imagen-----*/
 .imagen {
   text-align: center;
@@ -1090,7 +1097,7 @@ table td #recetatabla {
   }
 }
 .receta1 {
-  grid-area: nombre;
+  grid-area: receta1;
 }
 
 .receta2 {
@@ -1107,7 +1114,7 @@ table td #recetatabla {
 
 .contenedor {
   display: grid;
-  grid-template-areas: "nombre nombre nombre nombre nombre nombre" "receta2 receta2 receta2 receta3 receta3 receta3" "receta4 receta4 receta4 receta4 receta4 receta4";
+  grid-template-areas: "receta1 receta1 receta1 receta1 receta1 receta1" "receta2 receta2 receta2 receta3 receta3 receta3" "receta4 receta4 receta4 receta4 receta4 receta4";
   gap: 20px;
   padding-left: 20%;
   padding-right: 20%;
@@ -1130,7 +1137,7 @@ table td #recetatabla {
 
 .receta1 {
   display: grid;
-  grid-template-areas: "foto foto nombre nombre";
+  grid-template-areas: "foto  nombre ";
   gap: 50px;
 }
 
@@ -1149,4 +1156,58 @@ img#plato {
   height: 70%;
   width: 66%;
 }
-/*# sourceMappingURL=style.css.map */
+
+/*Cuadro modal Admin*/
+.modal-window {
+  text-align: left;
+  line-height: 1.4;
+  position: fixed;
+  background-color: rgba(182, 173, 173, 0.25);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+.modal-window:target {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+.modal-window > div {
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2em;
+  background: white;
+  border: 3px solid #7ed957;
+}
+
+.modal-close {
+  color: #aaa;
+  line-height: 50px;
+  font-size: 80%;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 70px;
+  text-decoration: none;
+}
+.modal-close:hover {
+  color: black;
+}
+
+.modal-window > div {
+  border-radius: 1rem;
+}
+
+.modal-window div:not(:last-of-type) {
+  margin-bottom: 15px;
+}/*# sourceMappingURL=style.css.map */

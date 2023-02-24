@@ -1144,6 +1144,22 @@ table td #recetatabla{
     align-items: center;
 }
 
+@media screen and (max-width:800px) {
+    .contener{
+        display: grid;
+        grid-template-areas: 
+        'foto foto foto'
+        'formu formu formu'
+        'tipo tipo tipo'
+        'ingre ingre ingre'
+        'prepa prepa prepa'
+        'valores valores valores valores valores valores';
+        gap: 20px;
+        
+        ;
+    }
+}
+
 
 
 /*-----div de la imagen-----*/
@@ -1261,7 +1277,7 @@ margin-left: 3em;
 //Receta Cliente
 
 .receta1{
-grid-area:nombre;
+grid-area:receta1;
 
 }
 
@@ -1284,7 +1300,7 @@ grid-area: receta4;
 
 display: grid;
 grid-template-areas: 
-'nombre nombre nombre nombre nombre nombre'
+'receta1 receta1 receta1 receta1 receta1 receta1'
 'receta2 receta2 receta2 receta3 receta3 receta3'
 'receta4 receta4 receta4 receta4 receta4 receta4';
 gap: 20px;
@@ -1312,7 +1328,7 @@ grid-area: nombre;
 .receta1{
 display: grid;
 grid-template-areas:
-'foto foto nombre nombre';
+'foto  nombre ';
 gap: 50px;
 }
 
@@ -1333,6 +1349,8 @@ height: 70%;
 width: 66%;
 
 }
+
+
 
 /*Cuadro modal Admin*/
 
