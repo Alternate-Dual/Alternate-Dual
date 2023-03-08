@@ -659,7 +659,7 @@ table tr:nth-child(2n+1).admin {
   background-color: white;
 }
 
-.carrousel2 {
+.carrousel3 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -667,7 +667,7 @@ table tr:nth-child(2n+1).admin {
   max-width: 100%;
 }
 
-.carrousel3 {
+.carrousel2 {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
