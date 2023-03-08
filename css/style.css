@@ -1080,6 +1080,7 @@ table td #recetatabla {
   text-align: center;
   margin-left: 1em;
   margin-right: 1em;
+  width: 14em;
 }
 
 @media screen and (max-width: 1000px) {

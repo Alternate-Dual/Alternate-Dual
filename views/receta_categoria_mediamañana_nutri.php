@@ -81,7 +81,7 @@ if(!isset($_SESSION['rol'])){
         ?>
 
      <div class="scrollY">   
-        <div class="carrousel2">  
+        <div class="carrousel3">  
             <?php
             $db = new Database();
             $conexion = $db->connect();

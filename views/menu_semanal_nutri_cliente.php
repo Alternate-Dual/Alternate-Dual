@@ -81,6 +81,7 @@ if(!isset($_SESSION['rol'])){
         <div class="cabeza">
             <h3 class="enlace_menu_semanal"><a href="receta_categoria_desayuno_nutri.php">Desayuno</a></h3>
             <div class="buscar">
+            <a href="receta_categoria_desayuno_nutri.php">ver todo</a>
             <input type="search" placeholder="🔍Buscar" name="" id="searchMenuDia">
             </div>
         </div>        
@@ -111,6 +112,7 @@ if(!isset($_SESSION['rol'])){
             <h3 id="enlace_menu_semanal"><a href="receta_categoria_mediamañana_nutri.php">Media mañana</a></h3>
 
             <div class="buscar">
+            <a href="receta_categoria_mediamañana_nutri.php">ver todo</a>
             <input type="search" placeholder="🔍Buscar" name="" id="searchMenuDia">
             </div>
         </div>
@@ -141,6 +143,7 @@ if(!isset($_SESSION['rol'])){
             <h3 id="enlace_menu_semanal"><a href="receta_categoria_almuerzo_nutri.php">Almuerzo</a></h3>
 
             <div class="buscar">
+            <a href="receta_categoria_almuerzo_nutri.php">ver todo</a>
             <input type="search" placeholder="🔍Buscar" name="" id="searchMenuDia">
             </div>
         </div>
@@ -172,6 +175,7 @@ if(!isset($_SESSION['rol'])){
             <h3 id="enlace_menu_semanal"><a href="receta_categoria_merienda_nutri.php">Merienda</a></h3>
 
             <div class="buscar">
+            <a href="receta_categoria_merienda_nutri.php">ver todo</a>
             <input type="search" placeholder="🔍Buscar" name="" id="searchMenuDia">
             </div>
         </div>
@@ -202,6 +206,7 @@ if(!isset($_SESSION['rol'])){
             <h3 id="enlace_menu_semanal"><a href="receta_categoria_cena_nutri.php">Cena</a></h3>
 
             <div class="buscar">
+            <a href="receta_categoria_cena_nutri.php">ver todo</a>
             <input type="search" placeholder="🔍Buscar" name="" id="searchMenuDia">
             </div>
         </div>
