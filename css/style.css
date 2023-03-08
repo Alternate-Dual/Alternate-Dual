@@ -1071,9 +1071,6 @@ table td #recetatabla {
   flex-direction: row;
   flex-wrap: nowrap;
   overflow-y: hidden;
-  overflow-x: scroll;
-  max-width: 100%;
-  text-align: center;
 }
 
 .elemento {
@@ -1092,8 +1089,12 @@ table td #recetatabla {
   }
   .carrousel {
     display: flex;
+    flex-direction: row;
     flex-wrap: nowrap;
-    overflow-x: auto;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    max-width: 100%;
+    text-align: center;
   }
 }
 .receta1 {
