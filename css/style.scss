@@ -738,11 +738,20 @@ table tr:nth-child(2n+1).admin{
 .carrousel2{
     display:flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     text-align: center; 
     max-width: 100%;     
     
     }
+
+    .carrousel3{
+        display:flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        text-align: center; 
+        max-width: 100%;     
+        
+        }
 
 .plato2{
     background-color: #e7ebec;
