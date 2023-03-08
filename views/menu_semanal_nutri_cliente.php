@@ -206,7 +206,7 @@ if(!isset($_SESSION['rol'])){
             </div>
         </div>
         
-        <div class="carrousel3">
+        <div class="carrousel2">
                 <?php
                 $db = new Database();
                 $conexion = $db->connect();
