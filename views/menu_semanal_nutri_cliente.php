@@ -67,6 +67,7 @@ if(!isset($_SESSION['rol'])){
    
   
     <div class="cabeza2">
+    <a href="nutricionista_menu.php">🡰</a>
         <h2>Semana 1</h2>
         <div class="semanaSiguiente">
                 <button class="buton" onclick="crearReceta()">Crear receta</button>

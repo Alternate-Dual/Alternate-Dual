@@ -744,7 +744,7 @@ table tr:nth-child(2n+1).admin {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-left: 44%;
+  margin-left: 20%;
   margin-right: 13%;
   margin-top: 2%;
 }
