@@ -67,7 +67,7 @@ if(!isset($_SESSION['rol'])){
     <div class="cabeza3">
     
         <div class="semanaSiguiente">
-                <button class="buton" onclick="crearPaciente()">Añadir paciente</button>
+                <button class="buton" onclick="window.location.href='crear_paciente_nutri.php'">Añadir paciente</button>
             </div>
     </div>
     </div>
