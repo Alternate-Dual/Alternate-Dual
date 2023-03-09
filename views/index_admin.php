@@ -91,7 +91,7 @@ if(!isset($_SESSION['rol'])){
                             <p><?= $datos->correo_electronico?></p>
                         </div>
                     </div>
-                <button type="submit" class="btnVerde" style="transition: all .30s ease;">Modificar</button> <br>
+                <button type="submit" class="btnVerde" style="transition: all .30s ease;" onclick="window.location.href='modificar_usuario.php?id=<?= $datos->id ?>'">Modificar</button> <br>
                 <button type="submit" class="btnVerde" style="transition: all .30s ease;" onclick="window.location.href='index_admin.php?id=<?= $datos->id ?>'">Eliminar</button>
             </td>
         </tr>

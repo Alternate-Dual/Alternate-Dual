@@ -77,10 +77,10 @@ if(!isset($_SESSION['rol'])){
             <td class="admin"><img src="../img/favicon-32x32.png" alt=""></td>
             <td class="admin"><?= $datos->nombre?> <?= $datos->apellidos?></td>
             <td class="admin">
-                <button type="submit" class="btnVerde" style="transition: all .30s ease;" onclick="window.location.href='#abrir_modal'">Contactar</button> <br>
-                    <div id="abrir_modal" class="modal-window">
+                <button type="submit" class="btnVerde" style="transition: all .30s ease;" onclick="window.location.href='#abrir_modal_contacto'">Contactar</button> <br>
+                    <div id="abrir_modal_contacto" class="modal-window">
                           <div>
-                            <a href="#" title="Close" class="modal-close">Cerrar</a>
+                            <a href="#" title="Cerrar" class="modal-close">Cerrar</a>
                             <h3>Nombre y apellidos: </h3>
                             <p><?= $datos->nombre?> <?= $datos->apellidos?></p>
                             <h3>Fecha de nacimiento:</h3>
@@ -91,7 +91,7 @@ if(!isset($_SESSION['rol'])){
                             <p><?= $datos->correo_electronico?></p>
                         </div>
                     </div>
-                <button type="submit" class="btnVerde" style="transition: all .30s ease;">Modificar</button> <br>
+                <button class="btnVerde" style="transition: all .30s ease;" onclick="window.location.href='modificar_usuario.php?id=<?= $datos->id ?>'">Modificar</button> <br>
                 <button type="submit" class="btnVerde" style="transition: all .30s ease;" onclick="window.location.href='index_admin.php?id=<?= $datos->id ?>'">Eliminar</button>
             </td>
         </tr>

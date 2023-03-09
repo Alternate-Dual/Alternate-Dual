@@ -20,5 +20,7 @@ function cambiarPeso() {
 
 function crearReceta() {
       location.href = "../views/crear_receta_nutri.php";
-    }
+}
+
+
 
