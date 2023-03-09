@@ -710,6 +710,19 @@ table tr:nth-child(2n+1).admin {
   text-align: center;
 }
 
+.contBlan4 {
+  border-radius: 18px;
+  background-color: white;
+  margin-bottom: 2%;
+  padding: 2%;
+  width: 55%;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  text-align: center;
+}
+
 .semanaActual {
   background-color: rgba(0, 255, 255, 0);
   height: 50px;
@@ -724,6 +737,27 @@ table tr:nth-child(2n+1).admin {
   justify-content: space-between;
   margin-left: 7%;
   margin-right: 7%;
+  margin-top: 2%;
+}
+
+.cabeza2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 20%;
+  margin-right: 13%;
+  margin-top: 2%;
+}
+
+.cabeza3 {
+  display: flex;
+  margin-left: 17%;
+  margin-bottom: 2%;
+}
+
+.cabeza4 {
+  display: flex;
+  flex-direction: row;
   margin-top: 2%;
 }
 
@@ -799,12 +833,34 @@ div#caja {
     align-items: stretch;
     text-align: center;
   }
+  .contBlan4 {
+    border-radius: 18px;
+    background-color: white;
+    margin-bottom: 2%;
+    padding: 2%;
+    width: 90%;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    text-align: center;
+  }
   .carrousel2 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     text-align: center;
     max-width: 100%;
+  }
+  .cabeza2 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20%;
+    margin-top: 2%;
+  }
+  .cabeza3 {
+    display: flex;
+    margin-left: 35%;
   }
 }
 #bodyMenuSemanal {
@@ -929,6 +985,21 @@ div#caja div {
     overflow-y: scroll;
     overflow-x: hidden;
     max-height: 500px;
+  }
+  .semanaSiguiente button {
+    font-size: large;
+    font-family: "Nunito", sans-serif;
+    background-color: #7ed957;
+    border: 1px solid #7ed957;
+    color: white;
+    padding: 3%;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 100%;
+    text-align: center;
+    border-radius: 12px;
+    margin-top: 2%;
+    margin-bottom: 2%;
   }
 }
 .foto {
@@ -1080,6 +1151,22 @@ table td #recetatabla {
   width: 14em;
 }
 
+@media screen and (max-width: 1700px) {
+  .contBlan2 {
+    background-color: white;
+    margin-bottom: 2%;
+    padding: 2%;
+    width: 60%;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .contBlan2 {
+    background-color: white;
+    margin-bottom: 2%;
+    padding: 2%;
+    width: 75%;
+  }
+}
 @media screen and (max-width: 1000px) {
   .contBlan2 {
     background-color: white;

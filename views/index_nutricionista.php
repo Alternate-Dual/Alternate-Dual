@@ -63,6 +63,14 @@ if(!isset($_SESSION['rol'])){
     <br>
     
     <h1 class="admin">Pacientes</h1>
+
+    <div class="cabeza3">
+    
+        <div class="semanaSiguiente">
+                <button class="buton" onclick="window.location.href='crear_paciente_nutri.php'">Añadir paciente</button>
+            </div>
+    </div>
+    </div>
     
     <table class="admin">
 
