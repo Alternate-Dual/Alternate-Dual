@@ -64,9 +64,15 @@ if(!isset($_SESSION['rol'])){
             <img src="../img/icon1.jpg" alt="cara" />
             <h4>Nombre del cliente</h4>
         </div>
-    </div>
+   
   
-     <h2>Semana 1</h2>
+    <div class="cabeza2">
+        <h2>Semana 1</h2>
+        <div class="semanaSiguiente">
+                <button class="buton" onclick="crearReceta()">Crear receta</button>
+            </div>
+    </div>
+    </div>
      <br>
         
      <?php
