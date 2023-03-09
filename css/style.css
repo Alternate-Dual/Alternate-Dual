@@ -833,6 +833,18 @@ div#caja {
     align-items: stretch;
     text-align: center;
   }
+  .contBlan4 {
+    border-radius: 18px;
+    background-color: white;
+    margin-bottom: 2%;
+    padding: 2%;
+    width: 90%;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    text-align: center;
+  }
   .carrousel2 {
     display: flex;
     flex-direction: row;
@@ -1139,6 +1151,22 @@ table td #recetatabla {
   width: 14em;
 }
 
+@media screen and (max-width: 1700px) {
+  .contBlan2 {
+    background-color: white;
+    margin-bottom: 2%;
+    padding: 2%;
+    width: 60%;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .contBlan2 {
+    background-color: white;
+    margin-bottom: 2%;
+    padding: 2%;
+    width: 75%;
+  }
+}
 @media screen and (max-width: 1000px) {
   .contBlan2 {
     background-color: white;
