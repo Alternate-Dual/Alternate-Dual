@@ -73,7 +73,7 @@ if(!isset($_SESSION['rol'])){
 
     </div>
 
-    <div class="contBlan2">
+    <div class="contBlan4">
         <h3>Almuerzo</h3>
         <br>
         <?php
