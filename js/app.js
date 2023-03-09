@@ -22,3 +22,7 @@ function crearReceta() {
       location.href = "../views/crear_receta_nutri.php";
     }
 
+// function crearPaciente() {
+//     location.href = "../views/crear_paciente_nutri.php";
+// }
+

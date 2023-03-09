@@ -65,7 +65,8 @@ if(!isset($_SESSION['rol'])){
             <h4>Nombre del cliente</h4>
         </div>
 
-        <div class="cabeceraSemana">
+        <div class="cabeza">
+        <a href="menu_semanal_nutri_cliente.php">🡰</a>
             <div class="semanaSiguiente">
                 <button class="buton" onclick="crearReceta()">Crear receta</button>
             </div>
@@ -92,6 +93,7 @@ if(!isset($_SESSION['rol'])){
                     <div class="plato2">
                     <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
                         <div id="check">
+                            <a ><i class="fa-solid fa-trash-can"></i></a>
                             <a href="#abrir_modal" id="dietacliente"><i class="fa-solid fa-info"></i></a>
                             <input type="checkbox" id="dietaclientein">
 

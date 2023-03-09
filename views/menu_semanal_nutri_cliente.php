@@ -82,7 +82,6 @@ if(!isset($_SESSION['rol'])){
     <div class="contBlan2">
         <h2>Lunes</h2>
         <br>
-        <br>
 
         <div class="cabeza">
             <h3 class="enlace_menu_semanal"><a href="receta_categoria_desayuno_nutri.php">Desayuno</a></h3>
@@ -104,6 +103,7 @@ if(!isset($_SESSION['rol'])){
                         <div class="plato2">
                         <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
                             <div id="check">
+                                <a ><i class="fa-solid fa-trash-can"></i></a>
                                 <a href="#abrir_modal" id="dietacliente"><i class="fa-solid fa-info"></i></a>
                                 <input type="checkbox" id="dietaclientein">
                             </div>
@@ -135,6 +135,7 @@ if(!isset($_SESSION['rol'])){
                         <div class="plato2">
                         <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
                             <div id="check">
+                                <a ><i class="fa-solid fa-trash-can"></i></a>
                                 <a href="#abrir_modal" id="dietacliente"><i class="fa-solid fa-info"></i></a>
                                 <input type="checkbox" id="dietaclientein">
                             </div>
@@ -167,6 +168,7 @@ if(!isset($_SESSION['rol'])){
                         <div class="plato2">
                         <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
                             <div id="check">
+                                <a ><i class="fa-solid fa-trash-can"></i></a>
                                 <a href="#abrir_modal" id="dietacliente"><i class="fa-solid fa-info"></i></a>
                                 <input type="checkbox" id="dietaclientein">
                             </div>
@@ -198,6 +200,7 @@ if(!isset($_SESSION['rol'])){
                         <div class="plato2">
                         <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
                             <div id="check">
+                                <a ><i class="fa-solid fa-trash-can"></i></a>
                                 <a href="#abrir_modal" id="dietacliente"><i class="fa-solid fa-info"></i></a>
                                 <input type="checkbox" id="dietaclientein">
                             </div>
@@ -229,6 +232,7 @@ if(!isset($_SESSION['rol'])){
                         <div class="plato2">
                         <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
                             <div id="check">
+                                <a ><i class="fa-solid fa-trash-can"></i></a>
                                 <a href="#abrir_modal" id="dietacliente"><i class="fa-solid fa-info"></i></a>
                                 <input type="checkbox" id="dietaclientein">
                             </div>

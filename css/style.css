@@ -749,6 +749,18 @@ table tr:nth-child(2n+1).admin {
   margin-top: 2%;
 }
 
+.cabeza3 {
+  display: flex;
+  margin-left: 17%;
+  margin-bottom: 2%;
+}
+
+.cabeza4 {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2%;
+}
+
 #menuDia {
   display: flex;
   flex-direction: row;
@@ -827,6 +839,16 @@ div#caja {
     flex-wrap: wrap;
     text-align: center;
     max-width: 100%;
+  }
+  .cabeza2 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20%;
+    margin-top: 2%;
+  }
+  .cabeza3 {
+    display: flex;
+    margin-left: 35%;
   }
 }
 #bodyMenuSemanal {
@@ -951,6 +973,21 @@ div#caja div {
     overflow-y: scroll;
     overflow-x: hidden;
     max-height: 500px;
+  }
+  .semanaSiguiente button {
+    font-size: large;
+    font-family: "Nunito", sans-serif;
+    background-color: #7ed957;
+    border: 1px solid #7ed957;
+    color: white;
+    padding: 3%;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 100%;
+    text-align: center;
+    border-radius: 12px;
+    margin-top: 2%;
+    margin-bottom: 2%;
   }
 }
 .foto {
