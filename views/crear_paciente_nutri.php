@@ -17,7 +17,8 @@
 
 <body>
     <br>
-    <h1>Datos personales</h1>
+    <br>
+    <h1>Añadir paciente</h1>
     <?php
         include("../includes/database.php");
         include("../includes/controlador_registrar_usuario.php");
@@ -67,10 +68,10 @@
                 <input type="email" id="email" form="signupForm" name="correo_electronico" class="inputregistro" required><br>
             </div>
 
-            <div class="form-group">
+            <!--<div class="form-group">
                 <label for="password">Contraseña</label><br>
                 <input type="password" id="password" form="signupForm" name="password" class="inputregistro" required><br>
-            </div>
+            </div>-->
                 <button type="submit" id="enviar" form="signupForm" class="btnVerde" name="registro" value="Registrar">Confirmar</button>
            
         </div>
