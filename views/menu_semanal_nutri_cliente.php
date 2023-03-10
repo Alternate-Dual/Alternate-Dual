@@ -106,7 +106,7 @@ if(!isset($_SESSION['rol'])){
                         <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
                             <div id="check">
                                 <a href="menu_semanal_nutri_cliente.php?ID=<?= $datos->ID ?>"><i class="fa-solid fa-trash-can"></i></a>
-                                <a href="#abrir_modal" id="dietacliente"><i class="fa-solid fa-info"></i></a>
+                                <a href="receta_plato_nutricionista.php?ID=<?= $datos->ID ?>" id="dietacliente"><i class="fa-solid fa-info"></i></a>
                                 <input type="checkbox" id="dietaclientein">
                             </div>
                         </div>
