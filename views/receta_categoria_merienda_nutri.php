@@ -94,71 +94,8 @@ if(!isset($_SESSION['rol'])){
                     <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
                         <div id="check">
                         <a ><i class="fa-solid fa-trash-can"></i></a>
-                            <a href="#abrir_modal" id="dietacliente"><i class="fa-solid fa-info"></i></a>
+                            <a href="receta_plato_nutricionista.php?ID=<?= $datos->ID ?>" id="dietacliente"><i class="fa-solid fa-info"></i></a>
                             <input type="checkbox" id="dietaclientein">
-
-                            <!-- <div id="abrir_modal" class="modal-window"> -->
-                                <!-- <div style="box-sizing: content-box;"> -->
-                                    <!-- <a href="#" title="Close" class="modal-close">Cerrar</a> -->
-                                    <!-- <div class="contenedor"> -->
-                                            <!-- <div class="receta1"> -->
-<!--  -->
-                                                <!-- <div class="foto1"> -->
-                                                <!-- imagen -->
-                                                <!-- <img src="../img/desayuno.jpg" id="plato"> -->
-                                                <!-- </div> -->
-<!--  -->
-                                                <!-- <div class="foto2"> -->
-                                                    <!-- <h3>Fruta</h3> -->
-<!--  -->
-                                                    <!-- <div id="list"> -->
-                                                        <!-- <ul id="horizon"> -->
-                                                            <!-- <li>ej</li> -->
-                                                            <!-- <li>ej</li> -->
-                                                            <!-- <li>ej</li> -->
-                                                        <!-- </ul> -->
-                                                    <!-- </div> -->
-                                                <!-- </div> -->
-<!--  -->
-                                            <!-- </div> -->
-<!--  -->
-                                            <!-- <div class="receta2"> -->
-                                                <!-- <h3>Qué necesitas</h3> -->
-                                                <!-- <div id="list"> -->
-                                                <!-- <ul> -->
-                                                    <!-- <li>Fruta</li> -->
-                                                    <!-- <li></li> -->
-                                                    <!-- <li></li> -->
-                                                <!-- </ul> -->
-                                                <!-- </div> -->
-                                            <!-- </div> -->
-<!--  -->
-                                            <!-- <div class="receta3"> -->
-                                                <!--  -->
-                                                <!-- <h3>Cómo prepararlo</h3> -->
-                                                <!-- <div id="list"> -->
-                                                <!-- <ol> -->
-                                                    <!-- <li></li> -->
-                                                    <!-- <li></li> -->
-                                                    <!-- <li></li> -->
-                                                <!-- </ol> -->
-                                                <!-- </div> -->
-                                            <!-- </div> -->
-<!--  -->
-                                            <!-- <div class="receta4"> -->
-                                                <!-- <h3>Valores nutricionales</h3> -->
-                                                <!-- <div> -->
-                                                    <!-- <ul id="horizon"> -->
-                                                        <!-- <li>ej</li> -->
-                                                        <!-- <li>ej</li> -->
-                                                        <!-- <li>ej</li> -->
-                                                    <!-- </ul> -->
-                                                <!-- </div> -->
-                                            <!-- </div> -->
-                                    <!--  -->
-                                    <!-- </div> -->
-                                <!-- </div> -->
-                            <!-- </div> -->
                         </div>
                     </div>
                     <p><?= $datos->nombre_receta?></p>
