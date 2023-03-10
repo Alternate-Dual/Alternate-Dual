@@ -92,7 +92,7 @@ if(!isset($_SESSION['rol'])){
                         </div>
                     </div>
                 <button class="btnVerde" style="transition: all .30s ease;" onclick="window.location.href='modificar_usuario.php?id=<?= $datos->id ?>'">Modificar</button> <br>
-                <button type="submit" class="btnVerde" style="transition: all .30s ease;" onclick="window.location.href='index_admin.php?id=<?= $datos->id ?>'">Eliminar</button>
+                <button type="submit" class="btnVerde" style="transition: all .30s ease;" onclick="window.location.href='administrar_nutricionistas.php?id=<?= $datos->id ?>'">Eliminar</button>
             </td>
         </tr>
         <?php }

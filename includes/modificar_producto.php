@@ -11,6 +11,7 @@
             if ($sql==1) {
                 header("location:index_admin.php");
             } else {
+                echo "Usuario modificado";
                 header("location:index_admin.php");
             }
             

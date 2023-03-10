@@ -78,6 +78,7 @@ if(!isset($_SESSION['rol'])){
         
      <?php
         include ("../includes/database.php");
+        include ("../includes/eliminar_receta.php");
       ?>
    
     <div class="contBlan2">
@@ -104,7 +105,7 @@ if(!isset($_SESSION['rol'])){
                         <div class="plato2">
                         <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
                             <div id="check">
-                                <a ><i class="fa-solid fa-trash-can"></i></a>
+                                <a href="menu_semanal_nutri_cliente.php?ID=<?= $datos->ID ?>"><i class="fa-solid fa-trash-can"></i></a>
                                 <a href="#abrir_modal" id="dietacliente"><i class="fa-solid fa-info"></i></a>
                                 <input type="checkbox" id="dietaclientein">
                             </div>
@@ -136,7 +137,7 @@ if(!isset($_SESSION['rol'])){
                         <div class="plato2">
                         <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
                             <div id="check">
-                                <a ><i class="fa-solid fa-trash-can"></i></a>
+                                <a href="menu_semanal_nutri_cliente.php?ID=<?= $datos->ID ?>"><i class="fa-solid fa-trash-can"></i></a>
                                 <a href="#abrir_modal" id="dietacliente"><i class="fa-solid fa-info"></i></a>
                                 <input type="checkbox" id="dietaclientein">
                             </div>
@@ -169,7 +170,7 @@ if(!isset($_SESSION['rol'])){
                         <div class="plato2">
                         <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
                             <div id="check">
-                                <a ><i class="fa-solid fa-trash-can"></i></a>
+                                <a href="menu_semanal_nutri_cliente.php?ID=<?= $datos->ID ?>"><i class="fa-solid fa-trash-can"></i></a>
                                 <a href="#abrir_modal" id="dietacliente"><i class="fa-solid fa-info"></i></a>
                                 <input type="checkbox" id="dietaclientein">
                             </div>
@@ -201,7 +202,7 @@ if(!isset($_SESSION['rol'])){
                         <div class="plato2">
                         <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
                             <div id="check">
-                                <a ><i class="fa-solid fa-trash-can"></i></a>
+                                <a href="menu_semanal_nutri_cliente.php?ID=<?= $datos->ID ?>"><i class="fa-solid fa-trash-can"></i></a>
                                 <a href="#abrir_modal" id="dietacliente"><i class="fa-solid fa-info"></i></a>
                                 <input type="checkbox" id="dietaclientein">
                             </div>
@@ -226,14 +227,13 @@ if(!isset($_SESSION['rol'])){
                 $db = new Database();
                 $conexion = $db->connect();
                 
-                $sql=$conexion->query("select * from receta where tipo_comida='cena' ORDER BY id DESC
-                LIMIT 3");
+                $sql=$conexion->query("select * from receta where tipo_comida='cena' ORDER BY id DESC LIMIT 3");
                 while ($datos = $sql->fetchObject()){ ?>
                     <div class="elemento">
                         <div class="plato2">
                         <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
                             <div id="check">
-                                <a ><i class="fa-solid fa-trash-can"></i></a>
+                                <a href="menu_semanal_nutri_cliente.php?ID=<?= $datos->ID ?>"><i class="fa-solid fa-trash-can"></i></a>
                                 <a href="#abrir_modal" id="dietacliente"><i class="fa-solid fa-info"></i></a>
                                 <input type="checkbox" id="dietaclientein">
                             </div>
