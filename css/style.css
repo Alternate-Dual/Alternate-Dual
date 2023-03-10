@@ -1443,9 +1443,7 @@ table td #recetatabla {
 
 #plato {
   background-color: #e7ebec;
-  padding: 2em;
   margin-left: auto;
-  margin-right: auto;
   margin-top: 1em;
   width: 7em;
   height: 10em;
@@ -1642,8 +1640,8 @@ table td #recetatabla {
 
 img#plato {
   margin-top: 5%;
-  height: 70%;
-  width: 66%;
+  height: auto;
+  width: 80%;
 }
 
 /*Cuadro modal Admin*/

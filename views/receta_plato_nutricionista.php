@@ -1,5 +1,11 @@
 <?php 
-include_once '../database.php';
+include ("../includes/database.php");
+
+$ID=$_GET["ID"];
+
+$db = new Database();
+$conexion = $db->connect();
+$sql=$conexion->query("select * from receta where ID=$ID");
 
 session_start();
 
@@ -10,6 +16,7 @@ if(!isset($_SESSION['rol'])){
         header('location: login.php');
     }
 }
+
 
 ?>
 
@@ -57,64 +64,60 @@ if(!isset($_SESSION['rol'])){
     </header>
     <br>
     <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <a href="menu_semanal_nutri_cliente.php">🡰</a>
+    
+    <?php
+
+     while($datos=$sql->fetchObject()){ ?>
 
     <div class="contenedor">
+    
         <div class="receta1">
-
             <div class="foto1">
             <!--imagen-->
-            <img src="../img/desayuno.jpg" id="plato">
+            <img src="<?= $datos->foto?>" id="plato">
             </div>
 
             <div class="foto2">
-                <h3>Fruta</h3>
-
-                <div id="list">
-                    <ul id="horizon">
-                        <li>ej</li>
-                        <li>ej</li>
-                        <li>ej</li>
-                    </ul>
-                </div>
+                <h3><?= $datos-> nombre_receta ?></h3><br>
+                <h4>Tiempo de realización (min):</h4><p><?= $datos-> tiempo_ejecucion ?></p><br>
+                <h4>Tipo de comida:</h4><p><?= $datos-> tipo_comida ?></p>
             </div>
 
         </div>
 
         <div class="receta2">
-            <h3>Qué necesitas</h3>
-            <div id="list">
-            <ul>
-                <li>Fruta</li>
-                <li></li>
-                <li></li>
-            </ul>
-            </div>
+            <h3>¿Qué necesitas?</h3>
+            <p><?= $datos-> ingredientes ?></p>
         </div>
 
         <div class="receta3">
             
-            <h3>Cómo prepararlo</h3>
-            <div id="list">
-            <ol>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ol>
-            </div>
+            <h3>Cómo prepararlo:</h3>
+            <p><?= $datos-> preparacion ?></p>
         </div>
 
         <div class="receta4">
-            <h3>Valores nutricionales</h3>
+            <h3>Valores nutricionales</h3><br>
             <div>
                 <ul id="horizon">
-                    <li>ej</li>
-                    <li>ej</li>
-                    <li>ej</li>
+                    <li><b>Calorias: </b><?= $datos-> calorias ?></li>
+                    <li><b>Carbohidratos: </b><?= $datos-> carbohidratos ?></li>
+                    <li><b>Proteinas: </b><?= $datos-> proteinas ?></li>
+                    <li><b>Grasas: </b><?= $datos-> grasas ?></li>
                 </ul>
             </div>
         </div>
    
     </div>
+    <?php }
+    ?>
+
     <br>
 
 <script src="../js/app.js"></script>
