@@ -34,12 +34,14 @@
         $db = new Database();
         $query = $db->connect()->prepare('SELECT*FROM usuarios WHERE correo_electronico = :correo_electronico AND password = :password');
         $query->execute(['correo_electronico' => $correo_electronico, 'password' => $password]);
-
+        
         $row = $query->fetch(PDO::FETCH_NUM);
         if($row == true){
             // validar rol
             $rol = $row[8];
             $_SESSION['rol'] = $rol;
+            $_SESSION['id'] = $id;
+            $_SESSION['nombre'] = $nombre;
 
             switch($_SESSION['rol']){
                 case 1:
