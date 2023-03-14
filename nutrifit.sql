@@ -2,10 +2,10 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 23-02-2023 a las 10:34:32
--- Versión del servidor: 10.4.24-MariaDB
--- Versión de PHP: 8.1.6
+-- Servidor: 127.0.0.1:3307
+-- Tiempo de generación: 14-03-2023 a las 09:29:29
+-- Versión del servidor: 10.4.25-MariaDB
+-- Versión de PHP: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -70,7 +70,21 @@ INSERT INTO `receta` (`ID`, `nombre_receta`, `tiempo_ejecucion`, `complejidad`, 
 (27, 'Lubina al vapor', 30, 'intermedio', 'cena', 'Aceite de albahaca\r\n30 g de aceite de oliva\r\n100 g de aceite de girasol\r\n30 g de hojas de albahaca frescas\r\n½ cucharadita de sal\r\nCremoso de patatas, lubina y tomates asados\r\n100 g de tomates cherry\r\n3 pellizco de sal\r\n1 chorrito de aceite de oliva\r\n1 lubina (de aprox. 1000 g) en 2 filetes, sin espinas\r\n500 g de patatas rojas en trozos\r\n300 g de leche\r\n30 g de mantequilla\r\n1 cucharadita de sal', 'Nivel intermedio', 1033, 25, 110, 53, '../fotos/LuBina_vapor.jpg'),
 (28, 'Carrot cake sin horno', 30, 'facil', 'media_mañana', 'Bizcocho\r\n1 cucharadita de mantequilla (para engrasar)\r\n200 g de zanahoria rallada (fino)\r\n130 g de harina de repostería\r\n75 g de azúcar\r\n75 g de azúcar moreno\r\n120 g de compota de manzana (natural, sin azúcar)\r\n2 huevos\r\n1 cucharadita de canela molida\r\n1 cucharadita de levadura química en polvo\r\n½ cucharadita de bicarbonato\r\n1 pellizco de sal\r\n1 pellizco de nuez moscada molida\r\n1 cucharada de vainilla líquida\r\n60 g de nueces pacanas troceadas\r\n60 g de pasas sin semillas (opcional)\r\n1200 g de agua\r\nFrosting\r\n120 g de queso cremoso\r\n60 g de mantequilla a temperatura ambiente, en trozos\r\n30 g de azúcar glas\r\n20 - 30 g de nueces pacanas troceadas', 'Hacer mezcla y poner en nevera', 373, 43, 5, 21, '../fotos/Carrot_cake_horno.jpg'),
 (29, 'Fiambre de pavo, piquillo y pistachos', 30, 'intermedio', 'desayuno', '100 g de jamón cocido en dados\r\n75 g de dados de beicon ahumado\r\n600 g de pechuga de pavo sin piel ni hueso en trozos de 2-3 cm\r\n150 g de queso de Burgos en trozos\r\n20 g de pistachos (sin piel y sin sal)\r\n3 pimientos del piquillo en trozos de 1 cm\r\n1 cucharadita de sal\r\n1 - 2 pellizcos de pimienta molida\r\n8 huevos de codorniz cocidos y pelados\r\n500 g de agua\r\n', 'Hacer fiambre', 238, 2, 128, 12, '../fotos/Fiambre_pavo.jpg'),
-(30, 'Tostas de crema de salmón y lombarda', 15, 'facil', 'desayuno', 'Crema de salmón ahumado\r\n400 g de salmón ahumado en lonchas o trozos\r\n500 g de nata (35% de grasa)\r\n1 - 2 ramitas de eneldo fresco hojas y parte del tallo\r\n1 cucharadita de sal\r\n2 pellizcos de pimienta molida\r\nEnsalada de lombarda\r\n350 g de lombarda (en trozos de aprox. 5 cm)\r\n1 pera con piel (sin pepitas), en cuartos\r\n10 ramitas perejil fresco (hojas y parte del tallo)\r\n20 g de zumo de limón\r\n10 g de aceite de oliva\r\n1 cucharadita de sal\r\n1 pellizco de pimienta molida\r\nMontaje\r\n24 rebanadas de pan\r\n2 - 3 ramitas de eneldo fresco', 'Hacer crema de salmón y untar en tostada', 182, 17, 7, 10, '../fotos/tostada_salmon.jpg');
+(30, 'Tostas de crema de salmón y lombarda', 15, 'facil', 'desayuno', 'Crema de salmón ahumado\r\n400 g de salmón ahumado en lonchas o trozos\r\n500 g de nata (35% de grasa)\r\n1 - 2 ramitas de eneldo fresco hojas y parte del tallo\r\n1 cucharadita de sal\r\n2 pellizcos de pimienta molida\r\nEnsalada de lombarda\r\n350 g de lombarda (en trozos de aprox. 5 cm)\r\n1 pera con piel (sin pepitas), en cuartos\r\n10 ramitas perejil fresco (hojas y parte del tallo)\r\n20 g de zumo de limón\r\n10 g de aceite de oliva\r\n1 cucharadita de sal\r\n1 pellizco de pimienta molida\r\nMontaje\r\n24 rebanadas de pan\r\n2 - 3 ramitas de eneldo fresco', 'Hacer crema de salmón y untar en tostada', 182, 17, 7, 10, '../fotos/tostada_salmon.jpg'),
+(34, 'Gazpacho', 10, 'facil', 'almuerzo', '1000 g de tomates pera maduros y rojos cortados en dos\r\n1 diente de ajo\r\n50 g de pimiento verde cortado en trozos\r\n40 g de cebolla\r\n70 g de pepino parcialmente pelado y cortado en trozos\r\n30 g de vinagre\r\n1 cucharadita de sal\r\n50 - 100 g de aceite de oliva virgen extra\r\n8 cubitos de hielo (ver sugerencia)', 'Picar y triturar verduras', 143, 7, 2, 12, '../fotos/gazpacho.jpg'),
+(35, 'Salmorejo', 10, 'facil', 'almuerzo', '150 g de aceite de oliva virgen extra\r\n4 huevos duros (para decorar)\r\n100 g de jamón serrano en dados (para decorar)\r\n1 - 2 dientes de ajo\r\n1000 g de tomates maduros y rojos\r\n1 cucharadita de sal\r\n150 g de miga de pan blanco (del día anterior)\r\n30 g de vinagre', 'Picar y triturar verduras', 2423, 11, 11, 111, '../fotos/Salmorejo.jpg'),
+(36, 'Huevo cocido', 5, 'facil', 'cena', '400 g de agua a temperatura ambiente\r\n4 huevos (53-63 g c/u) fríos de la nevera', 'hervir huevo', -190, 1, 8, 6, '../fotos/huevo_cocido.jpg'),
+(38, 'Guisantes con jamón', 15, 'facil', 'cena', '180 g de cebolla en cuartos\r\n50 g de aceite de oliva virgen extra\r\n500 g de guisantes congelados\r\n150 g de agua\r\n½ cucharadita de sal\r\n120 g de jamón serrano en dados', 'Hacer guisantes y añadir jamón', 342, 14, 16, 25, '../fotos/guisantes_con_jamom.jpg'),
+(39, 'Sopa de cebolla', 20, 'facil', 'almuerzo', '80 g de queso gruyère cortado en trozos\r\n500 g de cebollas cortadas en dos\r\n30 g de aceite\r\n20 g de mantequilla\r\n½ cucharadita de sal y algo más (al gusto)\r\n2 pellizcos de pimienta negra molida y algo más (al gusto\r\n2 cucharaditas de harina (10 g)\r\n900 g de agua\r\n1 pastilla de caldo de pollo (para 0,5 l.)\r\no bien 1 cucharadita colmada de concentrado casero de caldo de pollo\r\n12 rebanadas de baguette del día anterior (o de otro pan con corteza)', 'Picar cebolla, poner en olla con aceite y sal', 300, 29, 10, 13, '../fotos/sopa_cebolla.jpg'),
+(40, 'Arroz caldoso', 35, 'facil', 'almuerzo', '400 g de almejas frescas o chirlas\r\n300 g de gambas frescas enteras sin pelar\r\n1000 g de agua\r\n2 dientes de ajo\r\n200 g de tomate triturado en conserva\r\n150 g de pimiento rojo en trozos\r\n150 g de pimiento verde en trozos\r\n70 g de aceite de oliva\r\n150 g de vino blanco\r\n350 g de arroz\r\n2 cucharadas de perejil fresco picado\r\n1 pellizco de hebras de azafrán\r\n1 - 2 cucharaditas de sal\r\n50 g de zumo de naranja recién exprimido', 'poner en olla arroz y verduras ', 460, 53, 25, 15, '../fotos/arroz_caldoso.jpg'),
+(41, 'Mousse de chocolate', 20, 'facil', 'merienda', '50 g de azúcar\r\n200 g de chocolate fondant para postres (50% cacao) en trozos\r\n100 g de nata (min. 30 % de grasa)\r\n4 yemas\r\n4 claras de huevo\r\n1 pellizco de sal', 'poner el chocolate en cazo con leche', 310, 23, 7, 21, '../fotos/mosusse_chocolate.jpg'),
+(42, 'Flan', 15, 'facil', 'merienda', '50 - 80 g de azúcar\r\n300 g de leche entera\r\n3 huevos \"M\"\r\n6 - 12 cucharaditas caramelo líquido\r\n250 g de agua', 'Batir huevos y mezclar con leche', 126, 15, 5, 5, '../fotos/flan.jpg'),
+(43, 'Tarta de Santiago', 10, 'facil', 'desayuno', '1 cucharadita de mantequilla para engrasar el molde\r\n250 g de almendras crudas sin piel\r\n200 g de azúcar\r\n1 tira de piel de limón (solo la parte amarilla)\r\n4 huevos\r\n1 cucharada de azúcar glas para espolvorear', 'Hacer tarta', 339, 27, 10, 21, '../fotos/tarta_santiago.jpg'),
+(46, 'Magdalena de naranja', 15, 'facil', 'merienda', '\r\n½ naranja de zumo con piel\r\n4 huevos\r\n200 g de azúcar (y un poco más para espolvorear)\r\n200 g de aceite de girasol\r\n220 g de harina de repostería\r\n1 sobre de levadura química en polvo (15 g)\r\n1 pellizco de sal', 'Hacer masa y poner en horno', 154, 15, 2, 9, '../fotos/majdalena_naranja.jpg'),
+(47, 'Pastas de avellanas', 20, 'facil', 'desayuno', '130 g de avellanas crudas sin piel\r\n200 g de harina de repostería\r\n100 g de azúcar\r\n150 g de mantequilla a temperatura ambiente\r\n1 huevo batido (para pintar)', 'Hacer masa y hornear', 104, 8, 2, 7, '../fotos/pastas_avellana.jpg'),
+(48, 'Crêpes', 45, 'facil', 'desayuno', '50 g de mantequilla (y algo más para la sartén)\r\n600 g de leche\r\n250 g de harina\r\n4 huevos\r\n1 pellizco de sal', 'Hacer masa y poner en sartén', 197, 21, 7, 10, '../fotos/crepes.jpg'),
+(49, 'Batido de fresa', 5, 'facil', 'media_mañana', '400 g de fresas bien lavadas y sin hojas\r\n100 g de azúcar\r\n6 cubitos de hielo\r\n400 g de leche', 'Batir fresas con la leche', 127, 23, 2, 3, '../fotos/batido_fresa.jpg'),
+(50, 'Smoothie de fresas y mango', 5, 'facil', 'media_mañana', '100 g de fresas\r\n100 g de mango maduro\r\no bien 100 g de papaya\r\n2 yogur natural\r\n50 g de azúcar moreno\r\n100 g de cubitos de hielo', 'Batir frutas', 105, 20, 3, 2, '../fotos/smoothie_fresa_mango.jpg');
 
 -- --------------------------------------------------------
 
@@ -103,7 +117,7 @@ CREATE TABLE `usuarios` (
   `nombre` varchar(20) NOT NULL,
   `apellidos` varchar(40) NOT NULL,
   `fecha_nacimiento` date NOT NULL,
-  `dni` char(8) NOT NULL,
+  `dni` char(9) NOT NULL,
   `sexo` enum('Mujer','Hombre') NOT NULL,
   `correo_electronico` varchar(40) NOT NULL,
   `password` varchar(15) NOT NULL,
@@ -116,11 +130,12 @@ CREATE TABLE `usuarios` (
 
 INSERT INTO `usuarios` (`id`, `nombre`, `apellidos`, `fecha_nacimiento`, `dni`, `sexo`, `correo_electronico`, `password`, `rol_id`) VALUES
 (1, 'Admin', 'Admin', '0000-00-00', '00000000', 'Mujer', 'admin@nutrifit.com', 'Admin', 1),
-(2, 'Nutricionista', 'Nutricionista', '0000-00-00', '00000000', 'Hombre', 'nutricionista@nutrifit.com', 'Nutricionista1', 2),
+(2, 'Nutricionista', 'Nutricionista', '0000-00-00', '00000000', 'Hombre', 'nutricionista@nutrifit.com', '1234', 2),
 (4, 'Eva', 'Tellez', '2023-02-09', '77777777', 'Mujer', 'eva@nutrifit.com', '1234', 2),
 (6, 'Francisco', 'Romero', '2018-02-22', '8888', 'Hombre', 'paco@nutrifit.com', '12345', 2),
 (12, 'Aaron', 'Blanco', '0000-00-00', '88888888', 'Hombre', 'aaron@nutrifit.com', '1234', 3),
-(13, 'Paciente', 'Paciente', '0000-00-00', '88888888', 'Hombre', 'paciente@nutrifit.com', '1234', 3);
+(13, 'Paciente', 'Paciente', '0000-00-00', '88888888', 'Hombre', 'paciente@nutrifit.com', '1234', 3),
+(17, 'Eva', 'Téllez Bernal', '2023-03-17', '78601901E', '', 'Evatellezz', 'usuario123', 3);
 
 --
 -- Índices para tablas volcadas
@@ -153,7 +168,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `receta`
 --
 ALTER TABLE `receta`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT de la tabla `roles`
@@ -165,7 +180,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- Restricciones para tablas volcadas
