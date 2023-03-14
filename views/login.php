@@ -106,7 +106,7 @@
             </form>
             
             <br>
-            <a href="../views/registro_nutricionista.php">Darse de alta</a>
+            <!--<a href="../views/registro_nutricionista.php">Darse de alta</a>-->
 
         </div>
     </section>
