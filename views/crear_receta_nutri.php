@@ -61,6 +61,13 @@ if(!isset($_SESSION['rol'])){
     <br>
     <br>
     <h1>Crear receta</h1>
+
+    <div class="contBlan3">
+        <div class="cabeza2">
+        <a href="menu_semanal_nutri_cliente.php">🡰</a>
+            <h1></h1>
+        </div>
+    </div>
     <?php
         include("../includes/database.php");
         include("../includes/controlador_crear_receta.php");
