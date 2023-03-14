@@ -8,7 +8,7 @@
     private $charset;
 
     public function __construct(){
-        $this->host = 'localhost:3307';
+        $this->host = 'localhost:3306';
         $this->db = 'nutrifit';
         $this->user = 'root';
         $this->password = '';

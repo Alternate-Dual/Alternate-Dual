@@ -61,10 +61,21 @@ if(!isset($_SESSION['rol'])){
     <br>
     <br>
     <h1>Crear receta</h1>
-    <?php
+
+    
+
+    <div class="contBlan3">
+        <div class="cabeza2">
+        <a href="menu_semanal_nutri_cliente.php">🡰</a>
+           
+            <?php
         include("../includes/database.php");
         include("../includes/controlador_crear_receta.php");
-    ?>
+            ?>
+        </div>
+    </div>
+
+    
     <br>
     <div class="contener">
             <div class="foto" style="background-color:#545454;">
