@@ -77,8 +77,8 @@ if(!isset($_SESSION['rol'])){
             <td class="admin"><img src="../img/favicon-32x32.png" alt=""></td>
             <td class="admin"><?= $datos->nombre?> <?= $datos->apellidos?></td>
             <td class="admin">
-                <button type="submit" class="btnVerde" style="transition: all .30s ease;" onclick="window.location.href='#abrir_modal'">Contactar</button> <br>
-                    <div id="abrir_modal" class="modal-window">
+                <button type="submit" class="btnVerde" style="transition: all .30s ease;" onclick="window.location.href='#abrir_modal?id=<?= $datos->id?>'">Contactar</button> <br>
+                    <div id="abrir_modal?id=<?= $datos->id?>" class="modal-window">
                           <div>
                             <a href="#" title="Close" class="modal-close">Cerrar</a>
                             <h3>Nombre y apellidos: </h3>
