@@ -1,5 +1,4 @@
 <?php 
-include_once '../database.php';
 
 session_start();
 
@@ -72,71 +71,111 @@ if(!isset($_SESSION['rol'])){
             <br>
             <div class="carrousel">
                 <div class="elemento">
-                    <p>Desayuno</p>
-                    <div id="plato">
-                   <?php
+                <?php
                        $db = new Database();
                        $conexion = $db->connect();
-                       $sql=$conexion->query("select * from receta where tipo_comida='desayuno' LIMIT 1");
+                       $sql=$conexion->query("select * from receta where tipo_comida='desayuno' ORDER BY RAND() LIMIT 1");
                        while ($datos = $sql->fetchObject()){ ?>
-                       <h4 id="fuente"><?= $datos->nombre_receta?></h4>
-                       <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
-                       <div id="check">
-                           <a href="receta_desayuno_paciente.php" id="dietacliente"><i class="fa-solid fa-info"></i></a>
-                       </div>
-                       <?php }
+
+                        <p>Desayuno</p>
+                        <div class="plato2">
+                        <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
+                            <div id="check">
+                                <a href="receta_plato_paciente.php?ID=<?= $datos->ID ?>"><i class="fa-solid fa-info"></i></a>
+                                <input type="checkbox" id="dietaclientein">
+                            </div>
+                        </div>
+                        <p><?= $datos->nombre_receta?></p>
+                
+                <?php }
                    ?>
-                    </div>
                 </div>
                 
 
                 <div class="elemento">
-                <p>Media Mañana</p>
-                <div class="plato2">
-                <img id="imgNombreComidas" src="../img/desayuno1.jpg" alt="">
-                    <div id="check">
-                        <a href="receta_desayuno_paciente.php" id="dietacliente"><i class="fa-solid fa-info"></i></a>
-                        <input type="checkbox" id="dietaclientein">
-                    </div>
-                </div>
-                <p>Sandwich de manzana y granola uhadfoihauswrfioauwhs</p>
+                <?php
+                       $db = new Database();
+                       $conexion = $db->connect();
+                       $sql=$conexion->query("select * from receta where tipo_comida='media_mañana' ORDER BY RAND() LIMIT 1");
+                       while ($datos = $sql->fetchObject()){ ?>
+
+                        <p>Media Mañana</p>
+                        <div class="plato2">
+                        <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
+                            <div id="check">
+                                <a href="receta_plato_paciente.php?ID=<?= $datos->ID ?>"><i class="fa-solid fa-info"></i></a>
+                                <input type="checkbox" id="dietaclientein">
+                            </div>
+                        </div>
+                        <p><?= $datos->nombre_receta?></p>
+                
+                <?php }
+                   ?>
+                
             </div>
     
             <div class="elemento">
-                <p>Comida</p>
-                <div class="plato2">
-                <img id="imgNombreComidas" src="../img/desayuno1.jpg" alt="">
-                    <div id="check">
-                        <a href="receta_desayuno_paciente.php" id="dietacliente"><i class="fa-solid fa-info"></i></a>
-                        <input type="checkbox" id="dietaclientein">
-                    </div>
-                </div>
-                <p>Sandwich de manzana y granola</p>
+            <?php
+                       $db = new Database();
+                       $conexion = $db->connect();
+                       $sql=$conexion->query("select * from receta where tipo_comida='almuerzo' ORDER BY RAND() LIMIT 1");
+                       while ($datos = $sql->fetchObject()){ ?>
+
+                        <p>Almuerzo</p>
+                        <div class="plato2">
+                        <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
+                            <div id="check">
+                                <a href="receta_plato_paciente.php?ID=<?= $datos->ID ?>"><i class="fa-solid fa-info"></i></a>
+                                <input type="checkbox" id="dietaclientein">
+                            </div>
+                        </div>
+                        <p><?= $datos->nombre_receta?></p>
+                
+                <?php }
+                   ?>
             </div>
     
             <div class="elemento">
-                <p>Merienda</p>
-                <div class="plato2">
-                <img id="imgNombreComidas" src="../img/desayuno1.jpg" alt="">
-                    <div id="check">
-                        <a href="receta_desayuno_paciente.php" id="dietacliente"><i class="fa-solid fa-info"></i></a>
-                        <input type="checkbox" id="dietaclientein">
-                    </div>
-                </div>
-                <p>Sandwich de manzana y granola</p>
+            <?php
+                       $db = new Database();
+                       $conexion = $db->connect();
+                       $sql=$conexion->query("select * from receta where tipo_comida='merienda' ORDER BY RAND() LIMIT 1");
+                       while ($datos = $sql->fetchObject()){ ?>
+
+                        <p>Merienda</p>
+                        <div class="plato2">
+                        <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
+                            <div id="check">
+                                <a href="receta_plato_paciente.php?ID=<?= $datos->ID ?>"><i class="fa-solid fa-info"></i></a>
+                                <input type="checkbox" id="dietaclientein">
+                            </div>
+                        </div>
+                        <p><?= $datos->nombre_receta?></p>
+                
+                <?php }
+                   ?>
             </div>
                 
     
             <div class="elemento">
-                <p>Cena</p>
-                <div class="plato2">
-                <img id="imgNombreComidas" src="../img/desayuno1.jpg" alt="">
-                    <div id="check">
-                        <a href="receta_desayuno_paciente.php" id="dietacliente"><i class="fa-solid fa-info"></i></a>
-                        <input type="checkbox" id="dietaclientein">
-                    </div>
-                </div>
-                <p>Sandwich de manzana y granola</p>
+            <?php
+                       $db = new Database();
+                       $conexion = $db->connect();
+                       $sql=$conexion->query("select * from receta where tipo_comida='cena' ORDER BY RAND() LIMIT 1");
+                       while ($datos = $sql->fetchObject()){ ?>
+
+                        <p>Cena</p>
+                        <div class="plato2">
+                        <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
+                            <div id="check">
+                                <a href="receta_plato_paciente.php?ID=<?= $datos->ID ?>"><i class="fa-solid fa-info"></i></a>
+                                <input type="checkbox" id="dietaclientein">
+                            </div>
+                        </div>
+                        <p><?= $datos->nombre_receta?></p>
+                
+                <?php }
+                   ?>
             </div>
     
             </div>
@@ -148,64 +187,115 @@ if(!isset($_SESSION['rol'])){
         <h3>Martes</h3>
         <br>
         <div class="carrousel">
-            <div class="elemento">
-                <p>Desayuno</p>
-                <div id="plato">
-                    <h4>Nombre</h4>
-                    <img src="/img/favicon-32x32.png" alt="">
-                    <div id="check">
-                        <a href="receta_desayuno_paciente" id="dietacliente"><i class="fa-solid fa-info"></i></a>
-                    </div>
+                <div class="elemento">
+                <?php
+                       $db = new Database();
+                       $conexion = $db->connect();
+                       $sql=$conexion->query("select * from receta where tipo_comida='desayuno' ORDER BY RAND() LIMIT 1");
+                       while ($datos = $sql->fetchObject()){ ?>
+
+                        <p>Desayuno</p>
+                        <div class="plato2">
+                        <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
+                            <div id="check">
+                                <a href="receta_plato_paciente.php?ID=<?= $datos->ID ?>"><i class="fa-solid fa-info"></i></a>
+                                <input type="checkbox" id="dietaclientein">
+                            </div>
+                        </div>
+                        <p><?= $datos->nombre_receta?></p>
+                
+                <?php }
+                   ?>
                 </div>
-            </div>
+                
 
-            
+                <div class="elemento">
+                <?php
+                       $db = new Database();
+                       $conexion = $db->connect();
+                       $sql=$conexion->query("select * from receta where tipo_comida='media_mañana' ORDER BY RAND() LIMIT 1");
+                       while ($datos = $sql->fetchObject()){ ?>
+
+                        <p>Media Mañana</p>
+                        <div class="plato2">
+                        <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
+                            <div id="check">
+                                <a href="receta_plato_paciente.php?ID=<?= $datos->ID ?>"><i class="fa-solid fa-info"></i></a>
+                                <input type="checkbox" id="dietaclientein">
+                            </div>
+                        </div>
+                        <p><?= $datos->nombre_receta?></p>
+                
+                <?php }
+                   ?>
+                
+            </div>
+    
             <div class="elemento">
-                <p>Media Mañana</p>
-                <div id="plato">
-                    <h4>Nombre</h4>
-                    <img src="/img/favicon-32x32.png" alt="">
-                    <div id="check">
-                        <a href="receta_desayuno_paciente" id="dietacliente"><i class="fa-solid fa-info"></i></a>
-                    </div>
-                </div>
-            </div>
+            <?php
+                       $db = new Database();
+                       $conexion = $db->connect();
+                       $sql=$conexion->query("select * from receta where tipo_comida='almuerzo' ORDER BY RAND() LIMIT 1");
+                       while ($datos = $sql->fetchObject()){ ?>
 
+                        <p>Almuerzo</p>
+                        <div class="plato2">
+                        <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
+                            <div id="check">
+                                <a href="receta_plato_paciente.php?ID=<?= $datos->ID ?>"><i class="fa-solid fa-info"></i></a>
+                                <input type="checkbox" id="dietaclientein">
+                            </div>
+                        </div>
+                        <p><?= $datos->nombre_receta?></p>
+                
+                <?php }
+                   ?>
+            </div>
+    
             <div class="elemento">
-                <p>Comida</p>
-                <div id="plato">
-                    <h4>Nombre</h4>
-                    <img src="/img/favicon-32x32.png" alt="">
-                    <div id="check">
-                        <a href="receta_desayuno_paciente" id="dietacliente"><i class="fa-solid fa-info"></i></a>
-                    </div>
-                </div>
+            <?php
+                       $db = new Database();
+                       $conexion = $db->connect();
+                       $sql=$conexion->query("select * from receta where tipo_comida='merienda' ORDER BY RAND() LIMIT 1");
+                       while ($datos = $sql->fetchObject()){ ?>
+
+                        <p>Merienda</p>
+                        <div class="plato2">
+                        <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
+                            <div id="check">
+                                <a href="receta_plato_paciente.php?ID=<?= $datos->ID ?>"><i class="fa-solid fa-info"></i></a>
+                                <input type="checkbox" id="dietaclientein">
+                            </div>
+                        </div>
+                        <p><?= $datos->nombre_receta?></p>
+                
+                <?php }
+                   ?>
             </div>
-
-
+                
+    
             <div class="elemento">
-                <p>Merienda</p>
-                <div id="plato">
-                    <h4>Nombre</h4>
-                    <img src="/img/favicon-32x32.png" alt="">
-                    <div id="check">
-                        <a href="receta_desayuno_paciente" id="dietacliente"><i class="fa-solid fa-info"></i></a>
-                    </div>
-                </div>
-            </div>
+            <?php
+                       $db = new Database();
+                       $conexion = $db->connect();
+                       $sql=$conexion->query("select * from receta where tipo_comida='cena' ORDER BY RAND() LIMIT 1");
+                       while ($datos = $sql->fetchObject()){ ?>
 
-            <div class="elemento">
-                <p>Cena</p>
-                <div id="plato">
-                    <h4>Nombre</h4>
-                    <img src="/img/favicon-32x32.png" alt="">
-                    <div id="check">
-                        <a href="receta_desayuno_paciente" id="dietacliente"><i class="fa-solid fa-info"></i></a>
-                    </div>
-                </div>
+                        <p>Cena</p>
+                        <div class="plato2">
+                        <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
+                            <div id="check">
+                                <a href="receta_plato_paciente.php?ID=<?= $datos->ID ?>"><i class="fa-solid fa-info"></i></a>
+                                <input type="checkbox" id="dietaclientein">
+                            </div>
+                        </div>
+                        <p><?= $datos->nombre_receta?></p>
+                
+                <?php }
+                   ?>
             </div>
-
-        </div>
+    
+            </div>
     </div>
 
     <!-----------------------------------Miercoles------------------------>    
@@ -214,261 +304,465 @@ if(!isset($_SESSION['rol'])){
         <h3>Miércoles</h3>
         <br>
         <div class="carrousel">
-            <div class="elemento">
-                <p>Desayuno</p>
-                <div id="plato">
-                    <h4>Nombre</h4>
-                    <img src="/img/favicon-32x32.png" alt="">
-                    <div id="check">
-                        <a href="receta_desayuno_paciente" id="dietacliente"><i class="fa-solid fa-info"></i></a>
-                    </div>
+                <div class="elemento">
+                <?php
+                       $db = new Database();
+                       $conexion = $db->connect();
+                       $sql=$conexion->query("select * from receta where tipo_comida='desayuno' ORDER BY RAND() LIMIT 1");
+                       while ($datos = $sql->fetchObject()){ ?>
+
+                        <p>Desayuno</p>
+                        <div class="plato2">
+                        <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
+                            <div id="check">
+                                <a href="receta_plato_paciente.php?ID=<?= $datos->ID ?>"><i class="fa-solid fa-info"></i></a>
+                                <input type="checkbox" id="dietaclientein">
+                            </div>
+                        </div>
+                        <p><?= $datos->nombre_receta?></p>
+                
+                <?php }
+                   ?>
                 </div>
-            </div>
+                
 
-            
+                <div class="elemento">
+                <?php
+                       $db = new Database();
+                       $conexion = $db->connect();
+                       $sql=$conexion->query("select * from receta where tipo_comida='media_mañana' ORDER BY RAND() LIMIT 1");
+                       while ($datos = $sql->fetchObject()){ ?>
+
+                        <p>Media Mañana</p>
+                        <div class="plato2">
+                        <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
+                            <div id="check">
+                                <a href="receta_plato_paciente.php?ID=<?= $datos->ID ?>"><i class="fa-solid fa-info"></i></a>
+                                <input type="checkbox" id="dietaclientein">
+                            </div>
+                        </div>
+                        <p><?= $datos->nombre_receta?></p>
+                
+                <?php }
+                   ?>
+                
+            </div>
+    
             <div class="elemento">
-                <p>Media Mañana</p>
-                <div id="plato">
-                    <h4>Nombre</h4>
-                    <img src="/img/favicon-32x32.png" alt="">
-                    <div id="check">
-                        <a href="receta_desayuno_paciente" id="dietacliente"><i class="fa-solid fa-info"></i></a>
-                    </div>
-                </div>
-            </div>
+            <?php
+                       $db = new Database();
+                       $conexion = $db->connect();
+                       $sql=$conexion->query("select * from receta where tipo_comida='almuerzo' ORDER BY RAND() LIMIT 1");
+                       while ($datos = $sql->fetchObject()){ ?>
 
+                        <p>Almuerzo</p>
+                        <div class="plato2">
+                        <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
+                            <div id="check">
+                                <a href="receta_plato_paciente.php?ID=<?= $datos->ID ?>"><i class="fa-solid fa-info"></i></a>
+                                <input type="checkbox" id="dietaclientein">
+                            </div>
+                        </div>
+                        <p><?= $datos->nombre_receta?></p>
+                
+                <?php }
+                   ?>
+            </div>
+    
             <div class="elemento">
-                <p>Comida</p>
-                <div id="plato">
-                    <h4>Nombre</h4>
-                    <img src="/img/favicon-32x32.png" alt="">
-                    <div id="check">
-                        <a href="receta_desayuno_paciente" id="dietacliente"><i class="fa-solid fa-info"></i></a>
-                    </div>
-                </div>
+            <?php
+                       $db = new Database();
+                       $conexion = $db->connect();
+                       $sql=$conexion->query("select * from receta where tipo_comida='merienda' ORDER BY RAND() LIMIT 1");
+                       while ($datos = $sql->fetchObject()){ ?>
+
+                        <p>Merienda</p>
+                        <div class="plato2">
+                        <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
+                            <div id="check">
+                                <a href="receta_plato_paciente.php?ID=<?= $datos->ID ?>"><i class="fa-solid fa-info"></i></a>
+                                <input type="checkbox" id="dietaclientein">
+                            </div>
+                        </div>
+                        <p><?= $datos->nombre_receta?></p>
+                
+                <?php }
+                   ?>
             </div>
-
-
+                
+    
             <div class="elemento">
-                <p>Merienda</p>
-                <div id="plato">
-                    <h4>Nombre</h4>
-                    <img src="/img/favicon-32x32.png" alt="">
-                    <div id="check">
-                        <a href="receta_desayuno_paciente" id="dietacliente"><i class="fa-solid fa-info"></i></a>
-                    </div>
-                </div>
-            </div>
+            <?php
+                       $db = new Database();
+                       $conexion = $db->connect();
+                       $sql=$conexion->query("select * from receta where tipo_comida='cena' ORDER BY RAND() LIMIT 1");
+                       while ($datos = $sql->fetchObject()){ ?>
 
-            <div class="elemento">
-                <p>Cena</p>
-                <div id="plato">
-                    <h4>Nombre</h4>
-                    <img src="/img/favicon-32x32.png" alt="">
-                    <div id="check">
-                        <a href="receta_desayuno_paciente" id="dietacliente"><i class="fa-solid fa-info"></i></a>
-                    </div>
-                </div>
+                        <p>Cena</p>
+                        <div class="plato2">
+                        <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
+                            <div id="check">
+                                <a href="receta_plato_paciente.php?ID=<?= $datos->ID ?>"><i class="fa-solid fa-info"></i></a>
+                                <input type="checkbox" id="dietaclientein">
+                            </div>
+                        </div>
+                        <p><?= $datos->nombre_receta?></p>
+                
+                <?php }
+                   ?>
             </div>
-
-        </div>
+    
+            </div>
     </div>
     <!------------------Jueves-------------------------------------------->    
     <div class="contBlan2">
 
         <h3>Jueves</h3>
-
+        <br>
         <div class="carrousel">
-            <div class="elemento">
-                <p>Desayuno</p>
-                <div id="plato">
-                    <h4>Nombre</h4>
-                    <img src="/img/favicon-32x32.png" alt="">
-                    <div id="check">
-                        <a href="#"><i class="fa-solid fa-info"></i></a>
-                    </div>
+                <div class="elemento">
+                <?php
+                       $db = new Database();
+                       $conexion = $db->connect();
+                       $sql=$conexion->query("select * from receta where tipo_comida='desayuno' ORDER BY RAND() LIMIT 1");
+                       while ($datos = $sql->fetchObject()){ ?>
+
+                        <p>Desayuno</p>
+                        <div class="plato2">
+                        <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
+                            <div id="check">
+                                <a href="receta_plato_paciente.php?ID=<?= $datos->ID ?>"><i class="fa-solid fa-info"></i></a>
+                                <input type="checkbox" id="dietaclientein">
+                            </div>
+                        </div>
+                        <p><?= $datos->nombre_receta?></p>
+                
+                <?php }
+                   ?>
                 </div>
-            </div>
+                
 
-            
+                <div class="elemento">
+                <?php
+                       $db = new Database();
+                       $conexion = $db->connect();
+                       $sql=$conexion->query("select * from receta where tipo_comida='media_mañana' ORDER BY RAND() LIMIT 1");
+                       while ($datos = $sql->fetchObject()){ ?>
+
+                        <p>Media Mañana</p>
+                        <div class="plato2">
+                        <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
+                            <div id="check">
+                                <a href="receta_plato_paciente.php?ID=<?= $datos->ID ?>"><i class="fa-solid fa-info"></i></a>
+                                <input type="checkbox" id="dietaclientein">
+                            </div>
+                        </div>
+                        <p><?= $datos->nombre_receta?></p>
+                
+                <?php }
+                   ?>
+                
+            </div>
+    
             <div class="elemento">
-                <p>Media Mañana</p>
-                <div id="plato">
-                    <h4>Nombre</h4>
-                    <img src="/img/favicon-32x32.png" alt="">
-                    <div id="check">
-                        <a href="#"><i class="fa-solid fa-info"></i></a>
-                    </div>
-                </div>
-            </div>
+            <?php
+                       $db = new Database();
+                       $conexion = $db->connect();
+                       $sql=$conexion->query("select * from receta where tipo_comida='almuerzo' ORDER BY RAND() LIMIT 1");
+                       while ($datos = $sql->fetchObject()){ ?>
 
+                        <p>Almuerzo</p>
+                        <div class="plato2">
+                        <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
+                            <div id="check">
+                                <a href="receta_plato_paciente.php?ID=<?= $datos->ID ?>"><i class="fa-solid fa-info"></i></a>
+                                <input type="checkbox" id="dietaclientein">
+                            </div>
+                        </div>
+                        <p><?= $datos->nombre_receta?></p>
+                
+                <?php }
+                   ?>
+            </div>
+    
             <div class="elemento">
-                <p>Comida</p>
-                <div id="plato">
-                    <h4>Nombre</h4>
-                    <img src="/img/favicon-32x32.png" alt="">
-                    <div id="check">
-                        <a href="#"><i class="fa-solid fa-info"></i></a>
-                    </div>
-                </div>
+            <?php
+                       $db = new Database();
+                       $conexion = $db->connect();
+                       $sql=$conexion->query("select * from receta where tipo_comida='merienda' ORDER BY RAND() LIMIT 1");
+                       while ($datos = $sql->fetchObject()){ ?>
+
+                        <p>Merienda</p>
+                        <div class="plato2">
+                        <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
+                            <div id="check">
+                                <a href="receta_plato_paciente.php?ID=<?= $datos->ID ?>"><i class="fa-solid fa-info"></i></a>
+                                <input type="checkbox" id="dietaclientein">
+                            </div>
+                        </div>
+                        <p><?= $datos->nombre_receta?></p>
+                
+                <?php }
+                   ?>
             </div>
-
-
+                
+    
             <div class="elemento">
-                <p>Merienda</p>
-                <div id="plato">
-                    <h4>Nombre</h4>
-                    <img src="/img/favicon-32x32.png" alt="">
-                    <div id="check">
-                        <a href="#"><i class="fa-solid fa-info"></i></a>
-                    </div>
-                </div>
-            </div>
+            <?php
+                       $db = new Database();
+                       $conexion = $db->connect();
+                       $sql=$conexion->query("select * from receta where tipo_comida='cena' ORDER BY RAND() LIMIT 1");
+                       while ($datos = $sql->fetchObject()){ ?>
 
-            <div class="elemento">
-                <p>Cena</p>
-                <div id="plato">
-                    <h4>Nombre</h4>
-                    <img src="/img/favicon-32x32.png" alt="">
-                    <div id="check">
-                        <a href="#"><i class="fa-solid fa-info"></i></a>
-                    </div>
-                </div>
+                        <p>Cena</p>
+                        <div class="plato2">
+                        <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
+                            <div id="check">
+                                <a href="receta_plato_paciente.php?ID=<?= $datos->ID ?>"><i class="fa-solid fa-info"></i></a>
+                                <input type="checkbox" id="dietaclientein">
+                            </div>
+                        </div>
+                        <p><?= $datos->nombre_receta?></p>
+                
+                <?php }
+                   ?>
             </div>
-
-        </div>
+    
+            </div>
     </div>
 
     <!--------------------Viernes----------------------------------->        
     <div class="contBlan2">
 
         <h3>Viernes</h3>
-
+        <br>
         <div class="carrousel">
-            <div class="elemento">
-                <p>Desayuno</p>
-                <div id="plato">
-                    <h4>Nombre</h4>
-                    <img src="/img/favicon-32x32.png" alt="">
-                    <div id="check">
-                        <a href="#"><i class="fa-solid fa-info"></i></a>
-                    </div>
+                <div class="elemento">
+                <?php
+                       $db = new Database();
+                       $conexion = $db->connect();
+                       $sql=$conexion->query("select * from receta where tipo_comida='desayuno' ORDER BY RAND() LIMIT 1");
+                       while ($datos = $sql->fetchObject()){ ?>
+
+                        <p>Desayuno</p>
+                        <div class="plato2">
+                        <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
+                            <div id="check">
+                                <a href="receta_plato_paciente.php?ID=<?= $datos->ID ?>"><i class="fa-solid fa-info"></i></a>
+                                <input type="checkbox" id="dietaclientein">
+                            </div>
+                        </div>
+                        <p><?= $datos->nombre_receta?></p>
+                
+                <?php }
+                   ?>
                 </div>
-            </div>
+                
 
-            
+                <div class="elemento">
+                <?php
+                       $db = new Database();
+                       $conexion = $db->connect();
+                       $sql=$conexion->query("select * from receta where tipo_comida='media_mañana' ORDER BY RAND() LIMIT 1");
+                       while ($datos = $sql->fetchObject()){ ?>
+
+                        <p>Media Mañana</p>
+                        <div class="plato2">
+                        <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
+                            <div id="check">
+                                <a href="receta_plato_paciente.php?ID=<?= $datos->ID ?>"><i class="fa-solid fa-info"></i></a>
+                                <input type="checkbox" id="dietaclientein">
+                            </div>
+                        </div>
+                        <p><?= $datos->nombre_receta?></p>
+                
+                <?php }
+                   ?>
+                
+            </div>
+    
             <div class="elemento">
-                <p>Media Mañana</p>
-                <div id="plato">
-                    <h4>Nombre</h4>
-                    <img src="/img/favicon-32x32.png" alt="">
-                    <div id="check">
-                        <a href="#"><i class="fa-solid fa-info"></i></a>
-                    </div>
-                </div>
-            </div>
+            <?php
+                       $db = new Database();
+                       $conexion = $db->connect();
+                       $sql=$conexion->query("select * from receta where tipo_comida='almuerzo' ORDER BY RAND() LIMIT 1");
+                       while ($datos = $sql->fetchObject()){ ?>
 
+                        <p>Almuerzo</p>
+                        <div class="plato2">
+                        <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
+                            <div id="check">
+                                <a href="receta_plato_paciente.php?ID=<?= $datos->ID ?>"><i class="fa-solid fa-info"></i></a>
+                                <input type="checkbox" id="dietaclientein">
+                            </div>
+                        </div>
+                        <p><?= $datos->nombre_receta?></p>
+                
+                <?php }
+                   ?>
+            </div>
+    
             <div class="elemento">
-                <p>Comida</p>
-                <div id="plato">
-                    <h4>Nombre</h4>
-                    <img src="/img/favicon-32x32.png" alt="">
-                    <div id="check">
-                        <a href="#"><i class="fa-solid fa-info"></i></a>
-                    </div>
-                </div>
+            <?php
+                       $db = new Database();
+                       $conexion = $db->connect();
+                       $sql=$conexion->query("select * from receta where tipo_comida='merienda' ORDER BY RAND() LIMIT 1");
+                       while ($datos = $sql->fetchObject()){ ?>
+
+                        <p>Merienda</p>
+                        <div class="plato2">
+                        <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
+                            <div id="check">
+                                <a href="receta_plato_paciente.php?ID=<?= $datos->ID ?>"><i class="fa-solid fa-info"></i></a>
+                                <input type="checkbox" id="dietaclientein">
+                            </div>
+                        </div>
+                        <p><?= $datos->nombre_receta?></p>
+                
+                <?php }
+                   ?>
             </div>
-
-
+                
+    
             <div class="elemento">
-                <p>Merienda</p>
-                <div id="plato">
-                    <h4>Nombre</h4>
-                    <img src="/img/favicon-32x32.png" alt="">
-                    <div id="check">
-                        <a href="#"><i class="fa-solid fa-info"></i></a>
-                    </div>
-                </div>
-            </div>
+            <?php
+                       $db = new Database();
+                       $conexion = $db->connect();
+                       $sql=$conexion->query("select * from receta where tipo_comida='cena' ORDER BY RAND() LIMIT 1");
+                       while ($datos = $sql->fetchObject()){ ?>
 
-            <div class="elemento">
-                <p>Cena</p>
-                <div id="plato">
-                    <h4>Nombre</h4>
-                    <img src="/img/favicon-32x32.png" alt="">
-                    <div id="check">
-                        <a href="#"><i class="fa-solid fa-info"></i></a>
-                    </div>
-                </div>
+                        <p>Cena</p>
+                        <div class="plato2">
+                        <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
+                            <div id="check">
+                                <a href="receta_plato_paciente.php?ID=<?= $datos->ID ?>"><i class="fa-solid fa-info"></i></a>
+                                <input type="checkbox" id="dietaclientein">
+                            </div>
+                        </div>
+                        <p><?= $datos->nombre_receta?></p>
+                
+                <?php }
+                   ?>
             </div>
-
-        </div>
+    
+            </div>
     </div>
 
     <!-------------------------Sábado----------------------------->    
     <div class="contBlan2">
 
         <h3>Sábado</h3>
-
+        <br>
         <div class="carrousel">
-            <div class="elemento">
-                <p>Desayuno</p>
-                <div id="plato">
-                    <h4>Nombre</h4>
-                    <img src="/img/favicon-32x32.png" alt="">
-                    <div id="check">
-                        <a href="#"><i class="fa-solid fa-info"></i></a>
-                    </div>
+                <div class="elemento">
+                <?php
+                       $db = new Database();
+                       $conexion = $db->connect();
+                       $sql=$conexion->query("select * from receta where tipo_comida='desayuno' ORDER BY RAND() LIMIT 1");
+                       while ($datos = $sql->fetchObject()){ ?>
+
+                        <p>Desayuno</p>
+                        <div class="plato2">
+                        <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
+                            <div id="check">
+                                <a href="receta_plato_paciente.php?ID=<?= $datos->ID ?>"><i class="fa-solid fa-info"></i></a>
+                                <input type="checkbox" id="dietaclientein">
+                            </div>
+                        </div>
+                        <p><?= $datos->nombre_receta?></p>
+                
+                <?php }
+                   ?>
                 </div>
-            </div>
+                
 
-            
+                <div class="elemento">
+                <?php
+                       $db = new Database();
+                       $conexion = $db->connect();
+                       $sql=$conexion->query("select * from receta where tipo_comida='media_mañana' ORDER BY RAND() LIMIT 1");
+                       while ($datos = $sql->fetchObject()){ ?>
+
+                        <p>Media Mañana</p>
+                        <div class="plato2">
+                        <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
+                            <div id="check">
+                                <a href="receta_plato_paciente.php?ID=<?= $datos->ID ?>"><i class="fa-solid fa-info"></i></a>
+                                <input type="checkbox" id="dietaclientein">
+                            </div>
+                        </div>
+                        <p><?= $datos->nombre_receta?></p>
+                
+                <?php }
+                   ?>
+                
+            </div>
+    
             <div class="elemento">
-                <p>Media Mañana</p>
-                <div id="plato">
-                    <h4>Nombre</h4>
-                    <img src="/img/favicon-32x32.png" alt="">
-                    <div id="check">
-                        <a href="#"><i class="fa-solid fa-info"></i></a>
-                    </div>
-                </div>
-            </div>
+            <?php
+                       $db = new Database();
+                       $conexion = $db->connect();
+                       $sql=$conexion->query("select * from receta where tipo_comida='almuerzo' ORDER BY RAND() LIMIT 1");
+                       while ($datos = $sql->fetchObject()){ ?>
 
+                        <p>Almuerzo</p>
+                        <div class="plato2">
+                        <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
+                            <div id="check">
+                                <a href="receta_plato_paciente.php?ID=<?= $datos->ID ?>"><i class="fa-solid fa-info"></i></a>
+                                <input type="checkbox" id="dietaclientein">
+                            </div>
+                        </div>
+                        <p><?= $datos->nombre_receta?></p>
+                
+                <?php }
+                   ?>
+            </div>
+    
             <div class="elemento">
-                <p>Comida</p>
-                <div id="plato">
-                    <h4>Nombre</h4>
-                    <img src="/img/favicon-32x32.png" alt="">
-                    <div id="check">
-                        <a href="#"><i class="fa-solid fa-info"></i></a>
-                    </div>
-                </div>
+            <?php
+                       $db = new Database();
+                       $conexion = $db->connect();
+                       $sql=$conexion->query("select * from receta where tipo_comida='merienda' ORDER BY RAND() LIMIT 1");
+                       while ($datos = $sql->fetchObject()){ ?>
+
+                        <p>Merienda</p>
+                        <div class="plato2">
+                        <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
+                            <div id="check">
+                                <a href="receta_plato_paciente.php?ID=<?= $datos->ID ?>"><i class="fa-solid fa-info"></i></a>
+                                <input type="checkbox" id="dietaclientein">
+                            </div>
+                        </div>
+                        <p><?= $datos->nombre_receta?></p>
+                
+                <?php }
+                   ?>
             </div>
-
-
+                
+    
             <div class="elemento">
-                <p>Merienda</p>
-                <div id="plato">
-                    <h4>Nombre</h4>
-                    <img src="/img/favicon-32x32.png" alt="">
-                    <div id="check">
-                        <a href="#"><i class="fa-solid fa-info"></i></a>
-                    </div>
-                </div>
-            </div>
+            <?php
+                       $db = new Database();
+                       $conexion = $db->connect();
+                       $sql=$conexion->query("select * from receta where tipo_comida='cena' ORDER BY RAND() LIMIT 1");
+                       while ($datos = $sql->fetchObject()){ ?>
 
-            <div class="elemento">
-                <p>Cena</p>
-                <div id="plato">
-                    <h4>Nombre</h4>
-                    <img src="/img/favicon-32x32.png" alt="">
-                    <div id="check">
-                        <a href="#"><i class="fa-solid fa-info"></i></a>
-                    </div>
-                </div>
+                        <p>Cena</p>
+                        <div class="plato2">
+                        <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
+                            <div id="check">
+                                <a href="receta_plato_paciente.php?ID=<?= $datos->ID ?>"><i class="fa-solid fa-info"></i></a>
+                                <input type="checkbox" id="dietaclientein">
+                            </div>
+                        </div>
+                        <p><?= $datos->nombre_receta?></p>
+                
+                <?php }
+                   ?>
             </div>
-
-        </div>
+    
+            </div>
     </div>
 
     <!----------------Domingo----------------------------------->    
@@ -476,66 +770,117 @@ if(!isset($_SESSION['rol'])){
     <div class="contBlan2">
 
         <h3>Domingo</h3>
-
+        <br>
         <div class="carrousel">
-            <div class="elemento">
-                <p>Desayuno</p>
-                <div id="plato">
-                    <h4>Nombre</h4>
-                    <img src="/img/favicon-32x32.png" alt="">
-                    <div id="check">
-                        <a href="#"><i class="fa-solid fa-info"></i></a>
-                    </div>
+                <div class="elemento">
+                <?php
+                       $db = new Database();
+                       $conexion = $db->connect();
+                       $sql=$conexion->query("select * from receta where tipo_comida='desayuno' ORDER BY RAND() LIMIT 1");
+                       while ($datos = $sql->fetchObject()){ ?>
+
+                        <p>Desayuno</p>
+                        <div class="plato2">
+                        <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
+                            <div id="check">
+                                <a href="receta_plato_paciente.php?ID=<?= $datos->ID ?>"><i class="fa-solid fa-info"></i></a>
+                                <input type="checkbox" id="dietaclientein">
+                            </div>
+                        </div>
+                        <p><?= $datos->nombre_receta?></p>
+                
+                <?php }
+                   ?>
                 </div>
-            </div>
+                
 
-            
+                <div class="elemento">
+                <?php
+                       $db = new Database();
+                       $conexion = $db->connect();
+                       $sql=$conexion->query("select * from receta where tipo_comida='media_mañana' ORDER BY RAND() LIMIT 1");
+                       while ($datos = $sql->fetchObject()){ ?>
+
+                        <p>Media Mañana</p>
+                        <div class="plato2">
+                        <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
+                            <div id="check">
+                                <a href="receta_plato_paciente.php?ID=<?= $datos->ID ?>"><i class="fa-solid fa-info"></i></a>
+                                <input type="checkbox" id="dietaclientein">
+                            </div>
+                        </div>
+                        <p><?= $datos->nombre_receta?></p>
+                
+                <?php }
+                   ?>
+                
+            </div>
+    
             <div class="elemento">
-                <p>Media Mañana</p>
-                <div id="plato">
-                    <h4>Nombre</h4>
-                    <img src="/img/favicon-32x32.png" alt="">
-                    <div id="check">
-                        <a href="#"><i class="fa-solid fa-info"></i></a>
-                    </div>
-                </div>
-            </div>
+            <?php
+                       $db = new Database();
+                       $conexion = $db->connect();
+                       $sql=$conexion->query("select * from receta where tipo_comida='almuerzo' ORDER BY RAND() LIMIT 1");
+                       while ($datos = $sql->fetchObject()){ ?>
 
+                        <p>Almuerzo</p>
+                        <div class="plato2">
+                        <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
+                            <div id="check">
+                                <a href="receta_plato_paciente.php?ID=<?= $datos->ID ?>"><i class="fa-solid fa-info"></i></a>
+                                <input type="checkbox" id="dietaclientein">
+                            </div>
+                        </div>
+                        <p><?= $datos->nombre_receta?></p>
+                
+                <?php }
+                   ?>
+            </div>
+    
             <div class="elemento">
-                <p>Comida</p>
-                <div id="plato">
-                    <h4>Nombre</h4>
-                    <img src="/img/favicon-32x32.png" alt="">
-                    <div id="check">
-                        <a href="#"><i class="fa-solid fa-info"></i></a>
-                    </div>
-                </div>
+            <?php
+                       $db = new Database();
+                       $conexion = $db->connect();
+                       $sql=$conexion->query("select * from receta where tipo_comida='merienda' ORDER BY RAND() LIMIT 1");
+                       while ($datos = $sql->fetchObject()){ ?>
+
+                        <p>Merienda</p>
+                        <div class="plato2">
+                        <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
+                            <div id="check">
+                                <a href="receta_plato_paciente.php?ID=<?= $datos->ID ?>"><i class="fa-solid fa-info"></i></a>
+                                <input type="checkbox" id="dietaclientein">
+                            </div>
+                        </div>
+                        <p><?= $datos->nombre_receta?></p>
+                
+                <?php }
+                   ?>
             </div>
-
-
+                
+    
             <div class="elemento">
-                <p>Merienda</p>
-                <div id="plato">
-                    <h4>Nombre</h4>
-                    <img src="/img/favicon-32x32.png" alt="">
-                    <div id="check">
-                        <a href="#"><i class="fa-solid fa-info"></i></a>
-                    </div>
-                </div>
-            </div>
+            <?php
+                       $db = new Database();
+                       $conexion = $db->connect();
+                       $sql=$conexion->query("select * from receta where tipo_comida='cena' ORDER BY RAND() LIMIT 1");
+                       while ($datos = $sql->fetchObject()){ ?>
 
-            <div class="elemento">
-                <p>Cena</p>
-                <div id="plato">
-                    <h4>Nombre</h4>
-                    <img src="/img/favicon-32x32.png" alt="">
-                    <div id="check">
-                        <a href="#"><i class="fa-solid fa-info"></i></a>
-                    </div>
-                </div>
+                        <p>Cena</p>
+                        <div class="plato2">
+                        <img id="imgNombreComidas" src="<?= $datos->foto?>" alt="">
+                            <div id="check">
+                                <a href="receta_plato_paciente.php?ID=<?= $datos->ID ?>"><i class="fa-solid fa-info"></i></a>
+                                <input type="checkbox" id="dietaclientein">
+                            </div>
+                        </div>
+                        <p><?= $datos->nombre_receta?></p>
+                
+                <?php }
+                   ?>
             </div>
-
-        </div>
+    
+            </div>
     </div>
     <script src="../js/app.js"></script>
 </body>

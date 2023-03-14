@@ -1,3 +1,17 @@
+<?php 
+
+session_start();
+
+if(!isset($_SESSION['rol'])){
+    header('location: login.php');
+}else{
+    if($_SESSION['rol'] != 2){
+        header('location: login.php');
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +30,40 @@
 </head>
 
 <body>
+<header>
+        <a href="index_nutricionista.php" id="logo"><img src="../img/3.png"></a>
+        <nav>
+            <ul id="menu">
+                <li><a href="index_nutricionista.php"><i class="fa-regular fa-address-book"></i> Pacientes</a></li>
+                <li><a href="nutricionista_menu.php"><i class="fa-solid fa-bowl-food"></i> Menús</a></li>
+                <li><a href="#"><i class="fa-regular fa-comments"></i> Chat</a></li>
+                <li><a href="#"><i class="fa-regular fa-bell"></i> Notificaciones</a></li>
+            </ul>
+        </nav>
+        
+        <div id="user">
+            <div id="profile" onclick="menuToggle();">
+                <img src="../img/icon.png">
+            </div>
+            <div id="profilemenu">
+                <h3>¡ Hola de nuevo !<br><span>Nutricionista</span></h3>
+                <ul>
+                    <li><i class="fa-regular fa-user"></i><a href="perfil_nutricionista.php">Mi perfil</a></li>
+                    <li><a href="perfil_nutricionista.php"><i class="fa-solid fa-sliders"></i>Ajustes</a></li>
+                    <li><a href="login.php?cerrar_sesion=1"><i class="fa-solid fa-arrow-right-from-bracket"></i>Cerrar sesión</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <div id="menuicon">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <br>
     <br>
     <h1>Añadir paciente</h1>
@@ -39,10 +87,10 @@
                 <input type="text"  name="apellidos" class="inputregistro" required><br>
             </div>
         </div>
-        <!--<div class="form-group">
+        <div class="form-group">
             <label for="fecha">Fecha de nacimiento</label><br>
             <input type="date" name="fecha_nacimiento" min="1950-01-01" class="inputregistro" required><br>
-            </div>-->
+            </div>
 
             <div class="form-group">
             <label for="dni">DNI</label><br>
@@ -68,11 +116,11 @@
                 <input type="email" id="email" form="signupForm" name="correo_electronico" class="inputregistro" required><br>
             </div>
 
-            <!--<div class="form-group">
+            <div class="form-group">
                 <label for="password">Contraseña</label><br>
                 <input type="password" id="password" form="signupForm" name="password" class="inputregistro" required><br>
-            </div>-->
-                <button type="submit" id="enviar" form="signupForm" class="btnVerde" name="registro" value="Registrar">Confirmar</button>
+            </div>
+                <button type="submit" id="enviar" form="signupForm" class="btnVerde" name="registro" value="Registrar">Añadir</button>
            
         </div>
 

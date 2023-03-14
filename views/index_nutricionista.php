@@ -1,4 +1,5 @@
 <?php 
+include ("../includes/database.php");
 
 session_start();
 
@@ -41,7 +42,7 @@ if(!isset($_SESSION['rol'])){
                 <img src="../img/icon.png">
             </div>
             <div id="profilemenu">
-                <h3>¡ Hola **** !<br><span>Nutricionista</span></h3>
+                <h3>¡ Hola de nuevo !<br><span>Nutricionista</span></h3>
                 <ul>
                     <li><i class="fa-regular fa-user"></i><a href="perfil_nutricionista.php">Mi perfil</a></li>
                     <li><a href="perfil_nutricionista.php"><i class="fa-solid fa-sliders"></i>Ajustes</a></li>

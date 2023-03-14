@@ -15,7 +15,7 @@ if(!empty($_POST["registro"])){
         $sexo=$_POST["sexo"];
         $correo_electronico=$_POST["correo_electronico"];
         $password=$_POST["password"];
-        $sql=$conexion->query("INSERT INTO usuarios(nombre,apellidos,fecha_nacimiento,dni,sexo,correo_electronico,password,rol_id)values('$nombre','$apellidos','$fecha_nacimiento','$dni','$sexo','$correo_electronico','$password','2')");
+        $sql=$conexion->query("INSERT INTO usuarios(nombre,apellidos,fecha_nacimiento,dni,sexo,correo_electronico,password,rol_id)values('$nombre','$apellidos','$fecha_nacimiento','$dni','','$correo_electronico','$password','3')");
         if ($sql) {
             echo 'usuario registrado correctamente';
         } else {
