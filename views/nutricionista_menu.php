@@ -1,4 +1,5 @@
 <?php 
+include ("../includes/database.php");
 
 session_start();
 
@@ -66,23 +67,19 @@ if(!isset($_SESSION['rol'])){
 
     <table class="admin">
 
-        <tr class="admin">
-            <td class="admin"><img src="../img/favicon-32x32.png" alt=""></td>
-            <td class="admin"><a href="menu_semanal_nutri_cliente.php">Adrián Fernandez Ruiz</a></td>
-            <td class="admin"></td>
-        </tr>
+    <?php
+        $db = new Database();
+        $conexion = $db->connect();
 
-        <tr class="admin">
+        $sql=$conexion->query("select * from usuarios where rol_id='3'");
+        while ($datos = $sql->fetchObject()){ ?>
+            <tr class="admin">
             <td class="admin"><img src="../img/favicon-32x32.png" alt=""></td>
-            <td class="admin"><a href="menu_semanal_nutri_cliente.php">Juan Sanchez Gonzalez</a></td>
+            <td class="admin"><a href="menu_semanal_nutri_cliente.php?id=<?= $datos->id?>"><?= $datos->nombre?> <?= $datos->apellidos?></a></td>
             <td class="admin"></td>
         </tr>
-
-        <tr class="admin">
-            <td class="admin"><img src="../img/favicon-32x32.png" alt=""></td>
-            <td class="admin"><a href="menu_semanal_nutri_cliente.php">Jesús Gonzalez Herrera</a></td>
-            <td class="admin"></td>
-        </tr>
+        <?php }
+        ?>
 
     </table>
     <script src="../js/app.js"></script>

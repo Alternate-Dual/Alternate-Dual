@@ -69,7 +69,7 @@ if(!isset($_SESSION['rol'])){
     <h1>Añadir paciente</h1>
     <?php
         include("../includes/database.php");
-        include("../includes/controlador_registrar_usuario.php");
+        include("../includes/controlador_registrar_paciente.php");
     ?>
     <div class="contBlan">
         <a href="login.php" style="margin-right: 100vh;">🡰</a>

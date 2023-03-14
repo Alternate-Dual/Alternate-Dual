@@ -60,6 +60,8 @@ if(!isset($_SESSION['rol'])){
     <br>
     <h1 class="admin">Nutricionistas</h1>
 
+    <button class="btnVerde" style="padding:1%; margin-right:100vh; transition: all .30s ease;" onclick="window.location.href='registro_nutricionista.php'">Añadir nutricionista</button>
+
     <?php
      include ("../includes/database.php");
      include ("../includes/eliminar_usuario.php");
@@ -77,8 +79,8 @@ if(!isset($_SESSION['rol'])){
             <td class="admin"><img src="../img/favicon-32x32.png" alt=""></td>
             <td class="admin"><?= $datos->nombre?> <?= $datos->apellidos?></td>
             <td class="admin">
-                <button type="submit" class="btnVerde" style="transition: all .30s ease;" onclick="window.location.href='#abrir_modal_contacto'">Contactar</button> <br>
-                    <div id="abrir_modal_contacto" class="modal-window">
+                <button type="submit" class="btnVerde" style="transition: all .30s ease;" onclick="window.location.href='#abrir_modal_contacto?id=<?= $datos->id?>'">Contactar</button> <br>
+                    <div id="abrir_modal_contacto?id=<?= $datos->id?>" class="modal-window">
                           <div>
                             <a href="#" title="Cerrar" class="modal-close">Cerrar</a>
                             <h3>Nombre y apellidos: </h3>

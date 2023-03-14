@@ -1,3 +1,17 @@
+<?php 
+
+session_start();
+
+if(!isset($_SESSION['rol'])){
+    header('location: login.php');
+}else{
+    if($_SESSION['rol'] != 1){
+        header('location: login.php');
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +37,7 @@
         include("../includes/controlador_registrar_usuario.php");
     ?>
     <div class="contBlan">
-        <a href="login.php" style="margin-right: 100vh;">🡰</a>
+        <a href="administrar_nutricionista.php" style="margin-right: 100vh;">🡰</a>
         <form name="formulario" method="post" id="signupForm" action="" novalidate="novalidate">
         <div class="detNom">
 
